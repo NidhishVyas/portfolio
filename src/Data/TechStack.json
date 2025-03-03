@@ -1,0 +1,68 @@
+[
+  {
+    "category": "Frontend",
+    "stack": [
+      { "name": "ReactJS", "icon": "react" },
+      { "name": "NextJS", "icon": "nextdotjs" },
+      { "name": "Angular", "icon": "angular" },
+      { "name": "Bootstrap", "icon": "bootstrap" },
+      { "name": "HTML", "icon": "html5" },
+      { "name": "CSS", "icon": "css" }
+    ]
+  },
+  {
+    "category": "Backend",
+    "stack": [
+      { "name": "NodeJS", "icon": "nodedotjs" },
+      { "name": "Express", "icon": "express" },
+      { "name": "Django", "icon": "django" }
+    ]
+  },
+  {
+    "category": "Databases",
+    "stack": [
+      { "name": "MongoDB", "icon": "mongodb" },
+      { "name": "MySQL", "icon": "mysql" },
+      { "name": "PostgreSQL", "icon": "postgresql" }
+    ]
+  },
+  {
+    "category": "Programming",
+    "stack": [
+      { "name": "Python", "icon": "python" },
+      { "name": "Java", "icon": "java" },
+      { "name": "R", "icon": "r" },
+      { "name": "JavaScript", "icon": "javascript" },
+      { "name": "C++", "icon": "cplusplus" },
+      { "name": "C", "icon": "c" },
+      { "name": "TypeScript", "icon": "typescript" }
+    ]
+  },
+  {
+    "category": "App Dev",
+    "stack": [
+      { "name": "React Native", "icon": "react" },
+      { "name": "Kotlin", "icon": "kotlin" },
+      { "name": "Flutter", "icon": "flutter" }
+    ]
+  },
+  {
+    "category": "Tools",
+    "stack": [
+      { "name": "Git", "icon": "git" },
+      { "name": "Docker", "icon": "docker" },
+      { "name": "Android Studio", "icon": "androidstudio" },
+      { "name": "Linux", "icon": "linux" },
+      { "name": "Wireshark", "icon": "wireshark" },
+      { "name": "Figma", "icon": "figma" },
+      { "name": "Jenkins", "icon": "jenkins" },
+      { "name": "Firebase", "icon": "firebase" },
+      { "name": "AWS", "icon": "amazonwebservices" },
+      { "name": "Google Cloud Platform", "icon": "googlecloud" },
+      { "name": "Postman", "icon": "postman" },
+      { "name": "Google Colab", "icon": "googlecolab" },
+      { "name": "Jupyter Notebook", "icon": "jupyter" },
+      { "name": "Heroku", "icon": "heroku" },
+      { "name": "Digital Ocean", "icon": "digitalocean" }
+    ]}
+]

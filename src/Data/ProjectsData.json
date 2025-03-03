@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Project 1",
+    "info": "Developed a platform for virtual pitch competitions using Next.js 15, enabling smooth idea sharing and exploration with optimal performance.",
+    "image": "/Images/hero.png",
+    "sourceCode": "",
+    "website": "",
+    "techStack": []
+  },
+  {
+    "name": "Project 2",
+    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "image": "/Images/hero.png",
+    "sourceCode": "",
+    "website": "",
+    "points": [
+      "Leveraged Partial Prerendering and After for faster loading.",
+      "Implemented a custom CMS for easy content management.",
+      "Integrated Auth.js for user authentication and authorization.",
+      "Utilized Framer Motion for smooth animations.",
+      "Implemented Sentry for error tracking."
+    ],
+    "techStack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "markdown",
+      "Sentry"
+    ]
+  },
+  {
+    "name": "Project 3",
+    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "image": "/Images/hero.png",
+    "sourceCode": "",
+    "website": "",
+    "techStack": []
+  },
+  {
+    "name": "Project 4",
+    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "image": "/Images/hero.png",
+    "sourceCode": "",
+    "website": "",
+    "techStack": []
+  }
+]

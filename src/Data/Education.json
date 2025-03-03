@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "university": " New Jersey Institute of Technology",
+    "degree": "MS in Computer Science",
+    "location": "Newark, NJ",
+    "endDate": "May 2025",
+    "coursework": [
+      "Data Structures and Algorithms",
+      "Database Management Systems Design",
+      "Web Systems Development"
+    ]
+  },
+  {
+    "id": 2,
+    "university": " University of Mumbai",
+    "degree": "BE in Information Technology",
+    "location": "Mumbai, IN",
+    "endDate": "May 2023",
+    "coursework": [
+      "OOPs",
+      "Software Engineering",
+      "DevOps",
+      "Data Mining",
+      "Artificial Intelligence",
+      "Data Science"
+    ]
+  }
+]
