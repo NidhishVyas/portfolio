@@ -18,22 +18,30 @@ const FlexDiv = styled.div`
 const Heading = styled.div`
   font-size: 18px;
   max-width: 200px;
+  font-family: ${(props) => props.theme.Fonts.Poppins};
+
   @media ${(props) => props.theme.MediaQueries.m.query} {
     max-width: 100%;
   }
 `;
 
 const SubHeading = styled.div`
+  font-family: ${(props) => props.theme.Fonts.Poppins};
   font-size: 16px;
 `;
 
 const Description = styled.div`
   margin-left: 5px;
+  font-family: ${(props) => props.theme.Fonts.Inter};
+  font-size: 14px;
 `;
 
 const CourseworkDiv = styled.p`
-text-align: left;
+  font-family: ${(props) => props.theme.Fonts.Inter};
+  font-size: 14px;
+  text-align: left;
 `;
+
 const Experience = ({ data }) => {
   const courseworkList = data?.coursework ? data?.coursework.join(", ") : null;
 
@@ -55,15 +63,9 @@ const Experience = ({ data }) => {
           <Description>{point}</Description>
         </FlexDiv>
       ))}
-      {courseworkList && <CourseworkDiv>Coursework: {courseworkList}</CourseworkDiv>}
-      {/* <CourseworkDiv>
-        <Coursework>
-          Coursework -
-          {data.coursework?.map((course, index) => (
-            <CourseworkList key={index}>{course}</CourseworkList>
-          ))}
-        </Coursework>
-      </CourseworkDiv> */}
+      {courseworkList && (
+        <CourseworkDiv>Coursework: {courseworkList}</CourseworkDiv>
+      )}
     </MainDiv>
   );
 };

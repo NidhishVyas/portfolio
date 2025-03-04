@@ -30,10 +30,13 @@ const SocialsIcon = styled.button`
 const FooterText = styled.p`
   margin: 20px 0 10px;
   font-size: 14px;
+  font-family: ${(props) => props.theme.Fonts.Quicksand};
+  font-weight: 700;
 `;
 
 const Copyright = styled.p`
   font-size: 14px;
+  font-family: ${(props) => props.theme.Fonts.Poppins};
 `;
 
 const Footer = () => {

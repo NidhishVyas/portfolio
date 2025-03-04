@@ -51,12 +51,14 @@ const ProjectImage = styled.img`
 
 const ProjectName = styled.p`
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
   margin: 25px 0 15px;
+  font-family: ${(props) => props.theme.Fonts.Quicksand};
 `;
 
 const ProjectInfo = styled.p`
   color: ${(props) => props.theme.Colors.LightWhite};
+  font-family: ${(props) => props.theme.Fonts.Poppins};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     font-size: 18px;
@@ -75,6 +77,7 @@ const Button = styled.a`
   justify-content: center;
   align-items: center;
   width: 45%;
+  font-family: ${(props) => props.theme.Fonts.Poppins};
   color: ${(props) => props.theme.Colors.White};
   border: 1px solid ${(props) => props.theme.Colors.LightestWhite};
   border-radius: 15px;

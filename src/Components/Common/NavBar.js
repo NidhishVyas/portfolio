@@ -111,6 +111,7 @@ const NavDiv = styled.div`
 
 const NavItem = styled(motion.p)`
   font-size: 28px;
+  font-family: ${(props) => props.theme.Fonts.Inter};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     /* font-size: 16px; */
@@ -132,8 +133,10 @@ const SocialsDiv = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 `;
 
-const Socials = styled(motion.a)`
+const Socials = styled(motion.p)`
   font-size: 18px;
+  font-family: ${(props) => props.theme.Fonts.Inter};
+
 `;
 
 const ResumeBtn = styled.a`
@@ -147,6 +150,7 @@ const ResumeBtn = styled.a`
   border-radius: 15px;
   padding: 10px;
   margin: 30px auto 30px;
+  font-family: ${(props) => props.theme.Fonts.Poppins};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     display: none;
@@ -265,7 +269,7 @@ const NavBar = () => {
         <Container>
           <LogoName />
           <MenuDiv onClick={toggleNav}>
-            <Icon name="bars" color={theme.Colors.Black} />
+            <Icon name="bars" color={theme.Colors.White} />
           </MenuDiv>
         </Container>
 

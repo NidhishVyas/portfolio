@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import TechStackData from "../../Data/TechStack.json";
 import Java from "../../Images/java.png";
+import SectionHeading from "../Common/SectionHeading";
 
 const MainWrapper = styled.div`
   margin-top: 60px;
@@ -11,25 +12,6 @@ const MainWrapper = styled.div`
   @media ${(props) => props.theme.MediaQueries.l.query} {
     /* text-align: left; */
     margin-top: 80px;
-  }
-`;
-
-const SectionHeading = styled.p`
-  color: ${(props) => props.theme.Colors.LightWhite};
-  text-transform: uppercase;
-  font-size: 14px;
-
-  @media ${(props) => props.theme.MediaQueries.m.query} {
-    font-size: 16px;
-  }
-`;
-
-const ProjectHeading = styled.div`
-  margin: 15px 0 40px;
-  font-size: 30px;
-
-  @media ${(props) => props.theme.MediaQueries.m.query} {
-    font-size: 48px;
   }
 `;
 
@@ -47,6 +29,8 @@ const StackDiv = styled.div`
 const StackCategory = styled.div`
   font-size: 25px;
   margin: 0 0 25px;
+  font-family: ${(props) => props.theme.Fonts.Quicksand};
+
   @media ${(props) => props.theme.MediaQueries.m.query} {
     width: 30%;
     font-size: 35px;
@@ -72,7 +56,7 @@ const TechStackItems = styled.div`
   justify-content: center;
   align-items: center;
   padding: 5px 25px;
-  /* border: 1px solid ${(props) => props.theme.Colors.White}; */
+  border: 1px solid ${(props) => props.theme.Colors.White};
   border-radius: 25px;
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
@@ -92,6 +76,7 @@ const TechImage = styled.img`
 const Tech = styled.p`
   font-size: 18px;
   margin-left: 10px;
+  font-family: ${(props) => props.theme.Fonts.Poppins};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     font-size: 20px;
@@ -101,8 +86,10 @@ const Tech = styled.p`
 const TechStack = () => {
   return (
     <MainWrapper>
-      <SectionHeading>I constantly try to improve</SectionHeading>
-      <ProjectHeading>My Tech Stack</ProjectHeading>
+      <SectionHeading
+        subHeading="I constantly try to improve"
+        heading="My Tech Stack"
+      />
       {TechStackData.map((item, i) => (
         <StackDiv key={i}>
           <StackCategory>{item.category}</StackCategory>

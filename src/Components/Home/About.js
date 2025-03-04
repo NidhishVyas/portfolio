@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Portrait from "../../Images/ProjectImg.png";
+import { ReactComponent as Portrait } from "../../Images/Logo.svg";
+import SectionHeading from "../Common/SectionHeading";
 
 const MainWrapper = styled.div`
   margin-top: 60px;
@@ -30,41 +31,52 @@ const AboutSection = styled.div`
   }
 `;
 
-const SectionHeading = styled.p`
-  color: ${(props) => props.theme.Colors.LightWhite};
-  text-transform: uppercase;
-  font-size: 14px;
+// const SectionHeading = styled.p`
+//   color: ${(props) => props.theme.Colors.LightWhite};
+//   text-transform: uppercase;
+//   font-size: 14px;
 
-  @media ${(props) => props.theme.MediaQueries.m.query} {
-    font-size: 16px;
-  }
-`;
+//   @media ${(props) => props.theme.MediaQueries.m.query} {
+//     font-size: 16px;
+//   }
+// `;
 
-const AboutHeading = styled.p`
-  margin: 15px 0 40px;
-  font-size: 30px;
+// const AboutHeading = styled.p`
+//   margin: 15px 0 40px;
+//   font-size: 30px;
 
-  @media ${(props) => props.theme.MediaQueries.m.query} {
-    font-size: 48px;
-  }
-`;
+//   @media ${(props) => props.theme.MediaQueries.m.query} {
+//     font-size: 48px;
+//   }
+// `;
 
 const AboutMe = styled.p`
   color: ${(props) => props.theme.Colors.LightWhite};
+  font-family: ${(props) => props.theme.Fonts.Poppins};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     font-size: 18px;
   }
 `;
 
-const LogoSection = styled.div``;
-
-const LogoImg = styled.img`
+const LogoSection = styled.div`
   aspect-ratio: 1/1;
   width: 220px;
   object-fit: cover;
   border-radius: 50%;
+  border: 1px solid ${(props) => props.theme.Colors.White};
+  @media ${(props) => props.theme.MediaQueries.l.query} {
+    width: 320px;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
+const LogoImg = styled(Portrait)`
+  aspect-ratio: 1/1;
+  width: 120px;
+  fill: transparent;
   @media ${(props) => props.theme.MediaQueries.l.query} {
     width: 320px;
   }
@@ -75,10 +87,10 @@ const About = () => {
     <MainWrapper>
       <FlexDiv>
         <AboutSection>
-          <SectionHeading>About Me</SectionHeading>
-          <AboutHeading>
-            Full-Stack Developer and a little bit of everything
-          </AboutHeading>
+          <SectionHeading
+            heading="Full-Stack Developer and a little bit of everything"
+            subHeading="About me"
+          />
           <AboutMe>
             I'm Nidhish Vyas, a proactive full-stack developer passionate about
             creating dynamic web experiences. From frontend to backend, I thrive
@@ -94,7 +106,7 @@ const About = () => {
           </AboutMe>
         </AboutSection>
         <LogoSection>
-          <LogoImg src={Portrait} />
+          <LogoImg />
         </LogoSection>
       </FlexDiv>
     </MainWrapper>

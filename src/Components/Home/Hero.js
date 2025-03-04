@@ -192,7 +192,8 @@ const GreetingsDiv = styled.div`
 const TitleText = styled.h3`
   font-size: 32px;
   margin-top: 30px;
-  font-family: ${(props) => props.theme.Fonts.Quicksand};
+  font-weight: 400;
+  font-family: ${(props) => props.theme.Fonts.Poppins};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     font-size: 36px;
@@ -202,7 +203,7 @@ const TitleText = styled.h3`
 const Name = styled.h1`
   font-size: 52px;
   font-weight: 700;
-  font-family: ${(props) => props.theme.Fonts.Cabin};
+  font-family: ${(props) => props.theme.Fonts.Quicksand};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     font-size: 60px;
@@ -211,6 +212,7 @@ const Name = styled.h1`
 
 const SubTitleText = styled.p`
   margin: 15px 0 20px;
+  font-family: ${(props) => props.theme.Fonts.Inter};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     margin: 15px 0 25px;
@@ -231,6 +233,7 @@ const ResumeDownload = styled.a`
   padding: 20px 30px;
   width: fit-content;
   border-radius: 50px;
+  font-family: ${(props) => props.theme.Fonts.Poppins};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     padding: 20px 45px;
@@ -283,7 +286,7 @@ const Hero = () => {
       <GreetingsDiv>
         <TitleText>Hello! I'm</TitleText>
         <Name>Nidhish Vyas</Name>
-        <SubTitleText>Full Stack Developer based in New Jersey</SubTitleText>
+        <SubTitleText>Your friendly neighborhood Full-Stack Developer</SubTitleText>
         <ResumeDownload href={Resume} download="Resume - Nidhish Vyas.pdf">
           <DownloadText>Get Resume</DownloadText>
           <Icon name="download" color={theme.Colors.White} size="l" />

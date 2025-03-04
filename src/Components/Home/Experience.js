@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ExEdu from "../Common/ExEdu";
 import ExperienceData from "../../Data/Experience.json";
+import SectionHeading from "../Common/SectionHeading";
 
 const MainWrapper = styled.div`
   margin-top: 60px;
@@ -13,30 +14,10 @@ const MainWrapper = styled.div`
   }
 `;
 
-const SectionHeading = styled.p`
-  color: ${(props) => props.theme.Colors.LightWhite};
-  text-transform: uppercase;
-  font-size: 14px;
-
-  @media ${(props) => props.theme.MediaQueries.m.query} {
-    font-size: 16px;
-  }
-`;
-
-const ProjectHeading = styled.div`
-  margin: 15px 0 40px;
-  font-size: 30px;
-
-  @media ${(props) => props.theme.MediaQueries.m.query} {
-    font-size: 48px;
-  }
-`;
-
 const Experience = () => {
   return (
     <MainWrapper>
-      <SectionHeading>Experience</SectionHeading>
-      <ProjectHeading>Experience</ProjectHeading>
+      <SectionHeading heading="Experience" subHeading="Experience" />
       {ExperienceData.map((item, i) => (
         <ExEdu data={item} key={i} />
       ))}

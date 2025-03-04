@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import ProjectListDesktop from "../Project/ProjectListDesktop";
 import ProjectListMobile from "../Project/ProjectListMobile";
+import SectionHeading from "../Common/SectionHeading";
 
 const MainWrapper = styled.div`
   margin-top: 60px;
@@ -10,25 +11,6 @@ const MainWrapper = styled.div`
   @media ${(props) => props.theme.MediaQueries.l.query} {
     /* text-align: left; */
     margin-top: 80px;
-  }
-`;
-
-const SectionHeading = styled.p`
-  color: ${(props) => props.theme.Colors.LightWhite};
-  text-transform: uppercase;
-  font-size: 14px;
-
-  @media ${(props) => props.theme.MediaQueries.m.query} {
-    font-size: 16px;
-  }
-`;
-
-const ProjectHeading = styled.div`
-  margin: 15px 0 40px;
-  font-size: 30px;
-
-  @media ${(props) => props.theme.MediaQueries.m.query} {
-    font-size: 48px;
   }
 `;
 
@@ -44,15 +26,8 @@ const Projects = () => {
 
   return (
     <MainWrapper>
-      <SectionHeading>Project</SectionHeading>
-      <ProjectHeading>Curated Works</ProjectHeading>
+      <SectionHeading heading="Curated Works" subHeading="Projects" />
       {isDesktop ? <ProjectListDesktop /> : <ProjectListMobile />}
-      {/* <img
-        key='react'
-        src={`https://cdn.simpleicons.org/python`}
-        alt='react'
-        width="50"
-      /> */}
     </MainWrapper>
   );
 };

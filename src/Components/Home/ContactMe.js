@@ -14,10 +14,13 @@ const MainWrapper = styled.div`
 
 const Heading = styled.h1`
   font-size: 32px;
+  font-family: ${(props) => props.theme.Fonts.Quicksand};
+  font-weight: 700;
 `;
 
 const ConnectText = styled.p`
   font-size: 18px;
+  font-family: ${(props) => props.theme.Fonts.Poppins};
   margin: 10px 0px;
 `;
 
@@ -27,6 +30,7 @@ const ConnectMeBtn = styled.button`
   margin: 40px auto;
   gap: 15px;
   background-color: ${(props) => props.theme.Colors.PrimaryColor};
+  font-family: ${(props) => props.theme.Fonts.Poppins};
   color: ${(props) => props.theme.Colors.White};
   padding: 15px 30px;
   border: 1px solid ${(props) => props.theme.Colors.White};
