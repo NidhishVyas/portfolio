@@ -2,7 +2,7 @@ import GlobalStyles from "./GlobalStyles";
 import { DarkTheme, LightTheme } from "./Theme";
 import { ThemeProvider } from "styled-components";
 import NavBar from "./Components/Common/NavBar";
-// import Footer from "./Components/CommonComponents/Footer";
+import Footer from "./Components/Common/Footer";
 import Home from "./Pages/Home";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <GlobalStyles />
       <NavBar />
       <Home />
-      {/* <Footer /> */}
+      <Footer />
     </ThemeProvider>
   );
 }

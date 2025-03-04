@@ -5,8 +5,9 @@ import About from "../Components/Home/About";
 import Projects from "../Components/Home/Projects";
 import Education from "../Components/Home/Education";
 import Experience from "../Components/Home/Experience";
-import TechStack
- from "../Components/Home/MyTechStack";
+import TechStack from "../Components/Home/MyTechStack";
+import ContactMe from "../Components/Home/ContactMe";
+
 const MainWrapper = styled.div`
   padding: 54px 20px 0;
   color: ${(props) => props.theme.Colors.White};
@@ -26,6 +27,7 @@ const Home = () => {
       <Experience />
       <Projects />
       <TechStack />
+      <ContactMe />
     </MainWrapper>
   );
 };

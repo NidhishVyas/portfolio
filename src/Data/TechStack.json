@@ -57,12 +57,13 @@
       { "name": "Figma", "icon": "figma" },
       { "name": "Jenkins", "icon": "jenkins" },
       { "name": "Firebase", "icon": "firebase" },
-      { "name": "AWS", "icon": "amazonwebservices" },
-      { "name": "Google Cloud Platform", "icon": "googlecloud" },
       { "name": "Postman", "icon": "postman" },
       { "name": "Google Colab", "icon": "googlecolab" },
+      { "name": "AWS", "icon": "amazonwebservices" },
       { "name": "Jupyter Notebook", "icon": "jupyter" },
+      { "name": "Digital Ocean", "icon": "digitalocean" },
       { "name": "Heroku", "icon": "heroku" },
-      { "name": "Digital Ocean", "icon": "digitalocean" }
-    ]}
+      { "name": "Google Cloud Platform", "icon": "googlecloud" }
+    ]
+  }
 ]

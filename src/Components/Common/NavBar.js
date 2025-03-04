@@ -49,11 +49,11 @@ const Container = styled.div`
 `;
 
 const LogoName = styled(Logo)`
-  height: 45px;
+  height: 30px;
   width: auto;
   fill: transparent;
   color: ${(props) => props.theme.Colors.White};
-  margin-left: 15px;
+  margin-left: 25px;
   @media ${(props) => props.theme.MediaQueries.m.query} {
     margin-left: 0;
   }
