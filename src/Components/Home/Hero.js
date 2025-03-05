@@ -234,6 +234,7 @@ const ResumeDownload = styled.a`
   width: fit-content;
   border-radius: 50px;
   font-family: ${(props) => props.theme.Fonts.Poppins};
+  box-shadow: inset 0 0px 10px ${(props) => props.theme.Colors.LightestWhite};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     padding: 20px 45px;

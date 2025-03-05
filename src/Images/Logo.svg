@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1626 1234.75">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1665 1253.58">
   <defs>
     <style>
       .cls-1 {
-        fill: currentColor;
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke-linecap: square;
+        stroke-miterlimit: 10;
+        stroke-width: 15px;
       }
     </style>
   </defs>
-  <rect width="1626" height="1233"/>
   <g>
-    <polygon class="cls-1" points="1625.09 0 1386.77 0 1010.62 756.75 632.25 0 604.53 0 500.59 213.26 1011.19 1234.75 1625.09 0"/>
-    <path class="cls-1" d="M2.91,1233h238.28l216.21-434.91c-37.46-74.92-80.36-160.91-119.54-239.28L2.91,1233Z"/>
+    <path class="cls-1" d="M1625.09,10.05h-238.32l-376.15,756.75L632.25,10.05h-27.72c-18.39,37.74-87.68,179.91-103.93,213.26,170.2,340.5,340.39,680.99,510.59,1021.49L1625.09,10.05Z"/>
+    <path class="cls-1" d="M2.91,1243.05h238.28l216.21-434.91c-37.46-74.92-80.36-160.91-119.54-239.28L2.91,1243.05Z"/>
   </g>
+  <polyline class="cls-2" points="558.5 105.55 1010.5 1007.55 1506.5 10.05"/>
+  <line class="cls-2" x1="123.5" y1="1243.55" x2="395.5" y2="685.55" />
 </svg>

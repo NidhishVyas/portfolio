@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import ProjectsData from "../../Data/ProjectsData";
 import Icon from "../Common/Icon";
 import TechStack from "../Common/TechStack";
+import Hero from "../../Images/hero.png";
 
 const ProjectDiv = styled(motion.div)`
   margin-bottom: 120px;
@@ -36,17 +37,46 @@ const ProjectImgDiv = styled.div`
       rgba(0, 0, 0, 0) 95%
     );
   }
+
   @media ${(props) => props.theme.MediaQueries.m.query} {
     height: 350px;
   }
 `;
 
-const ProjectImage = styled.img`
-  object-fit: cover;
+const ColorDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: calc(100% - 15px);
   width: calc(100% - 15px);
   border-radius: 10px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 20%,
+      rgb(255, 255, 255) 50%,
+      rgba(0, 0, 0, 0) 80%
+    );
+  }
+`;
+
+const ProjectImage = styled.img`
+  object-fit: cover;
+  max-width: 82.5%;
+  rotate: -3deg;
+  transform: translateY(20px);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   /* padding: 10px; */
+  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 1);
 `;
 
 const ProjectName = styled.p`
@@ -117,7 +147,9 @@ const ProjectListMobile = () => {
             }}
           >
             <ProjectImgDiv>
-              <ProjectImage src={data.image} alt={data.name} />
+              <ColorDiv style={{ backgroundColor: data.color }}>
+                <ProjectImage src={Hero} alt={data.name} />
+              </ColorDiv>
             </ProjectImgDiv>
             <ProjectName>{data.name}</ProjectName>
             <ProjectInfo>{data.info}</ProjectInfo>

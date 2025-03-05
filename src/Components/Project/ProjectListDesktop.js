@@ -67,9 +67,10 @@ const ProjectGistDiv = styled.div`
 `;
 
 const ProjectGist = styled.p`
-  font-size: 24px;
+  font-size: 22px;
   text-align: left;
   width: 90%;
+  font-family: ${(props) => props.theme.Fonts.Inter};
 `;
 
 const ProjectImage = styled.img`

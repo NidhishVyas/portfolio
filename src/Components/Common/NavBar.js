@@ -6,7 +6,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-import Icon from "./Icon";
+// import Icon from "./Icon";
 import { ReactComponent as Logo } from "../../Images/Logo.svg";
 import Resume from "../../Data/Resume - Nidhish Vyas.pdf";
 import NavList from "../../Data/NavList.json";
@@ -52,6 +52,7 @@ const LogoName = styled(Logo)`
   height: 30px;
   width: auto;
   fill: transparent;
+  stroke: ${(props) => props.theme.Colors.PrimaryColor};
   color: ${(props) => props.theme.Colors.White};
   margin-left: 25px;
   @media ${(props) => props.theme.MediaQueries.m.query} {
@@ -136,17 +137,16 @@ const SocialsDiv = styled.div`
 const Socials = styled(motion.p)`
   font-size: 18px;
   font-family: ${(props) => props.theme.Fonts.Inter};
-
 `;
 
-const ResumeBtn = styled.a`
+const ResumeBtn = styled(motion.a)`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80%;
-  color: ${(props) => props.theme.Colors.Black};
+  color: ${(props) => props.theme.Colors.White};
   font-size: 18px;
-  border: 1px solid ${(props) => props.theme.Colors.Black};
+  border: 1px solid ${(props) => props.theme.Colors.White};
   border-radius: 15px;
   padding: 10px;
   margin: 30px auto 30px;
@@ -223,6 +223,9 @@ const NavBar = () => {
   const { scrollYProgress } = useScroll();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  const menuPath = "M3 12h18M3 6h18M3 18h18";
+  const closePath = "M6 6L18 18M6 18L18 6";
+
   const socials = [
     { name: "Discord", link: "#" },
     { name: "LinkedIn", link: "#" },
@@ -269,7 +272,22 @@ const NavBar = () => {
         <Container>
           <LogoName />
           <MenuDiv onClick={toggleNav}>
-            <Icon name="bars" color={theme.Colors.White} />
+            {/* <Icon name="bars" color={theme.Colors.White} /> */}
+            <motion.svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke={theme.Colors.White}
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <motion.path
+                animate={{ d: isSideNav ? closePath : menuPath }}
+                transition={{ duration: 1, type: "spring", stiffness: 150 }}
+              />
+            </motion.svg>
           </MenuDiv>
         </Container>
 
@@ -303,9 +321,18 @@ const NavBar = () => {
                   </Hidden>
                 ))}
               </SocialsDiv>
-              <ResumeBtn href={Resume} download="Resume - Nidhish Vyas.pdf">
-                Resume
-              </ResumeBtn>
+              <Hidden>
+                <ResumeBtn
+                  href={Resume}
+                  download="Resume - Nidhish Vyas.pdf"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3, delay: 0.7 }}
+                >
+                  Resume
+                </ResumeBtn>
+              </Hidden>
             </DropMenu>
           )}
         </AnimatePresence>
@@ -329,7 +356,7 @@ const NavBar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "600px", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.7,ease: "easeInOut" }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
           >
             <NavDiv>
               {NavList.map((item, i) => (

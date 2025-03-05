@@ -27,7 +27,8 @@ const FlexDiv = styled.div`
 
 const AboutSection = styled.div`
   @media ${(props) => props.theme.MediaQueries.m.query} {
-    max-width: 576px;
+    width: 70%;
+    /* max-width: 576px; */
   }
 `;
 
@@ -66,7 +67,8 @@ const LogoSection = styled.div`
   border-radius: 50%;
   border: 1px solid ${(props) => props.theme.Colors.White};
   @media ${(props) => props.theme.MediaQueries.l.query} {
-    width: 320px;
+    /* width: 320px; */
+    width: 30%;
   }
   display: flex;
   justify-content: center;
@@ -77,6 +79,7 @@ const LogoImg = styled(Portrait)`
   aspect-ratio: 1/1;
   width: 120px;
   fill: transparent;
+  stroke: ${(props) => props.theme.Colors.PrimaryColor};
   @media ${(props) => props.theme.MediaQueries.l.query} {
     width: 320px;
   }

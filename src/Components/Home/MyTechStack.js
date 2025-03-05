@@ -32,8 +32,8 @@ const StackCategory = styled.div`
   font-family: ${(props) => props.theme.Fonts.Quicksand};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
-    width: 30%;
-    font-size: 35px;
+    width: 20%;
+    font-size: 28px;
     margin: 0;
   }
 `;
@@ -46,7 +46,7 @@ const MyTechWrap = styled.div`
   gap: 20px;
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
-    width: 70%;
+    width: 75%;
     justify-content: flex-start;
   }
 `;
@@ -55,31 +55,45 @@ const TechStackItems = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px 25px;
-  border: 1px solid ${(props) => props.theme.Colors.White};
+  padding: 5px 15px;
+  /* border: 1px solid ${(props) => props.theme.Colors.White}; */
+  /* background-color: ${(props) => props.theme.Colors.White}; */
   border-radius: 25px;
+  /* color: ${(props) => props.theme.Colors.Black}; */
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     padding: 5px 25px;
   }
+
+  @media ${(props) => props.theme.MediaQueries.l.query} {
+    padding: 8px 25px;
+  }
 `;
 
 const TechImage = styled.img`
-  height: 30px;
+  height: 20px;
   width: auto;
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
-    height: 35px;
+    height: 25px;
+  }
+
+  &.dark {
+    filter: invert(100%);
+  }
+
+  &.bright {
+    filter: brightness(200%);
   }
 `;
 
 const Tech = styled.p`
-  font-size: 18px;
+  font-size: 14px;
   margin-left: 10px;
   font-family: ${(props) => props.theme.Fonts.Poppins};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
-    font-size: 20px;
+    font-size: 16px;
   }
 `;
 
@@ -103,6 +117,13 @@ const TechStack = () => {
                       : Java
                   }
                   alt={tech.name}
+                  className={
+                    tech?.color === "dark"
+                      ? "dark"
+                      : tech?.color === "bright"
+                      ? "bright"
+                      : ""
+                  }
                 />
                 <Tech>{tech.name}</Tech>
               </TechStackItems>

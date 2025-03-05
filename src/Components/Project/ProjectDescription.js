@@ -24,17 +24,21 @@ const LineDiv = styled.div`
 `;
 
 const ProjectName = styled.div`
+  font-family: ${(props) => props.theme.Fonts.Quicksand};
+  font-weight: 700;
   font-size: 26px;
 `;
 
 const ProjectInfo = styled.div`
   margin: 8px 0 12px;
-  font-size: 16px;
+  font-size: 14px;
+  font-family: ${(props) => props.theme.Fonts.Poppins};
 `;
 
 const Point = styled.p`
   font-size: 14px;
   margin-bottom: 8px;
+  font-family: ${(props) => props.theme.Fonts.Poppins};
 `;
 
 const TechStack = styled.div`
@@ -49,12 +53,13 @@ const TechStack = styled.div`
 const Tech = styled.p`
   font-size: 14px;
   margin-left: 8px;
+  font-family: ${(props) => props.theme.Fonts.Poppins};
 `;
 
 const FlexDiv = styled.div`
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
 `;
 
@@ -91,7 +96,7 @@ const ProjectDescription = forwardRef((_, ref) => {
 
         {projectData.points?.map((point, index) => (
           <FlexDiv key={index}>
-            <Icon name="asterisk" size="xs" />
+            <Icon name="asterisk" size="xs" style={{margin: "5px 0 0"}} />
             <Point>{point}</Point>
           </FlexDiv>
         ))}

@@ -5,7 +5,8 @@
     "image": "/Images/hero.png",
     "sourceCode": "",
     "website": "",
-    "techStack": []
+    "techStack": [],
+    "color": "#e60076"
   },
   {
     "name": "Project 2",
@@ -20,13 +21,8 @@
       "Utilized Framer Motion for smooth animations.",
       "Implemented Sentry for error tracking."
     ],
-    "techStack": [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "markdown",
-      "Sentry"
-    ]
+    "techStack": ["Next.js", "React", "TypeScript", "markdown", "Sentry"],
+    "color": "#193cb8"
   },
   {
     "name": "Project 3",
@@ -34,7 +30,8 @@
     "image": "/Images/hero.png",
     "sourceCode": "",
     "website": "",
-    "techStack": []
+    "techStack": [],
+    "color": "#00bc7d"
   },
   {
     "name": "Project 4",
@@ -42,6 +39,7 @@
     "image": "/Images/hero.png",
     "sourceCode": "",
     "website": "",
-    "techStack": []
+    "techStack": [],
+    "color": "#6e11b0"
   }
 ]

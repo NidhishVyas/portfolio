@@ -13,7 +13,7 @@
       "Increased user satisfaction and platform stability by developing innovative React Native apps and blockchain-based solutions using React Native, TypeScript, and Hyperledger Aries (Bifold), ensuring seamless application functionality ",
       "Integrated FHWA-EAR Program into Master's Project for exploration of advanced technologies "
     ],
-    "techStack": []
+    "techStack": ["Next.js", "React", "TypeScript", "markdown", "Sentry"]
   },
   {
     "id": 2,

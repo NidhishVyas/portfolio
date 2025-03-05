@@ -3,8 +3,8 @@
     "category": "Frontend",
     "stack": [
       { "name": "ReactJS", "icon": "react" },
-      { "name": "NextJS", "icon": "nextdotjs" },
-      { "name": "Angular", "icon": "angular" },
+      { "name": "NextJS", "icon": "nextdotjs", "color": "dark" },
+      { "name": "Angular", "icon": "angular", "color": "dark" },
       { "name": "Bootstrap", "icon": "bootstrap" },
       { "name": "HTML", "icon": "html5" },
       { "name": "CSS", "icon": "css" }
@@ -14,8 +14,8 @@
     "category": "Backend",
     "stack": [
       { "name": "NodeJS", "icon": "nodedotjs" },
-      { "name": "Express", "icon": "express" },
-      { "name": "Django", "icon": "django" }
+      { "name": "Express", "icon": "express", "color": "dark" },
+      { "name": "Django", "icon": "django", "color": "bright" }
     ]
   },
   {
@@ -59,7 +59,7 @@
       { "name": "Firebase", "icon": "firebase" },
       { "name": "Postman", "icon": "postman" },
       { "name": "Google Colab", "icon": "googlecolab" },
-      { "name": "AWS", "icon": "amazonwebservices" },
+      { "name": "AWS", "icon": "amazonwebservices", "color": "bright" },
       { "name": "Jupyter Notebook", "icon": "jupyter" },
       { "name": "Digital Ocean", "icon": "digitalocean" },
       { "name": "Heroku", "icon": "heroku" },
