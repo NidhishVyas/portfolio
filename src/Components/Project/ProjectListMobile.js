@@ -70,7 +70,7 @@ const ColorDiv = styled.div`
 
 const ProjectImage = styled.img`
   object-fit: cover;
-  max-width: 82.5%;
+  max-width: 85%;
   rotate: -3deg;
   transform: translateY(20px);
   border-top-right-radius: 10px;
