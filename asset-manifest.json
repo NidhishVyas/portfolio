@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.65d51c2e.js",
+    "main.js": "/portfolio/static/js/main.cde49bbc.js",
     "static/media/portrait1.png": "/portfolio/static/media/portrait1.9464b5ae6aebce1d45e4.png",
     "static/media/hero.png": "/portfolio/static/media/hero.f4b3ba4f2987a14bd424.png",
+    "static/media/heroimg.png": "/portfolio/static/media/heroimg.561707d556d52dd29b28.png",
     "static/media/Resume - Nidhish Vyas.pdf": "/portfolio/static/media/Resume - Nidhish Vyas.9e44e400ee977ced31ff.pdf",
     "static/media/java.png": "/portfolio/static/media/java.509f97f4e3fe76c25e42.png",
     "index.html": "/portfolio/index.html",
     "static/media/Logo.svg": "/portfolio/static/media/Logo.88f4375abca88eea782e53371473401e.svg",
-    "main.65d51c2e.js.map": "/portfolio/static/js/main.65d51c2e.js.map"
+    "main.cde49bbc.js.map": "/portfolio/static/js/main.cde49bbc.js.map"
   },
   "entrypoints": [
-    "static/js/main.65d51c2e.js"
+    "static/js/main.cde49bbc.js"
   ]
 }
