@@ -58,7 +58,7 @@ const Footer = () => {
           <Icon name="envelope" color={theme.Colors.White} size="2xl" />
         </SocialsIcon>
       </SocialsDiv>
-      <FooterText>Developed with ❤ by Nidhish Vyas</FooterText>
+      <FooterText>Designed and Developed with ❤ by Nidhish Vyas</FooterText>
       <Copyright>Copyright © {new Date().getFullYear()}</Copyright>
     </MainWrapper>
   );

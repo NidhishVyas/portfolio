@@ -5,7 +5,7 @@ import ProjectsData from "../../Data/ProjectsData.json";
 
 const ProjectDetails = styled.div`
   width: 35%;
-  height: 500px;
+  height: 400px;
   text-align: left;
   display: flex;
   justify-content: flex-start;
@@ -20,7 +20,6 @@ const LineDiv = styled.div`
   height: 4px;
   border-radius: 50px;
   margin: 14px 16px 16px 0;
-  background-color: ${(props) => props.theme.Colors.LightWhite};
 `;
 
 const ProjectName = styled.div`
@@ -77,7 +76,7 @@ const ProjectDescription = forwardRef((_, ref) => {
   }
   return (
     <ProjectDetails>
-      <LineDiv />
+      <LineDiv style={{backgroundColor: projectData.color}}/>
       <div>
         <FlexDiv>
           <ProjectName>{projectData.name}</ProjectName>

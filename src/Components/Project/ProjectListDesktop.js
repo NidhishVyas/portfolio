@@ -6,6 +6,8 @@ import ProjectsData from "../../Data/ProjectsData.json";
 import Icon from "../Common/Icon";
 import ProjectDescription from "./ProjectDescription";
 
+import ProjImg from "../../Images/hero.png";
+
 const MainWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -19,12 +21,20 @@ const ProjectImageList = styled.div`
   flex-direction: column;
 `;
 
+const ProjectImage = styled.img`
+  object-fit: cover;
+  height: auto;
+  max-width: 85%;
+  margin: 0 auto;
+  border-radius: 10px 10px 0 0;
+`;
+
 const ProjectImgDiv = styled(motion.div)`
   backdrop-filter: blur(8px);
   background-color: ${(props) => props.theme.Colors.LightestWhite};
   border-radius: 10px;
   border: 1px solid ${(props) => props.theme.Colors.LightWhite};
-  height: 542px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,16 +57,36 @@ const ProjectImgDiv = styled(motion.div)`
       rgba(0, 0, 0, 0) 95%
     );
   }
+
+  &:hover ${ProjectImage} {
+    rotate: -3deg;
+    transition: all 0.3s;
+  }
 `;
 
 const ProjectColor = styled.div`
-  background-color: #1e3791;
   height: calc(100% - 15px);
   width: calc(100% - 15px);
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 20%,
+      rgb(255, 255, 255) 50%,
+      rgba(0, 0, 0, 0) 80%
+    );
+  }
 `;
 
 const ProjectGistDiv = styled.div`
@@ -71,14 +101,6 @@ const ProjectGist = styled.p`
   text-align: left;
   width: 90%;
   font-family: ${(props) => props.theme.Fonts.Inter};
-`;
-
-const ProjectImage = styled.img`
-  object-fit: cover;
-  height: auto;
-  max-width: 85%;
-  margin: 0 auto;
-  border-radius: 10px 10px 0 0;
 `;
 
 const ProjectListDesktop = () => {
@@ -129,15 +151,14 @@ const ProjectListDesktop = () => {
           }}
         >
           <ProjectImgDiv>
-            <ProjectColor>
+            <ProjectColor style={{ backgroundColor: data.color }}>
               <ProjectGistDiv>
                 <ProjectGist>
-                  A online space for entrepreneurs to pitch ideas, explore
-                  others, and gain exposure with clean design.
+                  {data.gist}
                 </ProjectGist>
                 <Icon name="arrow-right" />
               </ProjectGistDiv>
-              <ProjectImage src={data.image} alt={data.name} />
+              <ProjectImage src={ProjImg} alt={data.name} />
             </ProjectColor>
           </ProjectImgDiv>
         </motion.div>

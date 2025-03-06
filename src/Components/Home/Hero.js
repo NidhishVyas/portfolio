@@ -225,7 +225,7 @@ const Name = styled.h1`
   font-family: ${(props) => props.theme.Fonts.Cinzel};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
-    font-size: 60px;
+    font-size: 55px;
   }
 `;
 

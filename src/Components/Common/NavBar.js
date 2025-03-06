@@ -162,7 +162,6 @@ const TabMainDiv = styled(motion.div)`
   background-color: ${(props) => props.theme.Colors.LightestWhite};
   justify-content: space-between;
   align-items: center;
-  transition: all 0.3s ease-in-out;
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     display: flex;
@@ -179,7 +178,7 @@ const TabMainDiv = styled(motion.div)`
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
-    transition: all 0.7s linear;
+    transition: all 0.5s linear;
   }
 `;
 
