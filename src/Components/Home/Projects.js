@@ -15,7 +15,9 @@ const MainWrapper = styled.div`
 `;
 
 const Projects = () => {
-  const [isDesktop, setisDesktop] = useState(true);
+  const [isDesktop, setisDesktop] = useState(
+    window.innerWidth > 1023 ? true : false
+  );
 
   useEffect(() => {
     window.onresize = (e) => {

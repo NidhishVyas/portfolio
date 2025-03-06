@@ -15,6 +15,10 @@ const MainWrapper = styled.div`
   color: ${(props) => props.theme.Colors.White};
   max-width: 1000px;
 
+  @media ${(props) => props.theme.MediaQueries.m.query} {
+    padding: 54px 40px 0;
+  }
+  
   @media ${(props) => props.theme.MediaQueries.l.query} {
     margin: 80px auto 0;
   }

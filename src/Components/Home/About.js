@@ -8,6 +8,10 @@ const MainWrapper = styled.div`
   text-align: center;
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
+    margin-top: 0;
+  }
+
+  @media ${(props) => props.theme.MediaQueries.l.query} {
     text-align: left;
     margin-top: 80px;
   }
@@ -62,27 +66,25 @@ const AboutMe = styled.p`
 
 const LogoSection = styled.div`
   aspect-ratio: 1/1;
-  width: 220px;
+  /* width: 220px; */
   object-fit: cover;
   border-radius: 50%;
+  width: 220px;
   border: 1px solid ${(props) => props.theme.Colors.White};
-  @media ${(props) => props.theme.MediaQueries.l.query} {
-    /* width: 320px; */
-    width: 30%;
-  }
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media ${(props) => props.theme.MediaQueries.m.query} {
+    width: 30%;
+  }
 `;
 
 const LogoImg = styled(Portrait)`
   aspect-ratio: 1/1;
-  width: 120px;
   fill: transparent;
   stroke: ${(props) => props.theme.Colors.PrimaryColor};
-  @media ${(props) => props.theme.MediaQueries.l.query} {
-    width: 320px;
-  }
+  width: 320px;
 `;
 
 const About = () => {
@@ -90,14 +92,11 @@ const About = () => {
     <MainWrapper>
       <FlexDiv>
         <AboutSection>
-        {/* <SectionHeading
+          {/* <SectionHeading
             heading="Full-Stack Developer and a little bit of everything"
             subHeading="About me"
           /> */}
-          <SectionHeading
-            heading="SELF PORTRAIT"
-            subHeading="About me"
-          /> 
+          <SectionHeading heading="SELF PORTRAIT" subHeading="About me" />
           <AboutMe>
             I'm Nidhish Vyas, a proactive full-stack developer passionate about
             creating dynamic web experiences. From frontend to backend, I thrive
@@ -121,7 +120,6 @@ const About = () => {
 };
 
 export default About;
-
 
 // Potential headings:
 // "MY STORY"

@@ -11,19 +11,20 @@ const FlexDiv = styled.div`
   display: flex;
   justify-content: ${(props) =>
     props.nospace ? "flex-start" : "space-between"};
-  align-items: ${(props) => (props.flexstart ? "flex-start" : "center")};
+  align-items: flex-start;
   text-align: left;
   margin-bottom: 12px;
+  flex-direction: ${(props) => (props.colrev ? "column-reverse" : "column")};
+
+  @media ${(props) => props.theme.MediaQueries.m.query} {
+    flex-direction: row;
+  }
 `;
 
 const Heading = styled.div`
   font-size: 18px;
-  max-width: 200px;
   font-family: ${(props) => props.theme.Fonts.Poppins};
-
-  @media ${(props) => props.theme.MediaQueries.m.query} {
-    max-width: 100%;
-  }
+  font-weight: 700;
 `;
 
 const SubHeading = styled.div`
@@ -35,6 +36,7 @@ const DateDivMob = styled.div`
   display: block;
   font-family: ${(props) => props.theme.Fonts.Poppins};
   font-size: 16px;
+  color: ${(props) => props.theme.Colors.LightWhite};
   @media ${(props) => props.theme.MediaQueries.m.query} {
     display: none;
   }
@@ -44,6 +46,7 @@ const DateDivTab = styled.div`
   display: none;
   font-family: ${(props) => props.theme.Fonts.Poppins};
   font-size: 16px;
+  color: ${(props) => props.theme.Colors.LightWhite};
   @media ${(props) => props.theme.MediaQueries.m.query} {
     display: block;
   }
@@ -59,6 +62,8 @@ const CourseworkDiv = styled.p`
   font-family: ${(props) => props.theme.Fonts.Inter};
   font-size: 14px;
   text-align: left;
+  color: ${(props) => props.theme.Colors.LightWhite};
+
 `;
 
 const TechStackDiv = styled.div`
@@ -96,18 +101,20 @@ const Experience = ({ data }) => {
 
   return (
     <MainDiv>
-      <FlexDiv flexstart="true">
+      <FlexDiv colrev="true">
         <Heading>{data?.university || data?.company}</Heading>
-        <Heading>{data?.location}</Heading>
+        <DateDivMob>
+          {data?.startDate ? `${formatDate(data?.startDate).shortDate} -` : ""}{" "}
+          {formatDate(data?.endDate).shortDate}
+        </DateDivMob>
+        <DateDivTab>
+          {data?.startDate ? `${formatDate(data?.startDate).fullDate} -` : ""}{" "}
+          {formatDate(data?.endDate).fullDate}
+        </DateDivTab>
       </FlexDiv>
       <FlexDiv>
         <SubHeading>{data?.degree || data?.title}</SubHeading>
-        <DateDivMob>
-          {data?.startDate ? `${formatDate(data?.startDate).shortDate} -` : ""} {formatDate(data?.endDate).shortDate}
-        </DateDivMob>
-        <DateDivTab>
-          {data?.startDate ? `${formatDate(data?.startDate).fullDate} -` : ""} {formatDate(data?.endDate).fullDate}
-        </DateDivTab>
+        {/* <Heading>{data?.location}</Heading> */}
       </FlexDiv>
       {/* {data.description?.map((point, index) => (
         <FlexDiv key={index} flexstart="true" nospace="true">

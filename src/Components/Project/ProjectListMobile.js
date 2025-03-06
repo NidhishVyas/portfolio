@@ -9,6 +9,11 @@ import Hero from "../../Images/hero.png";
 const ProjectDiv = styled(motion.div)`
   margin-bottom: 80px;
   text-align: left;
+
+  @media ${(props) => props.theme.MediaQueries.m.query} {
+    max-width: 90%;
+    margin: 0 auto 80px;
+  }
 `;
 
 const ProjectImgDiv = styled.div`
@@ -77,6 +82,11 @@ const ProjectImage = styled.img`
   border-top-left-radius: 10px;
   /* padding: 10px; */
   box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 1);
+
+  @media ${(props) => props.theme.MediaQueries.m.query} {
+    max-width: 90%;
+    transform: translateY(30px);
+  }
 `;
 
 const ProjectName = styled.p`

@@ -192,6 +192,7 @@ const TabMenuDiv = styled.div`
 const MenuBtn = styled.button`
   border: 1px solid ${(props) => props.theme.Colors.Black};
   background-color: ${(props) => props.theme.Colors.White};
+  color: ${(props) => props.theme.Colors.Black};
   padding: 10px 25px;
   border-radius: 10px;
   font-size: 18px;
