@@ -13,7 +13,7 @@ const MainWrapper = styled.div`
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
     text-align: left;
-    margin-top: 80px;
+    margin: 120px auto;
   }
 `;
 
@@ -58,6 +58,8 @@ const AboutSection = styled.div`
 const AboutMe = styled.p`
   color: ${(props) => props.theme.Colors.LightWhite};
   font-family: ${(props) => props.theme.Fonts.Poppins};
+  font-size: 14px;
+  /* text-align: justify; */
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     font-size: 18px;
@@ -69,7 +71,7 @@ const LogoSection = styled.div`
   /* width: 220px; */
   object-fit: cover;
   border-radius: 50%;
-  width: 220px;
+  width: 200px;
   border: 1px solid ${(props) => props.theme.Colors.White};
   display: flex;
   justify-content: center;
@@ -96,7 +98,7 @@ const About = () => {
             heading="Full-Stack Developer and a little bit of everything"
             subHeading="About me"
           /> */}
-          <SectionHeading heading="SELF PORTRAIT" subHeading="About me" about/>
+          <SectionHeading heading="SELF PORTRAIT" subHeading="About me" about />
           <AboutMe>
             I'm Nidhish Vyas, a proactive full-stack developer passionate about
             creating dynamic web experiences. From frontend to backend, I thrive

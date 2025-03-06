@@ -7,9 +7,9 @@ const MainWrapper = styled.div`
   margin-top: 90px;
   text-align: center;
 
-  @media ${(props) => props.theme.MediaQueries.l.query} {
+  @media ${(props) => props.theme.MediaQueries.m.query} {
     /* text-align: left; */
-    margin-top: 80px;
+    margin: 120px auto;
   }
 `;
 

@@ -32,6 +32,9 @@ const Fonts = {
   Inter: `'Inter', sans-serif;`,
   Cabin : `'Cabin', sans-serif;`,
   Cinzel : `'Cinzel', sans-serif;`,
+  Nats : `'Nats', sans-serif;`,
+  Fruitos : `'Fruitos', sans-serif;`,
+  Jost : `'Jost', sans-serif;`,
 };
 
 export const LightTheme = {
@@ -57,7 +60,7 @@ export const LightTheme = {
 
 export const DarkTheme = {
   Colors: {
-    PrimaryColor: "#1a1a1a",
+    PrimaryColor: "#0a0a0a",
     SecondaryColor: "#2a2c39",
     BackgroundColor: "#1A1A1A",
     TextColor: "#E0E0E0",
@@ -71,6 +74,7 @@ export const DarkTheme = {
     LightBlack: "#00000040",
     White: "#FFFFFF",
     Black: "#000000",
+    TechBg: "#171717",
   },
   MediaQueries: MediaQueries,
   Fonts: Fonts,

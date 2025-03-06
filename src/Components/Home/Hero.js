@@ -10,7 +10,7 @@ const MainWrapper = styled.div`
   /* background-image: url(${HeroImg}); */
   background-position: center;
   background-size: cover;
-  height: calc(100vh - 54px);
+  /* height: calc(100vh - 54px); */
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
     height: auto;
@@ -41,7 +41,7 @@ const HeroImageDiv = styled.div`
   position: absolute;
   left: calc(50% - 22px);
   transform: translateX(-50%);
-  top: 50px;
+  top: 80px;
   width: 240px;
   height: auto;
   overflow-y: clip;
@@ -193,11 +193,11 @@ const SocialsIcon = styled.button`
 `;
 
 const GreetingsDiv = styled.div`
-  padding-top: 350px;
+  padding-top: 380px;
   width: 100%;
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
-    padding-top: 560px;
+    padding-top: 590px;
   }
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
@@ -209,10 +209,10 @@ const GreetingsDiv = styled.div`
 `;
 
 const TitleText = styled.h3`
-  font-size: 32px;
+  font-size: 24px;
   margin-top: 30px;
   font-weight: 400;
-  font-family: ${(props) => props.theme.Fonts.Poppins};
+  font-family: ${(props) => props.theme.Fonts.Jost};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     font-size: 36px;
@@ -221,8 +221,8 @@ const TitleText = styled.h3`
 
 const Name = styled.h1`
   font-size: 45px;
-  font-weight: 700;
-  font-family: ${(props) => props.theme.Fonts.Cinzel};
+  font-weight: 400;
+  font-family: ${(props) => props.theme.Fonts.Fruitos};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     font-size: 55px;
@@ -230,8 +230,8 @@ const Name = styled.h1`
 `;
 
 const SubTitleText = styled.p`
-  margin: 15px 0 20px;
-  font-family: ${(props) => props.theme.Fonts.Inter};
+  margin: 20px 0;
+  font-family: ${(props) => props.theme.Fonts.Jost};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     margin: 15px 0 25px;
@@ -249,7 +249,7 @@ const ResumeDownload = styled.a`
   justify-content: flex-start;
   align-items: center;
   border: 1px solid ${(props) => props.theme.Colors.LightWhite};
-  padding: 20px 30px;
+  padding: 15px 25px;
   width: fit-content;
   border-radius: 50px;
   font-family: ${(props) => props.theme.Fonts.Poppins};
@@ -263,7 +263,7 @@ const ResumeDownload = styled.a`
 const DownloadText = styled.p`
   color: ${(props) => props.theme.Colors.White};
   margin-right: 10px;
-  font-size: 16px;
+  font-size: 14px;
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     font-size: 22px;
@@ -309,11 +309,11 @@ const Hero = () => {
           <TitleText>Hello! I'm</TitleText>
           <Name>Nidhish Vyas</Name>
           <SubTitleText>
-            Your friendly neighborhood Full-Stack Developer
+          Code by day, data by night! I'm a Full-Stack Developer who transforms ideas into dynamic web apps and raw data into powerful insights.
           </SubTitleText>
           <ResumeDownload href={Resume} download="Resume - Nidhish Vyas.pdf">
             <DownloadText>Get Resume</DownloadText>
-            <Icon name="download" color={theme.Colors.White} size="l" />
+            <Icon name="download" color={theme.Colors.White} size="sm" />
           </ResumeDownload>
         </GreetingsDiv>
       </MainWrapper>

@@ -1,0 +1,13 @@
+    @font-face {
+    font-family: 'Nats';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Nats'), url('NATS-Regular.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'Fruitos';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Fruitos'), url('FruitosSInline.woff') format('woff');
+        }

@@ -9,9 +9,9 @@ const MainWrapper = styled.div`
   text-align: center;
   /* color: ${(props) => props.theme.Colors.Black}; */
 
-  @media ${(props) => props.theme.MediaQueries.l.query} {
+  @media ${(props) => props.theme.MediaQueries.m.query} {
     /* text-align: left; */
-    margin-top: 80px;
+    margin: 120px auto;
   }
 `;
 
@@ -27,7 +27,7 @@ const StackDiv = styled.div`
 `;
 
 const StackCategory = styled.div`
-  font-size: 25px;
+  font-size: 22px;
   margin: 0 0 25px;
   font-family: ${(props) => props.theme.Fonts.Quicksand};
 
@@ -56,9 +56,9 @@ const TechStackItems = styled.div`
   justify-content: center;
   align-items: center;
   padding: 5px 15px;
-  /* border: 1px solid ${(props) => props.theme.Colors.White}; */
-  /* background-color: ${(props) => props.theme.Colors.White}; */
-  border-radius: 25px;
+  border: 1px solid ${(props) => props.theme.Colors.LightestWhite};
+  background-color: ${(props) => props.theme.Colors.TechBg};
+  border-radius: 15px;
   /* color: ${(props) => props.theme.Colors.Black}; */
 
   @media ${(props) => props.theme.MediaQueries.m.query} {

@@ -45,7 +45,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 54px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
 `;
 
 const LogoName = styled(Logo)`
@@ -67,7 +67,7 @@ const MenuDiv = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  /* border-left: 1px solid rgba(0, 0, 0, 0.2); */
 `;
 
 const DropMenu = styled(motion.div)`
@@ -321,7 +321,7 @@ const NavBar = () => {
                   </Hidden>
                 ))}
               </SocialsDiv>
-              <Hidden>
+              {/* <Hidden>
                 <ResumeBtn
                   href={Resume}
                   download="Resume - Nidhish Vyas.pdf"
@@ -332,7 +332,7 @@ const NavBar = () => {
                 >
                   Resume
                 </ResumeBtn>
-              </Hidden>
+              </Hidden> */}
             </DropMenu>
           )}
         </AnimatePresence>

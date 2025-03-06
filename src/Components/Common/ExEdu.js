@@ -29,13 +29,13 @@ const Heading = styled.div`
 
 const SubHeading = styled.div`
   font-family: ${(props) => props.theme.Fonts.Poppins};
-  font-size: 16px;
+  font-size: 14px;
 `;
 
 const DateDivMob = styled.div`
   display: block;
   font-family: ${(props) => props.theme.Fonts.Poppins};
-  font-size: 16px;
+  font-size: 14px;
   color: ${(props) => props.theme.Colors.LightWhite};
   @media ${(props) => props.theme.MediaQueries.m.query} {
     display: none;
@@ -45,7 +45,7 @@ const DateDivMob = styled.div`
 const DateDivTab = styled.div`
   display: none;
   font-family: ${(props) => props.theme.Fonts.Poppins};
-  font-size: 16px;
+  font-size: 14px;
   color: ${(props) => props.theme.Colors.LightWhite};
   @media ${(props) => props.theme.MediaQueries.m.query} {
     display: block;

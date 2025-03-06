@@ -90,7 +90,7 @@ const ProjectImage = styled.img`
 `;
 
 const ProjectName = styled.p`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   margin: 25px 0 15px;
   font-family: ${(props) => props.theme.Fonts.Quicksand};
@@ -99,6 +99,7 @@ const ProjectName = styled.p`
 const ProjectInfo = styled.p`
   color: ${(props) => props.theme.Colors.LightWhite};
   font-family: ${(props) => props.theme.Fonts.Poppins};
+  font-size: 14px;
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     font-size: 18px;
@@ -131,7 +132,7 @@ const Button = styled.a`
 `;
 
 const ButtonName = styled.p`
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 10px;
 `;
 const ProjectListMobile = () => {
@@ -163,7 +164,7 @@ const ProjectListMobile = () => {
             </ProjectImgDiv>
             <ProjectName>{data.name}</ProjectName>
             <ProjectInfo>{data.info}</ProjectInfo>
-            <TechStack data={data.techStack} />
+            <TechStack data={data.techStack} color={data.color} />
             <ButtonDiv>
               {!data.sourceCode && (
                 <Button
