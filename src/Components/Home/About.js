@@ -96,7 +96,7 @@ const About = () => {
             heading="Full-Stack Developer and a little bit of everything"
             subHeading="About me"
           /> */}
-          <SectionHeading heading="SELF PORTRAIT" subHeading="About me" />
+          <SectionHeading heading="SELF PORTRAIT" subHeading="About me" about/>
           <AboutMe>
             I'm Nidhish Vyas, a proactive full-stack developer passionate about
             creating dynamic web experiences. From frontend to backend, I thrive

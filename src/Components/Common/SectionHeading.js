@@ -4,6 +4,12 @@ import styled from "styled-components";
 const OverlappingContainer = styled.div`
   margin: 15px 0 40px;
   position: relative;
+
+  &.about-me {
+    @media ${(props) => props.theme.MediaQueries.l.query} {
+      width: fit-content;
+    }
+  }
 `;
 
 const SubHeading = styled.p`
@@ -40,9 +46,9 @@ const MainHeading = styled.div`
   }
 `;
 
-const SectionHeading = ({ subHeading, heading }) => {
+const SectionHeading = ({ subHeading, heading, about }) => {
   return (
-    <OverlappingContainer>
+    <OverlappingContainer className={about? "about-me" : ""}>
       <SubHeading>{subHeading}</SubHeading>
       <MainHeading>{heading}</MainHeading>
     </OverlappingContainer>
