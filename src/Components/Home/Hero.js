@@ -3,11 +3,17 @@ import styled, { useTheme } from "styled-components";
 import Portrait from "../../Images/portrait1.png";
 import Icon from "../Common/Icon";
 import Resume from "../../Data/Resume - Nidhish Vyas.pdf";
+import HeroImg from "../../Images/heroimg.png";
 
 const MainWrapper = styled.div`
   position: relative;
+  /* background-image: url(${HeroImg}); */
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - 54px);
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +23,19 @@ const MainWrapper = styled.div`
     margin: 0 auto;
   }
 `;
+
+// const HeroImgDiv = styled.div`
+//   background-image: url(${HeroImg});
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   height: 100vh;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   z-index: -1;
+// `;
 
 const HeroImageDiv = styled.div`
   position: absolute;
@@ -201,9 +220,9 @@ const TitleText = styled.h3`
 `;
 
 const Name = styled.h1`
-  font-size: 52px;
+  font-size: 45px;
   font-weight: 700;
-  font-family: ${(props) => props.theme.Fonts.Quicksand};
+  font-family: ${(props) => props.theme.Fonts.Cinzel};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     font-size: 60px;
@@ -256,44 +275,49 @@ const Hero = () => {
   // const socialIcons = ["linkedin-in", "github", "instagram", "envelope"];
 
   return (
-    <MainWrapper>
-      <HeroImageDiv>
-        <HeroImage src={Portrait} />
-        <SemiCircle />
-        <OtherSemiCircle inner="true" />
-        <OtherSemiCircle />
-        <SocialsDiv>
-          <SocialsIcon>
-            <Icon name="linkedin" color={theme.Colors.White} size="xl" />
-          </SocialsIcon>
-          <SocialsIcon>
-            <Icon name="github" color={theme.Colors.White} size="xl" />
-          </SocialsIcon>
-          <SocialsIcon>
-            <Icon name="instagram" color={theme.Colors.White} size="xl" />
-          </SocialsIcon>
-          <SocialsIcon>
-            <Icon name="envelope" color={theme.Colors.White} size="xl" />
-          </SocialsIcon>
-        </SocialsDiv>
-        {/* <SocialsDiv>
+    <>
+      {/* <HeroImgDiv /> */}
+      <MainWrapper>
+        <HeroImageDiv>
+          <HeroImage src={Portrait} />
+          <SemiCircle />
+          <OtherSemiCircle inner="true" />
+          <OtherSemiCircle />
+          <SocialsDiv>
+            <SocialsIcon>
+              <Icon name="linkedin" color={theme.Colors.White} size="xl" />
+            </SocialsIcon>
+            <SocialsIcon>
+              <Icon name="github" color={theme.Colors.White} size="xl" />
+            </SocialsIcon>
+            <SocialsIcon>
+              <Icon name="instagram" color={theme.Colors.White} size="xl" />
+            </SocialsIcon>
+            <SocialsIcon>
+              <Icon name="envelope" color={theme.Colors.White} size="xl" />
+            </SocialsIcon>
+          </SocialsDiv>
+          {/* <SocialsDiv>
           {socialIcons.map((icon, index) => (
             <SocialsIcon key={icon} index={index + 1}>
               <Icon name={icon} color={theme.Colors.White} size="xl" />
             </SocialsIcon>
           ))}
         </SocialsDiv> */}
-      </HeroImageDiv>
-      <GreetingsDiv>
-        <TitleText>Hello! I'm</TitleText>
-        <Name>Nidhish Vyas</Name>
-        <SubTitleText>Your friendly neighborhood Full-Stack Developer</SubTitleText>
-        <ResumeDownload href={Resume} download="Resume - Nidhish Vyas.pdf">
-          <DownloadText>Get Resume</DownloadText>
-          <Icon name="download" color={theme.Colors.White} size="l" />
-        </ResumeDownload>
-      </GreetingsDiv>
-    </MainWrapper>
+        </HeroImageDiv>
+        <GreetingsDiv>
+          <TitleText>Hello! I'm</TitleText>
+          <Name>Nidhish Vyas</Name>
+          <SubTitleText>
+            Your friendly neighborhood Full-Stack Developer
+          </SubTitleText>
+          <ResumeDownload href={Resume} download="Resume - Nidhish Vyas.pdf">
+            <DownloadText>Get Resume</DownloadText>
+            <Icon name="download" color={theme.Colors.White} size="l" />
+          </ResumeDownload>
+        </GreetingsDiv>
+      </MainWrapper>
+    </>
   );
 };
 

@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Icon from "../Common/Icon";
+import SectionHeading from "../Common/SectionHeading";
 
 const MainWrapper = styled.div`
-  margin-top: 60px;
+  margin-top: 90px;
   text-align: center;
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
@@ -12,11 +13,11 @@ const MainWrapper = styled.div`
   }
 `;
 
-const Heading = styled.h1`
-  font-size: 32px;
-  font-family: ${(props) => props.theme.Fonts.Quicksand};
-  font-weight: 700;
-`;
+// const Heading = styled.h1`
+//   font-size: 32px;
+//   font-family: ${(props) => props.theme.Fonts.Quicksand};
+//   font-weight: 700;
+// `;
 
 const ConnectText = styled.p`
   font-size: 18px;
@@ -38,18 +39,19 @@ const ConnectMeBtn = styled.button`
 `;
 
 const ContactMeText = styled.p`
-font-size: 16px;
+  font-size: 16px;
 `;
 
 const ContactMe = () => {
   return (
     <MainWrapper>
-      <Heading>Lets's Connect</Heading>
+      <SectionHeading heading="BUILD TOGETHER" subHeading="Let's connect" />
+      {/* <Heading>Lets's Connect</Heading> */}
       <ConnectText>
         Have a project in mind? Let's work together to bring your ideas to life!
       </ConnectText>
       <ConnectMeBtn>
-        <Icon name="linkedin" size="2xl"  />
+        <Icon name="linkedin" size="2xl" />
         <ContactMeText>Contact Me</ContactMeText>
         <Icon name="arrow-right" size="2xl" />
       </ConnectMeBtn>
@@ -58,3 +60,15 @@ const ContactMe = () => {
 };
 
 export default ContactMe;
+
+// potential headings
+// "STAY IN TOUCH"
+// "GET IN TOUCH"
+// "CONNECT WITH ME"
+// "LET’S TALK"
+// "REACH OUT"
+// "CONTACT ME"
+// "NETWORK & COLLABORATE"
+// "LET’S CHAT"
+// "BUILD TOGETHER"
+// "JOIN THE CONVERSATION"

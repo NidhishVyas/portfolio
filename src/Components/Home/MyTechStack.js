@@ -5,7 +5,7 @@ import Java from "../../Images/java.png";
 import SectionHeading from "../Common/SectionHeading";
 
 const MainWrapper = styled.div`
-  margin-top: 60px;
+  margin-top: 90px;
   text-align: center;
   /* color: ${(props) => props.theme.Colors.Black}; */
 
@@ -100,10 +100,11 @@ const Tech = styled.p`
 const TechStack = () => {
   return (
     <MainWrapper>
-      <SectionHeading
+      {/* <SectionHeading
         subHeading="I constantly try to improve"
         heading="My Tech Stack"
-      />
+      /> */}
+      <SectionHeading heading="STACK & SKILLS" subHeading="My Tech Stack" />
       {TechStackData.map((item, i) => (
         <StackDiv key={i}>
           <StackCategory>{item.category}</StackCategory>
@@ -136,3 +137,15 @@ const TechStack = () => {
 };
 
 export default TechStack;
+
+// Potential headings:
+// "TOOLS & TECHNOLOGIES"
+// "DEVELOPMENT KIT"
+// "TECHNOLOGY STACK"
+// "FRAMEWORKS & TOOLS"
+// "MY TOOLBOX"
+// "SOFTWARE EXPERTISE"
+// "STACK & SKILLS"
+// "TECHNOLOGY ARSENAL"
+// "CODING ECOSYSTEM"
+// "PLATFORMS & LANGUAGES"

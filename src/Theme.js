@@ -31,6 +31,7 @@ const Fonts = {
   Poppins: `'Poppins', sans-serif;`,
   Inter: `'Inter', sans-serif;`,
   Cabin : `'Cabin', sans-serif;`,
+  Cinzel : `'Cinzel', sans-serif;`,
 };
 
 export const LightTheme = {
@@ -46,6 +47,7 @@ export const LightTheme = {
     LightWhite: "#ffffff40",
     LightestWhite: "#ffffff1a",
     LightestBlack: "#0000001a",
+    LightBlack: "#00000040",
     White: "#FFFFFF",
     Black: "#000000",
   },
@@ -66,6 +68,7 @@ export const DarkTheme = {
     LightWhite: "#ffffff40",
     LightestWhite: "#ffffff1a",
     LightestBlack: "#0000001a",
+    LightBlack: "#00000040",
     White: "#FFFFFF",
     Black: "#000000",
   },

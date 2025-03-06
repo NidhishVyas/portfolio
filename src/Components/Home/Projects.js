@@ -5,7 +5,7 @@ import ProjectListMobile from "../Project/ProjectListMobile";
 import SectionHeading from "../Common/SectionHeading";
 
 const MainWrapper = styled.div`
-  margin-top: 60px;
+  margin-top: 90px;
   text-align: center;
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
@@ -26,10 +26,23 @@ const Projects = () => {
 
   return (
     <MainWrapper>
-      <SectionHeading heading="Curated Works" subHeading="Projects" />
+      <SectionHeading heading="SELECTED WORKS" subHeading="Projects" />
+      {/* <SectionHeading heading="Curated Works" subHeading="Projects" /> */}
       {isDesktop ? <ProjectListDesktop /> : <ProjectListMobile />}
     </MainWrapper>
   );
 };
 
 export default Projects;
+
+// Potential headings:
+// "CREATIVE WORKS"
+// "FEATURED PORTFOLIO"
+// "SHOWCASE"
+// "DESIGN COLLECTION"
+// "SELECTED WORKS"
+// "MY CREATIONS"
+// "INNOVATIVE IDEAS"
+// "WORK IN ACTION"
+// "CASE STUDIES"
+// "PORTFOLIO HIGHLIGHTS"

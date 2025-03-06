@@ -4,7 +4,7 @@ import { ReactComponent as Portrait } from "../../Images/Logo.svg";
 import SectionHeading from "../Common/SectionHeading";
 
 const MainWrapper = styled.div`
-  margin-top: 60px;
+  margin-top: 90px;
   text-align: center;
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
@@ -90,10 +90,14 @@ const About = () => {
     <MainWrapper>
       <FlexDiv>
         <AboutSection>
-          <SectionHeading
+        {/* <SectionHeading
             heading="Full-Stack Developer and a little bit of everything"
             subHeading="About me"
-          />
+          /> */}
+          <SectionHeading
+            heading="SELF PORTRAIT"
+            subHeading="About me"
+          /> 
           <AboutMe>
             I'm Nidhish Vyas, a proactive full-stack developer passionate about
             creating dynamic web experiences. From frontend to backend, I thrive
@@ -117,3 +121,16 @@ const About = () => {
 };
 
 export default About;
+
+
+// Potential headings:
+// "MY STORY"
+// "BIOGRAPHY"
+// "WHO I AM"
+// "PERSONAL JOURNEY"
+// "INSIDE LOOK"
+// "SELF PORTRAIT"
+// "MEET THE CREATOR"
+// "BEHIND THE SCENES"
+// "A GLIMPSE INTO ME"
+// "THE JOURNEY SO FAR"

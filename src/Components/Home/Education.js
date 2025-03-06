@@ -5,7 +5,7 @@ import EducationData from "../../Data/Education";
 import SectionHeading from "../Common/SectionHeading";
 
 const MainWrapper = styled.div`
-  margin-top: 60px;
+  margin-top: 90px;
   text-align: center;
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
@@ -17,7 +17,8 @@ const MainWrapper = styled.div`
 const Education = () => {
   return (
     <MainWrapper>
-      <SectionHeading heading="Education" subHeading="Education" />
+      <SectionHeading heading="LEARNING PATH" subHeading="Education" />
+      {/* <SectionHeading heading="Education" subHeading="Education" /> */}
       {EducationData.map((item, i) => (
         <ExEdu data={item} key={i} />
       ))}
@@ -26,3 +27,15 @@ const Education = () => {
 };
 
 export default Education;
+
+// potential headings:
+// "ACADEMIC JOURNEY"
+// "LEARNING PATH"
+// "KNOWLEDGE BASE"
+// "STUDIES & EXPERIENCE"
+// "EDUCATIONAL BACKGROUND"
+// "SCHOLASTIC HISTORY"
+// "MY ACADEMICS"
+// "FORMAL LEARNING"
+// "INTELLECTUAL GROWTH"
+// "QUALIFICATIONS"

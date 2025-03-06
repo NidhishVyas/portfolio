@@ -106,7 +106,7 @@ const Experience = ({ data }) => {
           {data?.startDate ? `${formatDate(data?.startDate).shortDate} -` : ""} {formatDate(data?.endDate).shortDate}
         </DateDivMob>
         <DateDivTab>
-          {data?.startDate ? `${formatDate(data?.startDate).shortDate} -` : ""} {formatDate(data?.endDate).shortDate}
+          {data?.startDate ? `${formatDate(data?.startDate).fullDate} -` : ""} {formatDate(data?.endDate).fullDate}
         </DateDivTab>
       </FlexDiv>
       {/* {data.description?.map((point, index) => (

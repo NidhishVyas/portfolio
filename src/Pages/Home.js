@@ -8,6 +8,8 @@ import Experience from "../Components/Home/Experience";
 import TechStack from "../Components/Home/MyTechStack";
 import ContactMe from "../Components/Home/ContactMe";
 
+// import HeroImg from "../Images/heroimg.png";
+
 const MainWrapper = styled.div`
   padding: 54px 20px 0;
   color: ${(props) => props.theme.Colors.White};

@@ -3,7 +3,7 @@ import styled, { useTheme } from "styled-components";
 import Icon from "./Icon";
 
 const MainWrapper = styled.div`
-  background: ${(props) => props.theme.Colors.PrimaryColor};
+  background: ${(props) => props.theme.Colors.LightBlack};
   padding: 20px 0;
   color: ${(props) => props.theme.Colors.White};
   text-align: center;

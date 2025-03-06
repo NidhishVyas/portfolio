@@ -7,7 +7,7 @@ import TechStack from "../Common/TechStack";
 import Hero from "../../Images/hero.png";
 
 const ProjectDiv = styled(motion.div)`
-  margin-bottom: 120px;
+  margin-bottom: 80px;
   text-align: left;
 `;
 
