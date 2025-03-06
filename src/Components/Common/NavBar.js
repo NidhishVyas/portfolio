@@ -342,7 +342,7 @@ const NavBar = () => {
           isscrolled={isScrolled}
           // transition={{ duration: 0.7, ease: "easeInOut" }}
         >
-          <LogoName src={Logo} alt="Logo" />
+          <LogoName />
           <TabMenuDiv>
             <MenuBtn>Resume</MenuBtn>
             <MenuBtn onClick={toggleNav}>Menu</MenuBtn>
