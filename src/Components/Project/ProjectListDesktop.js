@@ -140,7 +140,7 @@ const ProjectListDesktop = () => {
           ref={ref}
           initial="hidden"
           whileInView="visible"
-          viewport={{ amount: 0.3, once: false }}
+          viewport={{ amount: 0.5, once: false }}
           variants={{
             hidden: { opacity: 0, scale: 0.8 },
             visible: {
