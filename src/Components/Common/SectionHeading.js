@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
-const OverlappingContainer = styled.div`
+const OverlappingContainer = styled(motion.div)`
   margin: 15px 0 40px;
   position: relative;
 

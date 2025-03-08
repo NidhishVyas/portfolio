@@ -13,7 +13,7 @@ const FlexDiv = styled.div`
     props.nospace ? "flex-start" : "space-between"};
   align-items: flex-start;
   text-align: left;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
   flex-direction: ${(props) => (props.colrev ? "column-reverse" : "column")};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
@@ -30,6 +30,7 @@ const Heading = styled.div`
 const SubHeading = styled.div`
   font-family: ${(props) => props.theme.Fonts.Poppins};
   font-size: 14px;
+  margin: 2px 0 7px;
 `;
 
 const DateDivMob = styled.div`

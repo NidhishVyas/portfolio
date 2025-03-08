@@ -10,6 +10,7 @@ import {
 import { ReactComponent as Logo } from "../../Images/Logo.svg";
 import Resume from "../../Data/Resume - Nidhish Vyas.pdf";
 import NavList from "../../Data/NavList.json";
+import Hidden from "./Hidden";
 
 const MainWrapper = styled.div`
   position: fixed;
@@ -119,9 +120,9 @@ const NavItem = styled(motion.p)`
   }
 `;
 
-const Hidden = styled.div`
-  overflow: hidden;
-`;
+// const Hidden = styled.div`
+//   overflow: hidden;
+// `;
 
 const SocialsDiv = styled.div`
   display: flex;

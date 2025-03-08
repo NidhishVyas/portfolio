@@ -77,7 +77,7 @@ const ProjectImage = styled.img`
   object-fit: cover;
   max-width: 85%;
   rotate: -3deg;
-  transform: translateY(20px);
+  transform: translateY(30px);
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   /* padding: 10px; */
@@ -85,7 +85,6 @@ const ProjectImage = styled.img`
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     max-width: 90%;
-    transform: translateY(30px);
   }
 `;
 

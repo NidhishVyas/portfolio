@@ -7,6 +7,7 @@ import Education from "../Components/Home/Education";
 import Experience from "../Components/Home/Experience";
 import TechStack from "../Components/Home/MyTechStack";
 import ContactMe from "../Components/Home/ContactMe";
+import TransitionDiv from "../Components/Common/TransitionDiv";
 
 // import HeroImg from "../Images/heroimg.png";
 
@@ -18,7 +19,7 @@ const MainWrapper = styled.div`
   @media ${(props) => props.theme.MediaQueries.m.query} {
     padding: 54px 40px 0;
   }
-  
+
   @media ${(props) => props.theme.MediaQueries.l.query} {
     margin: 80px auto 0;
   }
@@ -28,12 +29,22 @@ const Home = () => {
   return (
     <MainWrapper>
       <Hero />
-      <About />
-      <Education />
-      <Experience />
+      <TransitionDiv>
+        <About />
+      </TransitionDiv>
+      <TransitionDiv>
+        <Education />
+      </TransitionDiv>
+      <TransitionDiv>
+        <Experience />
+      </TransitionDiv>
       <Projects />
-      <TechStack />
-      <ContactMe />
+      <TransitionDiv>
+        <TechStack />
+      </TransitionDiv>
+      <TransitionDiv>
+        <ContactMe />
+      </TransitionDiv>
     </MainWrapper>
   );
 };

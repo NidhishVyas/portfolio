@@ -4,6 +4,8 @@ import Portrait from "../../Images/portrait1.png";
 import Icon from "../Common/Icon";
 import Resume from "../../Data/Resume - Nidhish Vyas.pdf";
 import HeroImg from "../../Images/heroimg.png";
+import Hidden from "../Common/Hidden";
+import TransitionDiv from "../Common/TransitionDiv";
 
 const MainWrapper = styled.div`
   position: relative;
@@ -306,11 +308,25 @@ const Hero = () => {
         </SocialsDiv> */}
         </HeroImageDiv>
         <GreetingsDiv>
-          <TitleText>Hello! I'm</TitleText>
-          <Name>Nidhish Vyas</Name>
-          <SubTitleText>
-          Code by day, data by night! I'm a Full-Stack Developer who transforms ideas into dynamic web apps and raw data into powerful insights.
-          </SubTitleText>
+          <Hidden>
+            <TransitionDiv text="true">
+              <TitleText>Hello! I'm</TitleText>
+            </TransitionDiv>
+          </Hidden>
+          <Hidden>
+            <TransitionDiv text="true">
+              <Name>Nidhish Vyas</Name>
+            </TransitionDiv>
+          </Hidden>
+          <Hidden>
+            <TransitionDiv text="true">
+              <SubTitleText>
+                Code by day, data by night! I'm a Full-Stack Developer who
+                transforms ideas into dynamic web apps and raw data into
+                powerful insights.
+              </SubTitleText>
+            </TransitionDiv>
+          </Hidden>
           <ResumeDownload href={Resume} download="Resume - Nidhish Vyas.pdf">
             <DownloadText>Get Resume</DownloadText>
             <Icon name="download" color={theme.Colors.White} size="sm" />
