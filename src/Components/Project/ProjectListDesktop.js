@@ -1,6 +1,11 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
-import { motion, AnimatePresence, useInView } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useInView,
+  useAnimation,
+} from "framer-motion";
 
 import ProjectsData from "../../Data/ProjectsData.json";
 import Icon from "../Common/Icon";
@@ -17,17 +22,16 @@ const MainWrapper = styled.div`
 const ProjectImageList = styled.div`
   max-width: 65%;
   display: flex;
-  gap: 40px;
+  gap: 100px;
   flex-direction: column;
 `;
 
-const ProjectImage = styled.img`
+const ProjectImage = styled(motion.img)`
   object-fit: cover;
   height: auto;
   max-width: 85%;
   margin: 0 auto;
   border-radius: 10px 10px 0 0;
-  transform: translateY(20px);
 `;
 
 const ProjectImgDiv = styled(motion.div)`
@@ -35,7 +39,7 @@ const ProjectImgDiv = styled(motion.div)`
   background-color: ${(props) => props.theme.Colors.LightestWhite};
   border-radius: 10px;
   border: 1px solid ${(props) => props.theme.Colors.LightWhite};
-  height: 500px;
+  height: 525px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,10 +63,10 @@ const ProjectImgDiv = styled(motion.div)`
     );
   }
 
-  &:hover ${ProjectImage} {
+  /* &:hover ${ProjectImage} {
     rotate: -3deg;
     transition: all 0.3s;
-  }
+  } */
 `;
 
 const ProjectColor = styled.div`
@@ -124,6 +128,7 @@ const ProjectListDesktop = () => {
   const ProjectItem = ({ data, setActiveProject, activeProjectRef }) => {
     const ref = useRef(null);
     const inView = useInView(ref, { amount: 0.8, once: false });
+    const targetControls = useAnimation();
 
     useEffect(() => {
       if (
@@ -141,7 +146,7 @@ const ProjectListDesktop = () => {
           ref={ref}
           initial="hidden"
           whileInView="visible"
-          viewport={{ amount: 0.5, once: false }}
+          viewport={{ amount: 0.3, once: false }}
           variants={{
             hidden: { opacity: 0, scale: 0.8 },
             visible: {
@@ -151,15 +156,25 @@ const ProjectListDesktop = () => {
             },
           }}
         >
-          <ProjectImgDiv>
+          <ProjectImgDiv
+            onHoverStart={() => {
+              targetControls.start({ rotate: -3, y: 20, scale: 1.1 });
+            }}
+            onHoverEnd={() => {
+              targetControls.start({ rotate: 0, y: 20, scale: 1 });
+            }}
+          >
             <ProjectColor style={{ backgroundColor: data.color }}>
               <ProjectGistDiv>
-                <ProjectGist>
-                  {data.gist}
-                </ProjectGist>
+                <ProjectGist>{data.gist}</ProjectGist>
                 <Icon name="arrow-right" />
               </ProjectGistDiv>
-              <ProjectImage src={ProjImg} alt={data.name} />
+              <ProjectImage
+                src={ProjImg}
+                alt={data.name}
+                animate={targetControls}
+                initial={{ y: 20 }}
+              />
             </ProjectColor>
           </ProjectImgDiv>
         </motion.div>
