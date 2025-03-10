@@ -32,12 +32,14 @@ const ProjectInfo = styled.div`
   margin: 8px 0 12px;
   font-size: 14px;
   font-family: ${(props) => props.theme.Fonts.Poppins};
+  color: ${(props) => props.theme.Colors.TextColor};
 `;
 
 const Point = styled.p`
   font-size: 14px;
   margin-bottom: 8px;
   font-family: ${(props) => props.theme.Fonts.Poppins};
+  color: ${(props) => props.theme.Colors.TextColor};
 `;
 
 const TechStack = styled.div`
@@ -53,6 +55,7 @@ const Tech = styled.p`
   font-size: 14px;
   margin-left: 8px;
   font-family: ${(props) => props.theme.Fonts.Poppins};
+  color: ${(props) => props.theme.Colors.TextColor};
 `;
 
 const FlexDiv = styled.div`
@@ -76,7 +79,7 @@ const ProjectDescription = forwardRef((_, ref) => {
   }
   return (
     <ProjectDetails>
-      <LineDiv style={{backgroundColor: projectData.color}}/>
+      <LineDiv style={{ backgroundColor: projectData.color }} />
       <div>
         <FlexDiv>
           <ProjectName>{projectData.name}</ProjectName>
@@ -95,7 +98,7 @@ const ProjectDescription = forwardRef((_, ref) => {
 
         {projectData.points?.map((point, index) => (
           <FlexDiv key={index}>
-            <Icon name="asterisk" size="xs" style={{margin: "5px 0 0"}} />
+            <Icon name="asterisk" size="xs" style={{ margin: "5px 0 0" }} />
             <Point>{point}</Point>
           </FlexDiv>
         ))}

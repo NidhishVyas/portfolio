@@ -37,7 +37,7 @@ const DateDivMob = styled.div`
   display: block;
   font-family: ${(props) => props.theme.Fonts.Poppins};
   font-size: 14px;
-  color: ${(props) => props.theme.Colors.LightWhite};
+  color: ${(props) => props.theme.Colors.TextColor};
   @media ${(props) => props.theme.MediaQueries.m.query} {
     display: none;
   }
@@ -47,7 +47,7 @@ const DateDivTab = styled.div`
   display: none;
   font-family: ${(props) => props.theme.Fonts.Poppins};
   font-size: 14px;
-  color: ${(props) => props.theme.Colors.LightWhite};
+  color: ${(props) => props.theme.Colors.TextColor};
   @media ${(props) => props.theme.MediaQueries.m.query} {
     display: block;
   }
@@ -63,8 +63,7 @@ const CourseworkDiv = styled.p`
   font-family: ${(props) => props.theme.Fonts.Inter};
   font-size: 14px;
   text-align: left;
-  color: ${(props) => props.theme.Colors.LightWhite};
-
+  color: ${(props) => props.theme.Colors.TextColor};
 `;
 
 const TechStackDiv = styled.div`
@@ -78,7 +77,7 @@ const TechStackDiv = styled.div`
 
 const TechStack = styled.div`
   padding: 4px 12px;
-  border: 1px solid ${(props) => props.theme.Colors.LightWhite};
+  border: 1px solid ${(props) => props.theme.Colors.TextColor};
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -89,13 +88,20 @@ const Tech = styled.p`
   font-size: 14px;
   font-family: ${(props) => props.theme.Fonts.Poppins};
   margin-left: 8px;
+  color: ${(props) => props.theme.Colors.TextColor};
 `;
 
-// const TechUsed = styled.p`
-//   font-family: ${(props) => props.theme.Fonts.Inter};
-//   font-size: 14px;
-//   text-align: left;
-// `;
+const TechImg = styled.img`
+  width: 16px;
+
+  &.dark {
+    filter: invert(100%);
+  }
+
+  &.bright {
+    filter: brightness(200%);
+  }
+`;
 
 const Experience = ({ data }) => {
   const courseworkList = data?.coursework ? data?.coursework.join(", ") : null;
@@ -133,12 +139,18 @@ const Experience = ({ data }) => {
             {/* <FlexDiv style={{ marginTop: "12px", flexWrap: "wrap" }}> */}
             {data.techStack?.map((tech, i) => (
               <TechStack key={i}>
-                <img
-                  src={`https://cdn.simpleicons.org/${tech}`}
-                  alt={tech}
-                  width="16"
+                <TechImg
+                  src={`https://cdn.simpleicons.org/${tech.icon}`}
+                  alt={tech.name}
+                  className={
+                    tech?.color === "dark"
+                      ? "dark"
+                      : tech?.color === "bright"
+                      ? "bright"
+                      : ""
+                  }
                 />
-                <Tech>{tech}</Tech>
+                <Tech>{tech.name}</Tech>
               </TechStack>
             ))}
             {/* </FlexDiv> */}

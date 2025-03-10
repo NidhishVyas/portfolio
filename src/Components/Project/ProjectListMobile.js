@@ -17,7 +17,7 @@ const ProjectDiv = styled(motion.div)`
 `;
 
 const ProjectImgDiv = styled.div`
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(28px);
   background-color: ${(props) => props.theme.Colors.LightestWhite};
   border-radius: 10px;
   border: 1px solid ${(props) => props.theme.Colors.LightWhite};
@@ -96,7 +96,7 @@ const ProjectName = styled.p`
 `;
 
 const ProjectInfo = styled.p`
-  color: ${(props) => props.theme.Colors.LightWhite};
+  color: ${(props) => props.theme.Colors.TextColor};
   font-family: ${(props) => props.theme.Fonts.Poppins};
   font-size: 14px;
 

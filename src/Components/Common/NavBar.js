@@ -34,7 +34,7 @@ const MobMainDiv = styled.div`
   border-radius: 28px;
   width: 90%;
   margin: 0 auto;
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(28px);
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     display: none;
@@ -61,7 +61,9 @@ const LogoName = styled(Logo)`
   }
 `;
 
-const MenuDiv = styled.a`
+const MenuDiv = styled.button`
+background-color: transparent;
+  border: none;
   cursor: pointer;
   width: 64px;
   height: 100%;
@@ -79,6 +81,7 @@ const DropMenu = styled(motion.div)`
   border-bottom-right-radius: 28px;
   z-index: 1000;
   color: ${(props) => props.theme.Colors.White};
+  max-height: 600px;
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     position: fixed;
@@ -87,7 +90,7 @@ const DropMenu = styled(motion.div)`
     width: 300px;
     border-radius: 28px;
     background-color: ${(props) => props.theme.Colors.LightestWhite};
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(28px);
   }
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
@@ -97,12 +100,17 @@ const DropMenu = styled(motion.div)`
     transform: ${(props) => (props.isscrolled ? "translateX(73%)" : undefined)};
     /* transition: all 0.7s linear; */
   }
+
+  @media ${(props) => props.theme.MediaQueries.l.query} {
+    transform: ${(props) =>
+      props.isscrolled ? "translateX(107%)" : undefined};
+  }
 `;
 
 const NavDiv = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   padding: 30px 20px 20px;
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
@@ -115,8 +123,8 @@ const NavItem = styled(motion.p)`
   font-size: 28px;
   font-family: ${(props) => props.theme.Fonts.Inter};
 
-  @media ${(props) => props.theme.MediaQueries.m.query} {
-    /* font-size: 16px; */
+  @media ${(props) => props.theme.MediaQueries.l.query} {
+    font-size: 20px;
   }
 `;
 
@@ -138,6 +146,10 @@ const SocialsDiv = styled.div`
 const Socials = styled(motion.p)`
   font-size: 18px;
   font-family: ${(props) => props.theme.Fonts.Inter};
+
+  @media ${(props) => props.theme.MediaQueries.l.query} {
+    font-size: 16px;
+  }
 `;
 
 const ResumeBtn = styled(motion.a)`
@@ -166,7 +178,7 @@ const TabMainDiv = styled(motion.div)`
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     display: flex;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(28px);
     position: relative;
     margin: ${(props) => (props.isscrolled ? 0 : "20px")};
     padding: ${(props) => (props.isscrolled ? "20px" : "10px 20px")};
@@ -181,23 +193,28 @@ const TabMainDiv = styled(motion.div)`
     border-radius: 10px;
     transition: all 0.5s linear;
   }
+
+  @media ${(props) => props.theme.MediaQueries.xl.query} {
+    width: 90%;
+    max-width: ${(props) => (props.isscrolled ? "1200px" : "100%")};
+  }
 `;
 
-const TabMenuDiv = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-`;
+// const TabMenuDiv = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   gap: 20px;
+// `;
 
-const MenuBtn = styled.button`
-  border: 1px solid ${(props) => props.theme.Colors.Black};
-  background-color: ${(props) => props.theme.Colors.White};
-  color: ${(props) => props.theme.Colors.Black};
-  padding: 10px 25px;
-  border-radius: 10px;
-  font-size: 18px;
-`;
+// const MenuBtn = styled.button`
+//   border: 1px solid ${(props) => props.theme.Colors.Black};
+//   background-color: ${(props) => props.theme.Colors.White};
+//   color: ${(props) => props.theme.Colors.Black};
+//   padding: 10px 25px;
+//   border-radius: 10px;
+//   font-size: 18px;
+// `;
 
 // const TabMenuList = styled.div`
 //   background-color: ${(props) => props.theme.Colors.White};
@@ -218,7 +235,7 @@ const MenuBtn = styled.button`
 const NavBar = () => {
   const theme = useTheme();
   const [isSideNav, setIsSideNav] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
   const toggleNav = () => setIsSideNav(!isSideNav);
 
   const { scrollYProgress } = useScroll();
@@ -344,10 +361,28 @@ const NavBar = () => {
           // transition={{ duration: 0.7, ease: "easeInOut" }}
         >
           <LogoName />
-          <TabMenuDiv>
+          <MenuDiv onClick={toggleNav}>
+            {/* <Icon name="bars" color={theme.Colors.White} /> */}
+            <motion.svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke={theme.Colors.White}
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <motion.path
+                animate={{ d: isSideNav ? closePath : menuPath }}
+                transition={{ duration: 1, type: "spring", stiffness: 150 }}
+              />
+            </motion.svg>
+          </MenuDiv>
+          {/* <TabMenuDiv>
             <MenuBtn>Resume</MenuBtn>
             <MenuBtn onClick={toggleNav}>Menu</MenuBtn>
-          </TabMenuDiv>
+          </TabMenuDiv> */}
         </TabMainDiv>
       </AnimatePresence>
       {isSideNav && windowWidth >= 768 && (
@@ -355,7 +390,7 @@ const NavBar = () => {
           <DropMenu
             isscrolled={isScrolled}
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "600px", opacity: 1 }}
+            animate={{ height: "calc(100vh - 140px)", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.7, ease: "easeInOut" }}
           >

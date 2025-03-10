@@ -27,14 +27,15 @@ const ProjectImage = styled.img`
   max-width: 85%;
   margin: 0 auto;
   border-radius: 10px 10px 0 0;
+  transform: translateY(20px);
 `;
 
 const ProjectImgDiv = styled(motion.div)`
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(28px);
   background-color: ${(props) => props.theme.Colors.LightestWhite};
   border-radius: 10px;
   border: 1px solid ${(props) => props.theme.Colors.LightWhite};
-  height: 400px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;

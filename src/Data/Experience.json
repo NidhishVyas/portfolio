@@ -13,7 +13,14 @@
       "Increased user satisfaction and platform stability by developing innovative React Native apps and blockchain-based solutions using React Native, TypeScript, and Hyperledger Aries (Bifold), ensuring seamless application functionality ",
       "Integrated FHWA-EAR Program into Master's Project for exploration of advanced technologies "
     ],
-    "techStack": ["Next.js", "React", "TypeScript", "markdown", "Sentry"]
+    "techStack": [
+      { "name": "ReactJS", "icon": "react" },
+      { "name": "NextJS", "icon": "nextdotjs", "color": "dark" },
+      { "name": "Angular", "icon": "angular", "color": "dark" },
+      { "name": "Bootstrap", "icon": "bootstrap" },
+      { "name": "HTML", "icon": "html5" },
+      { "name": "CSS", "icon": "css" }
+    ]
   },
   {
     "id": 2,
@@ -28,6 +35,13 @@
       "Transformed a Figma design into a fully functional web-based application by leveraging MERN stack, enhancing user experience, enabling real-time updates, and improving application responsiveness and usability",
       "Managed post-development deployment process by overseeing domain acquisition, deployment management, and continuous maintenance using Git, achieving a 30% increase in website traffic and a 50% reduction in loading time"
     ],
-    "techStack": ["Next.js", "React", "TypeScript", "markdown", "Sentry"]
+    "techStack": [
+      { "name": "ReactJS", "icon": "react" },
+      { "name": "NextJS", "icon": "nextdotjs", "color": "dark" },
+      { "name": "Angular", "icon": "angular", "color": "dark" },
+      { "name": "Bootstrap", "icon": "bootstrap" },
+      { "name": "HTML", "icon": "html5" },
+      { "name": "CSS", "icon": "css" }
+    ]
   }
 ]

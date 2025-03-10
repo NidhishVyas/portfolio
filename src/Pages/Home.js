@@ -23,6 +23,10 @@ const MainWrapper = styled.div`
   @media ${(props) => props.theme.MediaQueries.l.query} {
     margin: 80px auto 0;
   }
+  
+  @media ${(props) => props.theme.MediaQueries.xl.query} {
+    max-width: 1200px;
+  }
 `;
 
 const Home = () => {

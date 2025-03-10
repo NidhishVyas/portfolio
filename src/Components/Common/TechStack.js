@@ -8,11 +8,11 @@ const TechStackDiv = styled.div`
   gap: 5px;
   flex-wrap: wrap;
   margin: 16px 0;
-  color: ${(props) => props.theme.Colors.LightWhite};
-  `;
+  color: ${(props) => props.theme.Colors.TextColor};
+`;
 
 const Tech = styled.p`
-background-color: ${(props) => props.theme.Colors.TechBg};
+  background-color: ${(props) => props.theme.Colors.TechBg};
   font-size: 14px;
   padding: 3px 7px;
   border: 1px solid ${(props) => props.theme.Colors.LightestWhite};

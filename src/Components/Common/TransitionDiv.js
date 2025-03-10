@@ -1,17 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const TransitionDiv = ({ children, text }) => {
+const TransitionDiv = ({ children, text = false }) => {
   return (
     <motion.div
       initial={text ? "textHidden" : "hidden"}
       whileInView={text ? "textVisible" : "visible"}
       animate={text ? "textVisible" : "visible"}
-      viewport={{ amount: 0.1, once: false }}
+      viewport={{ amount: 0.3, once: false }}
       variants={{
-        textHidden: { y: "100%" },
+        textHidden: { x: "-100%" },
         textVisible: {
-          y: 0,
+          x: 0,
           transition: { duration: 0.3 },
         },
         hidden: { opacity: 0, scale: 0.8, y: 20 },

@@ -203,7 +203,7 @@ const GreetingsDiv = styled.div`
   }
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
-    width: 400px;
+    width: 470px;
     /* height: auto; */
     align-self: flex-start;
     padding-top: 0px;
@@ -219,6 +219,10 @@ const TitleText = styled.h3`
   @media ${(props) => props.theme.MediaQueries.m.query} {
     font-size: 36px;
   }
+
+  @media ${(props) => props.theme.MediaQueries.l.query} {
+    font-size: 42px;
+  }
 `;
 
 const Name = styled.h1`
@@ -229,11 +233,16 @@ const Name = styled.h1`
   @media ${(props) => props.theme.MediaQueries.m.query} {
     font-size: 55px;
   }
+
+  @media ${(props) => props.theme.MediaQueries.l.query} {
+    font-size: 65px;
+  }
 `;
 
 const SubTitleText = styled.p`
   margin: 20px 0;
   font-family: ${(props) => props.theme.Fonts.Jost};
+  color: ${(props) => props.theme.Colors.TextColor};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     margin: 15px 0 25px;
@@ -268,7 +277,7 @@ const DownloadText = styled.p`
   font-size: 14px;
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
-    font-size: 22px;
+    font-size: 20px;
   }
 `;
 

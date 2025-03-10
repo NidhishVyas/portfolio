@@ -56,7 +56,7 @@ const AboutSection = styled.div`
 // `;
 
 const AboutMe = styled.p`
-  color: ${(props) => props.theme.Colors.LightWhite};
+  color: ${(props) => props.theme.Colors.TextColor};
   font-family: ${(props) => props.theme.Fonts.Poppins};
   font-size: 14px;
   /* text-align: justify; */
