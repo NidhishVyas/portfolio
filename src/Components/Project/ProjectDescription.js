@@ -30,7 +30,7 @@ const ProjectName = styled.div`
 
 const ProjectInfo = styled.div`
   margin: 8px 0 12px;
-  font-size: 14px;
+  font-size: 16px;
   font-family: ${(props) => props.theme.Fonts.Poppins};
   color: ${(props) => props.theme.Colors.TextColor};
 `;

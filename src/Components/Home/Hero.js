@@ -6,6 +6,8 @@ import Resume from "../../Data/Resume - Nidhish Vyas.pdf";
 import HeroImg from "../../Images/heroimg.png";
 import Hidden from "../Common/Hidden";
 import TransitionDiv from "../Common/TransitionDiv";
+import { Mail, Download  } from 'lucide-react';
+
 
 const MainWrapper = styled.div`
   position: relative;
@@ -296,7 +298,7 @@ const Hero = () => {
           <OtherSemiCircle />
           <SocialsDiv>
             <SocialsIcon>
-              <Icon name="linkedin" color={theme.Colors.White} size="xl" />
+              <Icon name="linkedin-in" color={theme.Colors.White} size="xl" />
             </SocialsIcon>
             <SocialsIcon>
               <Icon name="github" color={theme.Colors.White} size="xl" />
@@ -305,13 +307,13 @@ const Hero = () => {
               <Icon name="instagram" color={theme.Colors.White} size="xl" />
             </SocialsIcon>
             <SocialsIcon>
-              <Icon name="envelope" color={theme.Colors.White} size="xl" />
+              <Mail color={theme.Colors.White} size={18} />
             </SocialsIcon>
           </SocialsDiv>
           {/* <SocialsDiv>
           {socialIcons.map((icon, index) => (
             <SocialsIcon key={icon} index={index + 1}>
-              <Icon name={icon} color={theme.Colors.White} size="xl" />
+              <Icon name={icon} color={theme.Colors.White} size={20} />
             </SocialsIcon>
           ))}
         </SocialsDiv> */}
@@ -338,7 +340,7 @@ const Hero = () => {
           </Hidden>
           <ResumeDownload href={Resume} download="Resume - Nidhish Vyas.pdf">
             <DownloadText>Get Resume</DownloadText>
-            <Icon name="download" color={theme.Colors.White} size="sm" />
+            <Download color={theme.Colors.White} size={16} />
           </ResumeDownload>
         </GreetingsDiv>
       </MainWrapper>

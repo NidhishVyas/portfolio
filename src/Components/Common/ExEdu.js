@@ -23,14 +23,22 @@ const FlexDiv = styled.div`
 
 const Heading = styled.div`
   font-size: 18px;
-  font-family: ${(props) => props.theme.Fonts.Poppins};
+  font-family: ${(props) => props.theme.Fonts.Quicksand};
   font-weight: 700;
+
+  @media ${(props) => props.theme.MediaQueries.m.query} {
+    font-size: 24px;
+  }
 `;
 
 const SubHeading = styled.div`
   font-family: ${(props) => props.theme.Fonts.Poppins};
   font-size: 14px;
   margin: 2px 0 7px;
+
+  @media ${(props) => props.theme.MediaQueries.m.query} {
+    font-size: 16px;
+  }
 `;
 
 const DateDivMob = styled.div`
@@ -46,7 +54,7 @@ const DateDivMob = styled.div`
 const DateDivTab = styled.div`
   display: none;
   font-family: ${(props) => props.theme.Fonts.Poppins};
-  font-size: 14px;
+  font-size: 16px;
   color: ${(props) => props.theme.Colors.TextColor};
   @media ${(props) => props.theme.MediaQueries.m.query} {
     display: block;
@@ -82,6 +90,10 @@ const TechStack = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media ${(props) => props.theme.MediaQueries.m.query} {
+    padding: 5px 15px;
+  }
 `;
 
 const Tech = styled.p`
@@ -100,6 +112,10 @@ const TechImg = styled.img`
 
   &.bright {
     filter: brightness(200%);
+  }
+
+  @media ${(props) => props.theme.MediaQueries.m.query} {
+    width: 20px;
   }
 `;
 

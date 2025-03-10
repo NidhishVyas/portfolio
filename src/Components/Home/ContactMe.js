@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Icon from "../Common/Icon";
 import SectionHeading from "../Common/SectionHeading";
+import { MoveRight } from 'lucide-react';
 
 const MainWrapper = styled.div`
   margin-top: 90px;
@@ -53,7 +54,7 @@ const ContactMe = () => {
       <ConnectMeBtn>
         <Icon name="linkedin" size="2xl" />
         <ContactMeText>Contact Me</ContactMeText>
-        <Icon name="arrow-right" size="2xl" />
+        <MoveRight size={24} />
       </ConnectMeBtn>
     </MainWrapper>
   );

@@ -10,9 +10,12 @@ library.add(fas, far, fab);
 
 const Icon = ({
   name,
+  color,
+  // icon,
   style,
   size,
-  color,
+  // strokeWidth,
+  // absoluteStrokeWidth,
   spin,
   pulse,
   border,
@@ -47,6 +50,13 @@ const Icon = ({
       pull={pull}
       rotation={rotation}
     />
+    // <img
+    //   src={`https://cdn.simpleicons.org/${icon}`}
+    //   alt={name}
+    //   className={color === "dark" ? "dark" : color === "bright" ? "bright" : ""}
+    //   width={size}
+    //   height={size}
+    // />
   );
 };
 

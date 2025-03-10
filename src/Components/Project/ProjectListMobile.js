@@ -5,6 +5,7 @@ import ProjectsData from "../../Data/ProjectsData";
 import Icon from "../Common/Icon";
 import TechStack from "../Common/TechStack";
 import Hero from "../../Images/hero.png";
+import { ExternalLink } from "lucide-react";
 
 const ProjectDiv = styled(motion.div)`
   margin-bottom: 80px;
@@ -181,11 +182,7 @@ const ProjectListMobile = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon
-                    name="arrow-up-right-from-square"
-                    color={theme.Colors.White}
-                    size="sm"
-                  />
+                  <ExternalLink color={theme.Colors.White} size={20} />
                   <ButtonName>Website</ButtonName>
                 </Button>
               )}

@@ -11,6 +11,7 @@ import { ReactComponent as Logo } from "../../Images/Logo.svg";
 import Resume from "../../Data/Resume - Nidhish Vyas.pdf";
 import NavList from "../../Data/NavList.json";
 import Hidden from "./Hidden";
+import { ArrowUpRight } from "lucide-react";
 
 const MainWrapper = styled.div`
   position: fixed;
@@ -62,7 +63,7 @@ const LogoName = styled(Logo)`
 `;
 
 const MenuDiv = styled.button`
-background-color: transparent;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   width: 64px;
@@ -335,6 +336,7 @@ const NavBar = () => {
                       {...animationProps}
                     >
                       {item.name}
+                      <ArrowUpRight size={16} style={{ marginLeft: "3px" }} />
                     </Socials>
                   </Hidden>
                 ))}
@@ -412,6 +414,7 @@ const NavBar = () => {
                     {...animationProps}
                   >
                     {item.name}
+                    <ArrowUpRight size={16} style={{ marginLeft: "3px" }} />
                   </Socials>
                 </Hidden>
               ))}
