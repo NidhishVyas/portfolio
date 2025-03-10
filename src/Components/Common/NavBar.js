@@ -144,9 +144,10 @@ const SocialsDiv = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 `;
 
-const Socials = styled(motion.p)`
+const Socials = styled(motion.a)`
   font-size: 18px;
   font-family: ${(props) => props.theme.Fonts.Inter};
+  color: ${(props) => props.theme.Colors.White};
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
     font-size: 16px;
@@ -246,7 +247,7 @@ const NavBar = () => {
   const closePath = "M6 6L18 18M6 18L18 6";
 
   const socials = [
-    { name: "Discord", link: "#" },
+    { name: "Discord", link: "https://discord.com/users/nids1312" },
     { name: "LinkedIn", link: "#" },
     { name: "Github", link: "#" },
   ];
@@ -332,6 +333,7 @@ const NavBar = () => {
                   <Hidden key={i}>
                     <Socials
                       href={item.link}
+                      target="_blank"
                       variants={animationVariants}
                       {...animationProps}
                     >
