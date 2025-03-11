@@ -4,6 +4,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth !important;
+    scroll-padding-top: 110px;
   }
 
   body {

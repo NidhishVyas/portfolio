@@ -23,7 +23,7 @@ const TechStack = ({ data }) => {
   return (
     <TechStackDiv>
       {data.map((tech, i) => (
-        <Tech key={i}>{tech}</Tech>
+        <Tech key={i}>{tech.name}</Tech>
       ))}
     </TechStackDiv>
   );

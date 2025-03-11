@@ -2,6 +2,7 @@ import React, { forwardRef, useImperativeHandle, useState } from "react";
 import styled from "styled-components";
 import Icon from "../Common/Icon";
 import ProjectsData from "../../Data/ProjectsData.json";
+import Microsoft from "../../Images/microsoft.png";
 
 const ProjectDetails = styled.div`
   width: 35%;
@@ -49,6 +50,18 @@ const TechStack = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const TechImg = styled.img`
+  width: 16px;
+
+  &.dark {
+    filter: invert(100%);
+  }
+
+  &.bright {
+    filter: brightness(200%);
+  }
 `;
 
 const Tech = styled.p`
@@ -106,12 +119,24 @@ const ProjectDescription = forwardRef((_, ref) => {
         <FlexDiv style={{ marginTop: "12px", flexWrap: "wrap" }}>
           {projectData.techStack?.map((tech, i) => (
             <TechStack key={i}>
-              <img
-                src={`https://cdn.simpleicons.org/${tech}`}
-                alt={tech}
-                width="16"
-              />
-              <Tech>{tech}</Tech>
+              {tech.icon && (
+                <TechImg
+                  src={
+                    tech.icon === "microsoft"
+                      ? Microsoft
+                      : `https://cdn.simpleicons.org/${tech.icon}`
+                  }
+                  alt={tech.name}
+                  className={
+                    tech?.color === "dark"
+                      ? "dark"
+                      : tech?.color === "bright"
+                      ? "bright"
+                      : ""
+                  }
+                />
+              )}
+              <Tech>{tech.name}</Tech>
             </TechStack>
           ))}
         </FlexDiv>

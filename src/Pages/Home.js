@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+// import { Route, Routes } from "react-router-dom";
+// import * as ROUTES from "../Routes/routes";
 import Hero from "../Components/Home/Hero";
 import About from "../Components/Home/About";
 import Projects from "../Components/Home/Projects";
@@ -23,7 +25,7 @@ const MainWrapper = styled.div`
   @media ${(props) => props.theme.MediaQueries.l.query} {
     margin: 80px auto 0;
   }
-  
+
   @media ${(props) => props.theme.MediaQueries.xl.query} {
     max-width: 1200px;
   }
@@ -32,23 +34,37 @@ const MainWrapper = styled.div`
 const Home = () => {
   return (
     <MainWrapper>
-      <Hero />
-      <TransitionDiv>
-        <About />
-      </TransitionDiv>
-      <TransitionDiv>
-        <Education />
-      </TransitionDiv>
-      <TransitionDiv>
-        <Experience />
-      </TransitionDiv>
-      <Projects />
-      <TransitionDiv>
-        <TechStack />
-      </TransitionDiv>
-      <TransitionDiv>
-        <ContactMe />
-      </TransitionDiv>
+      <div id="Home">
+        <Hero />
+      </div>
+      <div id="About">
+        <TransitionDiv>
+          <About />
+        </TransitionDiv>
+      </div>
+      <div id="Education">
+        <TransitionDiv>
+          <Education />
+        </TransitionDiv>
+      </div>
+      <div id="Experience">
+        <TransitionDiv>
+          <Experience />
+        </TransitionDiv>
+      </div>
+      <div id="Projects">
+        <Projects />
+      </div>
+      <div id="Tech-Stack">
+        <TransitionDiv>
+          <TechStack />
+        </TransitionDiv>
+      </div>
+      <div id="Contact-Me">
+        <TransitionDiv>
+          <ContactMe />
+        </TransitionDiv>
+      </div>
     </MainWrapper>
   );
 };

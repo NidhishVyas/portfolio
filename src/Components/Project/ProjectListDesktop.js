@@ -170,7 +170,7 @@ const ProjectListDesktop = () => {
                 <Icon name="arrow-right" />
               </ProjectGistDiv>
               <ProjectImage
-                src={ProjImg}
+                src={data.image}
                 alt={data.name}
                 animate={targetControls}
                 initial={{ y: 20 }}

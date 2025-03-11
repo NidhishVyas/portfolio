@@ -6,18 +6,14 @@
     "location": "Newark, NJ",
     "startDate": "Jan 2024",
     "endDate": "Oct 2024",
-    "description": [
-      "Achieved secure and efficient communication by implementing DIDComm protocols to enable seamless web-to-mobile interaction, leveraging blockchain technology and decentralized identity for expanded functionality ",
-      "Deployed credential issuing entity and verifier using Zero-Knowledge Proofs for secure authentication ",
-      "Accomplished enhanced operational efficiency and data accuracy by streamlining vehicle transactions with real-time updates and automated workflows, significantly improving overall user experience and reliability",
-      "Increased user satisfaction and platform stability by developing innovative React Native apps and blockchain-based solutions using React Native, TypeScript, and Hyperledger Aries (Bifold), ensuring seamless application functionality ",
-      "Integrated FHWA-EAR Program into Master's Project for exploration of advanced technologies "
-    ],
+    "description": [],
     "techStack": [
+      { "name": "React Native", "icon": "react" },
+      { "name": "Typescript", "icon": "typescript" },
+      { "name": "Hyperledger Aries", "icon": "aries" },
       { "name": "ReactJS", "icon": "react" },
-      { "name": "NextJS", "icon": "nextdotjs", "color": "dark" },
-      { "name": "Angular", "icon": "angular", "color": "dark" },
-      { "name": "Bootstrap", "icon": "bootstrap" },
+      { "name": "Python", "icon": "python" },
+      { "name": "Jekyll", "icon": "jekyll", "color": "bright" },
       { "name": "HTML", "icon": "html5" },
       { "name": "CSS", "icon": "css" }
     ]
@@ -29,17 +25,41 @@
     "location": "Mumbai, IN",
     "startDate": "Apr 2022",
     "endDate": "Oct 2022",
-    "description": [
-      "Directed the design and implementation of a farmhouse booking website, enhancing system efficiency, responsiveness, scalability, and overall user experience through front-end and back-end development",
-      "Boosted farmhouse bookings by 13% through a user-friendly interface and streamlined information access, providing detailed admin statistics to enhance decision-making and operational efficiency",
-      "Transformed a Figma design into a fully functional web-based application by leveraging MERN stack, enhancing user experience, enabling real-time updates, and improving application responsiveness and usability",
-      "Managed post-development deployment process by overseeing domain acquisition, deployment management, and continuous maintenance using Git, achieving a 30% increase in website traffic and a 50% reduction in loading time"
-    ],
+    "description": [],
     "techStack": [
       { "name": "ReactJS", "icon": "react" },
-      { "name": "NextJS", "icon": "nextdotjs", "color": "dark" },
-      { "name": "Angular", "icon": "angular", "color": "dark" },
-      { "name": "Bootstrap", "icon": "bootstrap" },
+      { "name": "Figma", "icon": "figma" },
+      { "name": "NodeJS", "icon": "nodedotjs" },
+      { "name": "MongoDB", "icon": "mongodb" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Web Developer",
+    "company": " Technical Team SIES GST",
+    "location": "Mumbai, IN",
+    "startDate": "Jun 2021",
+    "endDate": "May 2023",
+    "description": [],
+    "techStack": [
+      { "name": "ReactJS", "icon": "react" },
+      { "name": "Figma", "icon": "figma" },
+      { "name": "NodeJS", "icon": "nodedotjs" },
+      { "name": "MongoDB", "icon": "mongodb" }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Web Developer",
+    "company": " TEDxSIESGST",
+    "location": "Mumbai, IN",
+    "startDate": "Jan 2021",
+    "endDate": "May 2023",
+    "description": [],
+    "techStack": [
+      { "name": "ReactJS", "icon": "react" },
+      { "name": "Figma", "icon": "figma" },
+      { "name": "NodeJS", "icon": "nodedotjs" },
       { "name": "HTML", "icon": "html5" },
       { "name": "CSS", "icon": "css" }
     ]

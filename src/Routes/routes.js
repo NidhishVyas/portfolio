@@ -1,0 +1,7 @@
+export const HOME = ""
+export const ABOUT = "/about"
+export const EDUCATION = "/education"
+export const EXPERIENCE = "/experience"
+export const PROJECTS = "/projects"
+export const TECHSTACK = "/tecthstack"
+export const CONTACTME = "/contactme"

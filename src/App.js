@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import GlobalStyles from "./GlobalStyles";
 import { DarkTheme, LightTheme } from "./Theme";
 import { ThemeProvider } from "styled-components";
@@ -12,9 +13,11 @@ function App() {
   return (
     <ThemeProvider theme={GlobalTheme}>
       <GlobalStyles />
-      <NavBar />
-      <Home />
-      <Footer />
+      <Suspense>
+        <NavBar />
+        <Home />
+        <Footer />
+      </Suspense>
     </ThemeProvider>
   );
 }

@@ -102,7 +102,7 @@ const DropMenu = styled(motion.div)`
     /* transition: all 0.7s linear; */
   }
 
-  @media ${(props) => props.theme.MediaQueries.l.query} {
+  @media ${(props) => props.theme.MediaQueries.xl.query} {
     transform: ${(props) =>
       props.isscrolled ? "translateX(107%)" : undefined};
   }
@@ -118,6 +118,16 @@ const NavDiv = styled.div`
     /* flex-direction: row; */
     /* padding: 0; */
   }
+`;
+
+const NavButton = styled.button`
+  background-color: transparent;
+  text-align: left;
+  border: none;
+  color: ${(props) => props.theme.Colors.White};
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
 `;
 
 const NavItem = styled(motion.p)`
@@ -235,6 +245,10 @@ const TabMainDiv = styled(motion.div)`
 // `;
 
 const NavBar = () => {
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  };
+
   const theme = useTheme();
   const [isSideNav, setIsSideNav] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -321,11 +335,11 @@ const NavBar = () => {
             >
               <NavDiv>
                 {NavList.map((item, i) => (
-                  <Hidden key={i}>
+                  <NavButton key={i} onClick={() => scrollToSection(item)}>
                     <NavItem variants={animationVariants} {...animationProps}>
-                      {item}
+                      {item.replace("-", " ")}
                     </NavItem>
-                  </Hidden>
+                  </NavButton>
                 ))}
               </NavDiv>
               <SocialsDiv>
@@ -400,11 +414,11 @@ const NavBar = () => {
           >
             <NavDiv>
               {NavList.map((item, i) => (
-                <Hidden key={i}>
+                <NavButton key={i} onClick={() => scrollToSection(item)}>
                   <NavItem variants={animationVariants} {...animationProps}>
-                    {item}
+                    {item.replace("-", " ")}
                   </NavItem>
-                </Hidden>
+                </NavButton>
               ))}
             </NavDiv>
             <SocialsDiv>

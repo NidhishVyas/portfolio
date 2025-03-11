@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 // import Icon from "./Icon";
 import formatDate from "../../Helpers/formatdate";
+import Aries from "../../Images/aries.png";
 
 const MainDiv = styled.div`
   margin-bottom: 40px;
@@ -156,7 +157,11 @@ const Experience = ({ data }) => {
             {data.techStack?.map((tech, i) => (
               <TechStack key={i}>
                 <TechImg
-                  src={`https://cdn.simpleicons.org/${tech.icon}`}
+                  src={
+                    tech.icon === "aries"
+                      ? Aries
+                      : `https://cdn.simpleicons.org/${tech.icon}`
+                  }
                   alt={tech.name}
                   className={
                     tech?.color === "dark"

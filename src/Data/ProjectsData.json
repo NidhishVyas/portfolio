@@ -1,16 +1,26 @@
 [
   {
-    "name": "Project 1",
-    "info": "Developed a platform for virtual pitch competitions using Next.js 15, enabling smooth idea sharing and exploration with optimal performance.",
-    "gist": "A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.",
-    "image": "/Images/hero.png",
+    "name": "College Student Portal",
+    "info": "Designed and developed a website application using MERN stack, integrating a customizable event calendar and RSVP system.",
+    "gist": "A online portal for SIES GST students that keeps you connected to the college from anywhere and everywhere!",
+    "image": "../../Images/hero.png",
     "sourceCode": "",
-    "website": "",
-    "techStack": [],
+    "website": "https://www.portal.siesgst.ac.in/",
+    "techStack": [
+      { "name": "ReactJS", "icon": "react" },
+      { "name": "Figma", "icon": "figma" },
+      { "name": "NodeJS", "icon": "nodedotjs" },
+      { "name": "Express", "icon": "express", "color": "dark" },
+      { "name": "MongoDB", "icon": "mongodb" },
+      { "name": "Axios", "icon": "axios" },
+      { "name": "Google Sign-in", "icon": "google" },
+      { "name": "Microsoft Sign-in", "icon": "microsoft" },
+      { "name": "Google Analytics", "icon": "googleanalytics" }
+    ],
     "color": "#e60076"
   },
   {
-    "name": "Project 2",
+    "name": "Crowdfunding using Blockchain",
     "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
     "gist": "A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.",
     "image": "/Images/hero.png",

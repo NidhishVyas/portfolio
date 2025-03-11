@@ -5,9 +5,8 @@ import Icon from "../Common/Icon";
 import Resume from "../../Data/Resume - Nidhish Vyas.pdf";
 import HeroImg from "../../Images/heroimg.png";
 import Hidden from "../Common/Hidden";
-import TransitionDiv from "../Common/TransitionDiv";
-import { Mail, Download  } from 'lucide-react';
-
+import { Mail, Download } from "lucide-react";
+import { motion } from "framer-motion";
 
 const MainWrapper = styled.div`
   position: relative;
@@ -212,7 +211,7 @@ const GreetingsDiv = styled.div`
   }
 `;
 
-const TitleText = styled.h3`
+const TitleText = styled(motion.h3)`
   font-size: 24px;
   margin-top: 30px;
   font-weight: 400;
@@ -227,7 +226,7 @@ const TitleText = styled.h3`
   }
 `;
 
-const Name = styled.h1`
+const Name = styled(motion.h1)`
   font-size: 45px;
   font-weight: 400;
   font-family: ${(props) => props.theme.Fonts.Fruitos};
@@ -241,7 +240,7 @@ const Name = styled.h1`
   }
 `;
 
-const SubTitleText = styled.p`
+const SubTitleText = styled(motion.p)`
   margin: 20px 0;
   font-family: ${(props) => props.theme.Fonts.Jost};
   color: ${(props) => props.theme.Colors.TextColor};
@@ -257,7 +256,7 @@ const SubTitleText = styled.p`
   }
 `;
 
-const ResumeDownload = styled.a`
+const ResumeDownload = styled(motion.a)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -286,6 +285,19 @@ const DownloadText = styled.p`
 const Hero = () => {
   const theme = useTheme();
   // const socialIcons = ["linkedin-in", "github", "instagram", "envelope"];
+
+  const animateProps = {
+    initial: "initial",
+    animate: "animate",
+  };
+
+  const animateVariants = {
+    initial: { x: "-100%" },
+    animate: {
+      x: 0,
+      transition: { duration: 0.5 },
+    },
+  };
 
   return (
     <>
@@ -320,28 +332,33 @@ const Hero = () => {
         </HeroImageDiv>
         <GreetingsDiv>
           <Hidden>
-            <TransitionDiv text="true">
-              <TitleText>Hello! I'm</TitleText>
-            </TransitionDiv>
+            <TitleText variants={animateVariants} {...animateProps}>
+              Hello! I'm
+            </TitleText>
           </Hidden>
           <Hidden>
-            <TransitionDiv text="true">
-              <Name>Nidhish Vyas</Name>
-            </TransitionDiv>
+            <Name variants={animateVariants} {...animateProps}>
+              Nidhish Vyas
+            </Name>
           </Hidden>
           <Hidden>
-            <TransitionDiv text="true">
-              <SubTitleText>
-                Code by day, data by night! I'm a Full-Stack Developer who
-                transforms ideas into dynamic web apps and raw data into
-                powerful insights.
-              </SubTitleText>
-            </TransitionDiv>
+            <SubTitleText variants={animateVariants} {...animateProps}>
+              Code by day, data by night! I'm a Full-Stack Developer who
+              transforms ideas into dynamic web apps and raw data into powerful
+              insights.
+            </SubTitleText>
           </Hidden>
-          <ResumeDownload href={Resume} download="Resume - Nidhish Vyas.pdf">
-            <DownloadText>Get Resume</DownloadText>
-            <Download color={theme.Colors.White} size={16} />
-          </ResumeDownload>
+          <Hidden>
+            <ResumeDownload
+              href={Resume}
+              download="Resume - Nidhish Vyas.pdf"
+              variants={animateVariants}
+              {...animateProps}
+            >
+              <DownloadText>Get Resume</DownloadText>
+              <Download color={theme.Colors.White} size={16} />
+            </ResumeDownload>
+          </Hidden>
         </GreetingsDiv>
       </MainWrapper>
     </>
