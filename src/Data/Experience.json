@@ -10,7 +10,7 @@
     "techStack": [
       { "name": "React Native", "icon": "react" },
       { "name": "Typescript", "icon": "typescript" },
-      { "name": "Hyperledger Aries", "icon": "aries" },
+      { "name": "Hyperledger Aries", "icon": "aries", "color": "bright" },
       { "name": "ReactJS", "icon": "react" },
       { "name": "Python", "icon": "python" },
       { "name": "Jekyll", "icon": "jekyll", "color": "bright" },

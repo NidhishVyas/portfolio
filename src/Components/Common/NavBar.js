@@ -150,7 +150,7 @@ const SocialsDiv = styled.div`
   flex-direction: column;
   gap: 16px;
   padding: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid ${(props) => props.theme.Colors.LightestWhite};
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 `;
 
@@ -247,6 +247,7 @@ const TabMainDiv = styled(motion.div)`
 const NavBar = () => {
   const scrollToSection = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    toggleNav();
   };
 
   const theme = useTheme();
@@ -274,7 +275,7 @@ const NavBar = () => {
   const animationProps = {
     initial: "hidden",
     animate: "visible",
-    exit: "hidden",
+    // exit: "hidden",
     transition: { duration: 0.3, delay: 0.7 },
   };
 

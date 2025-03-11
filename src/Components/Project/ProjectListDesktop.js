@@ -11,7 +11,7 @@ import ProjectsData from "../../Data/ProjectsData.json";
 import Icon from "../Common/Icon";
 import ProjectDescription from "./ProjectDescription";
 
-import ProjImg from "../../Images/hero.png";
+// import ProjImg from "../../Images/hero.png";
 
 const MainWrapper = styled.div`
   display: flex;
@@ -170,7 +170,7 @@ const ProjectListDesktop = () => {
                 <Icon name="arrow-right" />
               </ProjectGistDiv>
               <ProjectImage
-                src={data.image}
+                src={require(`../../Images/${data.image}`)}
                 alt={data.name}
                 animate={targetControls}
                 initial={{ y: 20 }}

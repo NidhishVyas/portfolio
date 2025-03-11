@@ -53,7 +53,7 @@ const Home = () => {
         </TransitionDiv>
       </div>
       <div id="Projects">
-        <Projects />
+          <Projects />
       </div>
       <div id="Tech-Stack">
         <TransitionDiv>
