@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import ProjectsData from "../../Data/ProjectsData";
 import Icon from "../Common/Icon";
 import TechStack from "../Common/TechStack";
-import Hero from "../../Images/hero.png";
+// import Hero from "../../Images/hero.png";
 import { ExternalLink } from "lucide-react";
 
 const ProjectDiv = styled(motion.div)`
@@ -159,7 +159,10 @@ const ProjectListMobile = () => {
           >
             <ProjectImgDiv>
               <ColorDiv style={{ backgroundColor: data.color }}>
-                <ProjectImage src={Hero} alt={data.name} />
+                <ProjectImage
+                  src={require(`../../Images/${data.image}`)}
+                  alt={data.name}
+                />
               </ColorDiv>
             </ProjectImgDiv>
             <ProjectName>{data.name}</ProjectName>
