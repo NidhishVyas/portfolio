@@ -137,15 +137,49 @@ const NavButton = styled.button`
   color: ${(props) => props.theme.Colors.White};
   padding: 0;
   overflow: hidden;
-  cursor: pointer;
+
+  &:hover {
+    overflow: visible;
+  }
 `;
 
 const NavItem = styled(motion.p)`
   font-size: 28px;
   font-family: ${(props) => props.theme.Fonts.Inter};
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
     font-size: 20px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: ${(props) => props.theme.Colors.White};
+    -webkit-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    transform-origin: bottom right;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -webkit-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+  }
+
+  &:hover::after {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    transform-origin: bottom left;
   }
 `;
 
@@ -168,9 +202,38 @@ const Socials = styled(motion.a)`
   font-size: 18px;
   font-family: ${(props) => props.theme.Fonts.Inter};
   color: ${(props) => props.theme.Colors.White};
-
+  position: relative;
+  width: fit-content;
   @media ${(props) => props.theme.MediaQueries.l.query} {
     font-size: 16px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: ${(props) => props.theme.Colors.White};
+    -webkit-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    transform-origin: bottom right;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -webkit-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+  }
+
+  &:hover::after {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    transform-origin: bottom left;
   }
 `;
 
@@ -273,8 +336,8 @@ const NavBar = () => {
 
   const socials = [
     { name: "Discord", link: "https://discord.com/users/nids1312" },
-    { name: "LinkedIn", link: "#" },
-    { name: "Github", link: "#" },
+    { name: "LinkedIn", link: "https://www.linkedin.com/in/nidhish-vyas/" },
+    { name: "Github", link: "https://github.com/NidhishVyas" },
   ];
 
   const animationVariants = {

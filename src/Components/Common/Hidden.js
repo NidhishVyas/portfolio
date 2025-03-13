@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+
+const HiddenDiv = styled.div`
+  overflow: hidden;
+
+  &:hover {
+    overflow: visible;
+  }
+`;
 
 const Hidden = ({ children }) => {
-  return <div style={{ overflow: "hidden" }}>{children}</div>;
+  return <HiddenDiv>{children}</HiddenDiv>;
 };
 
 export default Hidden;
