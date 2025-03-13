@@ -1,11 +1,20 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.2c4b1b75.js",
+    "main.js": "/portfolio/static/js/main.9eb95f2e.js",
+    "static/media/jalsa.png": "/portfolio/static/media/jalsa.0fad91399ef7c760a711.png",
+    "static/media/iste.png": "/portfolio/static/media/iste.c5908581b5e1dade415a.png",
+    "static/media/bugsquash.png": "/portfolio/static/media/bugsquash.b857d09005dac5b5c302.png",
     "static/media/portrait1.png": "/portfolio/static/media/portrait1.9464b5ae6aebce1d45e4.png",
+    "static/media/techxter.png": "/portfolio/static/media/techxter.e9d09259f895a47cc68e.png",
+    "static/media/sies-home.png": "/portfolio/static/media/sies-home.16a522a70eba5dd14f91.png",
+    "static/media/bytecamp.png": "/portfolio/static/media/bytecamp.d56007120683eecbb25f.png",
+    "static/media/pushpak.png": "/portfolio/static/media/pushpak.88465942d435691df0c1.png",
     "static/media/portrait2.png": "/portfolio/static/media/portrait2.a7951381d25ec2fed483.png",
+    "static/media/crowdfunding.png": "/portfolio/static/media/crowdfunding.2fd2eaf8d0f8d7a5ab00.png",
     "static/media/hero.png": "/portfolio/static/media/hero.f4b3ba4f2987a14bd424.png",
     "static/media/Logo.png": "/portfolio/static/media/Logo.40720a63d1a2211a05c7.png",
     "static/media/SIESGST Portal.png": "/portfolio/static/media/SIESGST Portal.cc5ed350af1c572bf412.png",
+    "static/media/tedx.png": "/portfolio/static/media/tedx.d8b7f2b7641fbac7dd03.png",
     "static/media/heroimg.png": "/portfolio/static/media/heroimg.561707d556d52dd29b28.png",
     "static/media/contact.jpg": "/portfolio/static/media/contact.191cb1ba4f121b8b06be.jpg",
     "static/media/Resume - Nidhish Vyas.pdf": "/portfolio/static/media/Resume - Nidhish Vyas.9e44e400ee977ced31ff.pdf",
@@ -14,9 +23,9 @@
     "static/media/aries.png": "/portfolio/static/media/aries.79331761e7c0ba051c27.png",
     "index.html": "/portfolio/index.html",
     "static/media/Logo.svg": "/portfolio/static/media/Logo.88f4375abca88eea782e53371473401e.svg",
-    "main.2c4b1b75.js.map": "/portfolio/static/js/main.2c4b1b75.js.map"
+    "main.9eb95f2e.js.map": "/portfolio/static/js/main.9eb95f2e.js.map"
   },
   "entrypoints": [
-    "static/js/main.2c4b1b75.js"
+    "static/js/main.9eb95f2e.js"
   ]
 }
