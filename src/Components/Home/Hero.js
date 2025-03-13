@@ -5,7 +5,7 @@ import Icon from "../Common/Icon";
 import Resume from "../../Data/Resume - Nidhish Vyas.pdf";
 import HeroImg from "../../Images/heroimg.png";
 import Hidden from "../Common/Hidden";
-import { Mail, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import { motion } from "framer-motion";
 
 const MainWrapper = styled.div`
@@ -50,7 +50,9 @@ const HeroImageDiv = styled.div`
   overflow-y: clip;
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
-    width: 400px;
+    width: 500px;
+    transform: translateX(calc(-50% + 100px));
+
     height: auto;
   }
 
@@ -58,7 +60,7 @@ const HeroImageDiv = styled.div`
     position: relative;
     left: auto;
     top: auto;
-    transform: translateX(-25%);
+    transform: translateX(calc(-25% + 100px));
     /* width: 60%; */
     /* height: auto; */
   }
@@ -119,7 +121,7 @@ const SocialsDiv = styled.div`
   align-items: center;
 `;
 
-const SocialsIcon = styled.button`
+const SocialsIcon = styled(motion.a)`
   background: ${(props) => props.theme.Colors.PrimaryColor};
   border: 1px solid ${(props) => props.theme.Colors.White};
   padding: 10px;
@@ -128,15 +130,15 @@ const SocialsIcon = styled.button`
   justify-content: center;
   align-items: center;
   position: absolute;
-  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
   &:nth-child(1) {
     left: 170px;
-    top: 15px;
+    top: 13px;
   }
   &:nth-child(2) {
     left: 225px;
-    top: 50px;
+    top: 47px;
   }
   &:nth-child(3) {
     left: 255px;
@@ -152,18 +154,18 @@ const SocialsIcon = styled.button`
 
     &:nth-child(1) {
       left: 285px;
-      top: 50px;
+      top: 45px;
     }
     &:nth-child(2) {
       left: 360px;
-      top: 90px;
+      top: 88px;
     }
     &:nth-child(3) {
       left: 415px;
       top: 170px;
     }
     &:nth-child(4) {
-      left: 425px;
+      left: 424px;
       top: 270px;
     }
   }
@@ -173,18 +175,18 @@ const SocialsIcon = styled.button`
 
     &:nth-child(1) {
       left: 285px;
-      top: 80px;
+      top: 75px;
     }
     &:nth-child(2) {
       left: 360px;
-      top: 120px;
+      top: 118px;
     }
     &:nth-child(3) {
       left: 415px;
       top: 200px;
     }
     &:nth-child(4) {
-      left: 425px;
+      left: 424px;
       top: 300px;
     }
   }
@@ -284,7 +286,12 @@ const DownloadText = styled.p`
 
 const Hero = () => {
   const theme = useTheme();
-  // const socialIcons = ["linkedin-in", "github", "instagram", "envelope"];
+  const socialIcons = [
+    { name: "linkedin-in", link: "https://www.linkedin.com/in/nidhish-vyas/" },
+    { name: "github", link: "https://github.com/NidhishVyas" },
+    { name: "discord", link: "https://discord.com/users/nids1312" },
+    { name: "envelope", link: "mailto:nv373@njit.edu" },
+  ];
 
   const animateProps = {
     initial: "initial",
@@ -309,26 +316,21 @@ const Hero = () => {
           <OtherSemiCircle inner="true" />
           <OtherSemiCircle />
           <SocialsDiv>
-            <SocialsIcon>
-              <Icon name="linkedin-in" color={theme.Colors.White} size="xl" />
-            </SocialsIcon>
-            <SocialsIcon>
-              <Icon name="github" color={theme.Colors.White} size="xl" />
-            </SocialsIcon>
-            <SocialsIcon>
-              <Icon name="instagram" color={theme.Colors.White} size="xl" />
-            </SocialsIcon>
-            <SocialsIcon>
-              <Mail color={theme.Colors.White} size={18} />
-            </SocialsIcon>
+            {socialIcons.map((icon, index) => (
+              <SocialsIcon
+                key={icon}
+                index={index + 1}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.3 }}
+                transition={{ duration: 0.3 }}
+                href={icon.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon name={icon.name} color={theme.Colors.White} size="lg" />
+              </SocialsIcon>
+            ))}
           </SocialsDiv>
-          {/* <SocialsDiv>
-          {socialIcons.map((icon, index) => (
-            <SocialsIcon key={icon} index={index + 1}>
-              <Icon name={icon} color={theme.Colors.White} size={20} />
-            </SocialsIcon>
-          ))}
-        </SocialsDiv> */}
         </HeroImageDiv>
         <GreetingsDiv>
           <Hidden>

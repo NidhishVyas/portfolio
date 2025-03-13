@@ -38,7 +38,7 @@ const Icon = ({
   return (
     <FontAwesomeIcon
       icon={iconDef}
-      style={style}
+      // style={style}
       size={size}
       color={color}
       spin={spin}
@@ -49,6 +49,8 @@ const Icon = ({
       listItem={listItem}
       pull={pull}
       rotation={rotation}
+
+      style={{ aspectRatio: 1 }}
     />
     // <img
     //   src={`https://cdn.simpleicons.org/${icon}`}

@@ -175,5 +175,24 @@
       { "name": "CSS3", "icon": "css3" }
     ],
     "color": "#e60076"
+  },
+  {
+    "name": "VDKMS Bifold",
+    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "gist": "Vehicular Decentralized Key Management System for Cellular Vehicular-to-Everything Networks, A Blockchain-Based Approach.",
+    "image": "vdkms.png",
+    "sourceCode": "",
+    "website": "",
+    "techStack": [
+      { "name": "React Native", "icon": "react" },
+      { "name": "TypeScript", "icon": "typescript" },
+      { "name": "Hyperledger Aries", "icon": "aries", "color": "bright" },
+      { "name": "ReactJS", "icon": "react" },
+      { "name": "Python", "icon": "python" },
+      { "name": "Jekyll", "icon": "jekyll", "color": "bright" },
+      { "name": "HTML5", "icon": "html5" },
+      { "name": "CSS3", "icon": "css3" }
+    ],
+    "color": "#00bc7d"
   }
 ]

@@ -4,6 +4,7 @@ import Icon from "../Common/Icon";
 import ProjectsData from "../../Data/ProjectsData.json";
 import Microsoft from "../../Images/microsoft.png";
 import MetaMask from "../../Images/MetaMask.svg";
+import Aries from "../../Images/aries.png";
 
 const ProjectDetails = styled.div`
   width: 35%;
@@ -127,6 +128,8 @@ const ProjectDescription = forwardRef((_, ref) => {
                       ? Microsoft
                       : tech.icon === "metamask"
                       ? MetaMask
+                      : tech.icon === "aries"
+                      ? Aries
                       : `https://cdn.simpleicons.org/${tech.icon}`
                   }
                   alt={tech.name}
