@@ -266,6 +266,7 @@ const ResumeDownload = styled(motion.a)`
   border-radius: 50px;
   font-family: ${(props) => props.theme.Fonts.Poppins};
   box-shadow: inset 0 0px 10px ${(props) => props.theme.Colors.LightestWhite};
+  color: ${(props) => props.theme.Colors.White};
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     padding: 20px 45px;
@@ -273,7 +274,6 @@ const ResumeDownload = styled(motion.a)`
 `;
 
 const DownloadText = styled.p`
-  color: ${(props) => props.theme.Colors.White};
   margin-right: 10px;
   font-size: 14px;
 
