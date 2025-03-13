@@ -21,7 +21,6 @@
         const favicon =
           document.querySelector("link[rel='icon']") ||
           document.createElement("link");
-        console.log(window.matchMedia("(prefers-color-scheme: dark)"))
         favicon.rel = "icon";
         favicon.href = darkMode
           ? "%PUBLIC_URL%/assets/favicon-light/favicon.ico"

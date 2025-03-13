@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled, { useTheme } from "styled-components";
 import {
   motion,
@@ -104,6 +104,13 @@ const DropMenu = styled(motion.div)`
 
   @media ${(props) => props.theme.MediaQueries.xl.query} {
     transform: ${(props) =>
+      props.isscrolled
+        ? `translateX(calc(107% - ${(1200 - props.width + 60) / 2}px))`
+        : undefined};
+  }
+
+  @media ${(props) => props.theme.MediaQueries.xxl.query} {
+    transform: ${(props) =>
       props.isscrolled ? "translateX(107%)" : undefined};
   }
 `;
@@ -195,6 +202,7 @@ const TabMainDiv = styled(motion.div)`
     margin: ${(props) => (props.isscrolled ? 0 : "20px")};
     padding: ${(props) => (props.isscrolled ? "20px" : "10px 20px")};
     border-radius: ${(props) => (props.isscrolled ? 0 : "10px")};
+    transition: all 0.3s linear;
   }
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
@@ -203,7 +211,6 @@ const TabMainDiv = styled(motion.div)`
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
-    transition: all 0.5s linear;
   }
 
   @media ${(props) => props.theme.MediaQueries.xl.query} {
@@ -298,8 +305,19 @@ const NavBar = () => {
   }, [windowWidth]);
 
   useMotionValueEvent(scrollYProgress, "change", (value) => {
+    if (isSideNav) toggleNav();
     setIsScrolled(value > 0);
   });
+
+  const [width, setWidth] = useState(0);
+  const widthRef = useRef(null);
+
+  useEffect(() => {
+    if (widthRef.current) {
+      setWidth(widthRef.current.offsetWidth);
+      console.log(widthRef.current.offsetWidth);
+    }
+  }, []);
 
   return (
     <MainWrapper>
@@ -374,36 +392,37 @@ const NavBar = () => {
           )}
         </AnimatePresence>
       </MobMainDiv>
-      <AnimatePresence>
-        <TabMainDiv
-          isscrolled={isScrolled}
-          // transition={{ duration: 0.7, ease: "easeInOut" }}
-        >
-          <LogoName />
-          <MenuDiv onClick={toggleNav}>
-            {/* <Icon name="bars" color={theme.Colors.White} /> */}
-            <motion.svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke={theme.Colors.White}
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <motion.path
-                animate={{ d: isSideNav ? closePath : menuPath }}
-                transition={{ duration: 1, type: "spring", stiffness: 150 }}
-              />
-            </motion.svg>
-          </MenuDiv>
-          {/* <TabMenuDiv>
+      {/* <AnimatePresence> */}
+      <TabMainDiv
+        isscrolled={isScrolled}
+        ref={widthRef}
+        // transition={{ duration: 0.7, ease: "easeInOut" }}
+      >
+        <LogoName />
+        <MenuDiv onClick={toggleNav}>
+          {/* <Icon name="bars" color={theme.Colors.White} /> */}
+          <motion.svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke={theme.Colors.White}
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <motion.path
+              animate={{ d: isSideNav ? closePath : menuPath }}
+              transition={{ duration: 1, type: "spring", stiffness: 150 }}
+            />
+          </motion.svg>
+        </MenuDiv>
+        {/* <TabMenuDiv>
             <MenuBtn>Resume</MenuBtn>
             <MenuBtn onClick={toggleNav}>Menu</MenuBtn>
           </TabMenuDiv> */}
-        </TabMainDiv>
-      </AnimatePresence>
+      </TabMainDiv>
+      {/* </AnimatePresence> */}
       {isSideNav && windowWidth >= 768 && (
         <AnimatePresence>
           <DropMenu
@@ -412,6 +431,7 @@ const NavBar = () => {
             animate={{ height: "calc(100vh - 140px)", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.7, ease: "easeInOut" }}
+            width={width}
           >
             <NavDiv>
               {NavList.map((item, i) => (

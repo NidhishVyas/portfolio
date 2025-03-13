@@ -23,7 +23,7 @@
     "name": "Crowdfunding using Blockchain",
     "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
     "gist": "A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.",
-    "image": "hero.png",
+    "image": "crowdfunding.png",
     "sourceCode": "",
     "website": "",
     "points": [
@@ -40,7 +40,7 @@
     "name": "Project 3",
     "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
     "gist": "A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.",
-    "image": "hero.png",
+    "image": "bugsquash.png",
     "sourceCode": "",
     "website": "",
     "techStack": [],
@@ -50,10 +50,104 @@
     "name": "Project 4",
     "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
     "gist": "A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.",
-    "image": "hero.png",
+    "image": "bytecamp.png",
     "sourceCode": "",
     "website": "",
     "techStack": [],
     "color": "#6e11b0"
+  },
+  {
+    "name": "College Student Portal",
+    "info": "Designed and developed a website application using MERN stack, integrating a customizable event calendar and RSVP system.",
+    "gist": "A online portal for SIES GST students that keeps you connected to the college from anywhere and everywhere!",
+    "image": "iste.png",
+    "sourceCode": "",
+    "website": "https://www.portal.siesgst.ac.in/",
+    "techStack": [
+      { "name": "ReactJS", "icon": "react" },
+      { "name": "Figma", "icon": "figma" },
+      { "name": "NodeJS", "icon": "nodedotjs" },
+      { "name": "Express", "icon": "express", "color": "dark" },
+      { "name": "MongoDB", "icon": "mongodb" },
+      { "name": "Axios", "icon": "axios" },
+      { "name": "Google Sign-in", "icon": "google" },
+      { "name": "Microsoft Sign-in", "icon": "microsoft" },
+      { "name": "Google Analytics", "icon": "googleanalytics" }
+    ],
+    "color": "#193cb8"
+  },
+  {
+    "name": "Crowdfunding using Blockchain",
+    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "gist": "A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.",
+    "image": "jalsa.png",
+    "sourceCode": "",
+    "website": "",
+    "points": [
+      "Leveraged Partial Prerendering and After for faster loading.",
+      "Implemented a custom CMS for easy content management.",
+      "Integrated Auth.js for user authentication and authorization.",
+      "Utilized Framer Motion for smooth animations.",
+      "Implemented Sentry for error tracking."
+    ],
+    "techStack": ["Next.js", "React", "TypeScript", "markdown", "Sentry"],
+    "color": "#e60076"
+  },
+  {
+    "name": "Project 3",
+    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "gist": "A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.",
+    "image": "pushpak.png",
+    "sourceCode": "",
+    "website": "",
+    "techStack": [],
+    "color": "#00bc7d"
+  },
+  {
+    "name": "Project 4",
+    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "gist": "A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.",
+    "image": "sies-home.png",
+    "sourceCode": "",
+    "website": "",
+    "techStack": [],
+    "color": "#6e11b0"
+  },
+  {
+    "name": "College Student Portal",
+    "info": "Designed and developed a website application using MERN stack, integrating a customizable event calendar and RSVP system.",
+    "gist": "A online portal for SIES GST students that keeps you connected to the college from anywhere and everywhere!",
+    "image": "techxter.png",
+    "sourceCode": "",
+    "website": "https://www.portal.siesgst.ac.in/",
+    "techStack": [
+      { "name": "ReactJS", "icon": "react" },
+      { "name": "Figma", "icon": "figma" },
+      { "name": "NodeJS", "icon": "nodedotjs" },
+      { "name": "Express", "icon": "express", "color": "dark" },
+      { "name": "MongoDB", "icon": "mongodb" },
+      { "name": "Axios", "icon": "axios" },
+      { "name": "Google Sign-in", "icon": "google" },
+      { "name": "Microsoft Sign-in", "icon": "microsoft" },
+      { "name": "Google Analytics", "icon": "googleanalytics" }
+    ],
+    "color": "#193cb8"
+  },
+  {
+    "name": "Crowdfunding using Blockchain",
+    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "gist": "A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.",
+    "image": "tedx.png",
+    "sourceCode": "",
+    "website": "",
+    "points": [
+      "Leveraged Partial Prerendering and After for faster loading.",
+      "Implemented a custom CMS for easy content management.",
+      "Integrated Auth.js for user authentication and authorization.",
+      "Utilized Framer Motion for smooth animations.",
+      "Implemented Sentry for error tracking."
+    ],
+    "techStack": ["Next.js", "React", "TypeScript", "markdown", "Sentry"],
+    "color": "#e60076"
   }
 ]
