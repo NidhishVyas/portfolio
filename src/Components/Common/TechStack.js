@@ -13,7 +13,8 @@ const TechStackDiv = styled.div`
 
 const Tech = styled.p`
   background-color: ${(props) => props.theme.Colors.TechBg};
-  font-size: 14px;
+  font-family: ${(props) => props.theme.Fonts.Poppins};
+  font-size: 12px;
   padding: 3px 7px;
   border: 1px solid ${(props) => props.theme.Colors.LightestWhite};
   border-radius: 5px;

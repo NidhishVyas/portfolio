@@ -6,8 +6,8 @@
       { "name": "NextJS", "icon": "nextdotjs", "color": "dark" },
       { "name": "Angular", "icon": "angular", "color": "dark" },
       { "name": "Bootstrap", "icon": "bootstrap" },
-      { "name": "HTML", "icon": "html5" },
-      { "name": "CSS", "icon": "css" }
+      { "name": "HTML5", "icon": "html5" },
+      { "name": "CSS3", "icon": "css3" }
     ]
   },
   {

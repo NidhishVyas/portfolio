@@ -14,8 +14,8 @@
       { "name": "ReactJS", "icon": "react" },
       { "name": "Python", "icon": "python" },
       { "name": "Jekyll", "icon": "jekyll", "color": "bright" },
-      { "name": "HTML", "icon": "html5" },
-      { "name": "CSS", "icon": "css" }
+      { "name": "HTML5", "icon": "html5" },
+      { "name": "CSS3", "icon": "css3" }
     ]
   },
   {
@@ -60,8 +60,8 @@
       { "name": "ReactJS", "icon": "react" },
       { "name": "Figma", "icon": "figma" },
       { "name": "NodeJS", "icon": "nodedotjs" },
-      { "name": "HTML", "icon": "html5" },
-      { "name": "CSS", "icon": "css" }
+      { "name": "HTML5", "icon": "html5" },
+      { "name": "CSS3", "icon": "css3" }
     ]
   }
 ]

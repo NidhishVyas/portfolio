@@ -56,7 +56,7 @@ const Home = () => {
           <Projects />
       </div>
       <div id="Tech-Stack">
-        <TransitionDiv>
+        <TransitionDiv amount="true">
           <TechStack />
         </TransitionDiv>
       </div>

@@ -57,6 +57,8 @@ const LogoName = styled(Logo)`
   stroke: ${(props) => props.theme.Colors.PrimaryColor};
   color: ${(props) => props.theme.Colors.White};
   margin-left: 25px;
+  cursor: pointer;
+
   @media ${(props) => props.theme.MediaQueries.m.query} {
     margin-left: 0;
   }
@@ -98,11 +100,12 @@ const DropMenu = styled(motion.div)`
     top: 125px;
     left: ${(props) => (props.isscrolled ? "50%" : undefined)};
     right: ${(props) => (props.isscrolled ? undefined : "4%")};
-    transform: ${(props) => (props.isscrolled ? "translateX(73%)" : undefined)};
+    /* transform: ${(props) =>
+      props.isscrolled ? "translateX(73%)" : undefined}; */
     /* transition: all 0.7s linear; */
   }
 
-  @media ${(props) => props.theme.MediaQueries.xl.query} {
+  @media ${(props) => props.theme.MediaQueries.l.query} {
     transform: ${(props) =>
       props.isscrolled
         ? `translateX(calc(107% - ${(1200 - props.width + 60) / 2}px))`
@@ -252,9 +255,9 @@ const TabMainDiv = styled(motion.div)`
 // `;
 
 const NavBar = () => {
-  const scrollToSection = (id) => {
+  const scrollToSection = (id, open = true) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-    toggleNav();
+    if (open) toggleNav();
   };
 
   const theme = useTheme();
@@ -323,7 +326,7 @@ const NavBar = () => {
     <MainWrapper>
       <MobMainDiv>
         <Container>
-          <LogoName />
+          <LogoName onClick={() => scrollToSection("Home", false)} />
           <MenuDiv onClick={toggleNav}>
             {/* <Icon name="bars" color={theme.Colors.White} /> */}
             <motion.svg
@@ -398,7 +401,7 @@ const NavBar = () => {
         ref={widthRef}
         // transition={{ duration: 0.7, ease: "easeInOut" }}
       >
-        <LogoName />
+        <LogoName onClick={() => scrollToSection("Home", false)} />
         <MenuDiv onClick={toggleNav}>
           {/* <Icon name="bars" color={theme.Colors.White} /> */}
           <motion.svg

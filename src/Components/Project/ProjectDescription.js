@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Icon from "../Common/Icon";
 import ProjectsData from "../../Data/ProjectsData.json";
 import Microsoft from "../../Images/microsoft.png";
+import MetaMask from "../../Images/MetaMask.svg";
 
 const ProjectDetails = styled.div`
   width: 35%;
@@ -124,6 +125,8 @@ const ProjectDescription = forwardRef((_, ref) => {
                   src={
                     tech.icon === "microsoft"
                       ? Microsoft
+                      : tech.icon === "metamask"
+                      ? MetaMask
                       : `https://cdn.simpleicons.org/${tech.icon}`
                   }
                   alt={tech.name}

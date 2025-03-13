@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const TransitionDiv = ({ children }) => {
+const TransitionDiv = ({ children, amount = false }) => {
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 0.3, once: true }}
+      viewport={{ amount: amount ? 0.05 : 0.3, once: true }}
       variants={{
         hidden: { opacity: 0, scale: 0.8, y: 20 },
         visible: {
