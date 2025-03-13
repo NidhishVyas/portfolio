@@ -3,6 +3,7 @@ import styled from "styled-components";
 import TechStackData from "../../Data/TechStack.json";
 import Java from "../../Images/java.png";
 import SectionHeading from "../Common/SectionHeading";
+import { motion } from "framer-motion";
 
 const MainWrapper = styled.div`
   margin-top: 90px;
@@ -51,7 +52,7 @@ const MyTechWrap = styled.div`
   }
 `;
 
-const TechStackItems = styled.div`
+const TechStackItems = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,6 +99,22 @@ const Tech = styled.p`
 `;
 
 const TechStack = () => {
+  const fadeInVariant = (id) => ({
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: id * 0.05,
+        duration: 0.5,
+        type: "spring",
+      },
+    },
+  });
+
   return (
     <MainWrapper>
       {/* <SectionHeading
@@ -110,7 +127,13 @@ const TechStack = () => {
           <StackCategory>{item.category}</StackCategory>
           <MyTechWrap>
             {item.stack.map((tech, id) => (
-              <TechStackItems key={id}>
+              <TechStackItems
+                key={id}
+                variants={fadeInVariant(id)}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+              >
                 <TechImage
                   src={
                     tech.icon !== "java"

@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled, { useTheme } from "styled-components";
 import Portrait from "../../Images/portrait1.png";
 import Icon from "../Common/Icon";
 import Resume from "../../Data/Resume - Nidhish Vyas.pdf";
 import HeroImg from "../../Images/heroimg.png";
-import Hidden from "../Common/Hidden";
 import { Download } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -66,7 +65,7 @@ const HeroImageDiv = styled.div`
   }
 `;
 
-const HeroImage = styled.img`
+const HeroImage = styled(motion.img)`
   width: 240px;
   height: auto;
 
@@ -76,7 +75,7 @@ const HeroImage = styled.img`
   }
 `;
 
-const SemiCircle = styled.div`
+const SemiCircle = styled(motion.div)`
   position: absolute;
   width: 150px;
   height: 230px;
@@ -84,6 +83,7 @@ const SemiCircle = styled.div`
   left: 125px;
   border-radius: 0 150px 150px 0;
   border: 1px solid ${(props) => props.theme.Colors.LightWhite};
+  border-left: none;
   z-index: -1;
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
@@ -99,7 +99,7 @@ const SemiCircle = styled.div`
   }
 `;
 
-const OtherSemiCircle = styled.div`
+const OtherSemiCircle = styled(motion.div)`
   position: absolute;
   width: ${(props) => (props.inner ? "200px" : "300px")};
   height: ${(props) => (props.inner ? "320px" : "480px")};
@@ -109,6 +109,7 @@ const OtherSemiCircle = styled.div`
   border: 1px solid ${(props) => props.theme.Colors.LightestWhite};
   z-index: -1;
   display: none;
+  border-left: none;
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
     display: block;
@@ -269,6 +270,7 @@ const ResumeDownload = styled(motion.a)`
   font-family: ${(props) => props.theme.Fonts.Poppins};
   box-shadow: inset 0 0px 10px ${(props) => props.theme.Colors.LightestWhite};
   color: ${(props) => props.theme.Colors.White};
+  cursor: pointer;
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     padding: 20px 45px;
@@ -292,6 +294,7 @@ const Hero = () => {
     { name: "discord", link: "https://discord.com/users/nids1312" },
     { name: "envelope", link: "mailto:nv373@njit.edu" },
   ];
+  const [isHovered, setIsHovered] = useState(false);
 
   const animateProps = {
     initial: "initial",
@@ -302,26 +305,53 @@ const Hero = () => {
     initial: { x: "-100%" },
     animate: {
       x: 0,
+      transition: { duration: 0.5, type: "spring" },
+    },
+  };
+
+  const circleAnimateVariants = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1, transition: { duration: 0.5, type: "spring" } },
+  };
+
+  const scaleAnimateVariants = {
+    initial: { scale: 0, opacity: 0 },
+    animate: {
+      scale: 1,
+      opacity: 1,
       transition: { duration: 0.5 },
     },
   };
+
+  const hoverTimeout = useRef(null);
 
   return (
     <>
       {/* <HeroImgDiv /> */}
       <MainWrapper>
         <HeroImageDiv>
-          <HeroImage src={Portrait} />
-          <SemiCircle />
-          <OtherSemiCircle inner="true" />
-          <OtherSemiCircle />
+          <HeroImage
+            src={Portrait}
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5  }}
+          />
+          <SemiCircle variants={circleAnimateVariants} {...animateProps} />
+          <OtherSemiCircle
+            inner="true"
+            variants={circleAnimateVariants}
+            {...animateProps}
+          />
+          <OtherSemiCircle variants={circleAnimateVariants} {...animateProps} />
           <SocialsDiv>
             {socialIcons.map((icon, index) => (
               <SocialsIcon
                 key={icon}
                 index={index + 1}
+                variants={scaleAnimateVariants}
+                {...animateProps}
                 whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.3 }}
+                whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.3 }}
                 href={icon.link}
                 target="_blank"
@@ -332,35 +362,45 @@ const Hero = () => {
             ))}
           </SocialsDiv>
         </HeroImageDiv>
-        <GreetingsDiv>
-          <Hidden>
-            <TitleText variants={animateVariants} {...animateProps}>
-              Hello! I'm
-            </TitleText>
-          </Hidden>
-          <Hidden>
-            <Name variants={animateVariants} {...animateProps}>
-              Nidhish Vyas
-            </Name>
-          </Hidden>
-          <Hidden>
-            <SubTitleText variants={animateVariants} {...animateProps}>
-              Code by day, data by night! I'm a Full-Stack Developer who
-              transforms ideas into dynamic web apps and raw data into powerful
-              insights.
-            </SubTitleText>
-          </Hidden>
-          <Hidden>
-            <ResumeDownload
-              href={Resume}
-              download="Resume - Nidhish Vyas.pdf"
-              variants={animateVariants}
-              {...animateProps}
-            >
-              <DownloadText>Get Resume</DownloadText>
-              <Download color={theme.Colors.White} size={16} />
-            </ResumeDownload>
-          </Hidden>
+        <GreetingsDiv style={{ overflow: isHovered ? "visible" : "hidden" }}>
+          <TitleText variants={animateVariants} {...animateProps}>
+            Hello! I'm
+          </TitleText>
+          <Name variants={animateVariants} {...animateProps}>
+            Nidhish Vyas
+          </Name>
+          <SubTitleText variants={animateVariants} {...animateProps}>
+            Code by day, data by night! I'm a Full-Stack Developer who
+            transforms ideas into dynamic web apps and raw data into powerful
+            insights.
+          </SubTitleText>
+          <ResumeDownload
+            href={Resume}
+            download="Resume - Nidhish Vyas.pdf"
+            variants={animateVariants}
+            {...animateProps}
+            onMouseEnter={() => {
+              if (hoverTimeout.current) {
+                clearTimeout(hoverTimeout.current);
+              }
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => {
+              hoverTimeout.current = setTimeout(() => {
+                setIsHovered(false);
+              }, 500);
+            }}
+            whileHover={{
+              boxShadow: `0px 0px 10px ${theme.Colors.LightWhite}`,
+              scale: 1.05,
+              transition: { duration: 0.3, ease: "easeInOut" },
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.3 }}
+          >
+            <DownloadText>Get Resume</DownloadText>
+            <Download color={theme.Colors.White} size={16} />
+          </ResumeDownload>
         </GreetingsDiv>
       </MainWrapper>
     </>

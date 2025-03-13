@@ -3,6 +3,7 @@ import styled from "styled-components";
 // import Icon from "./Icon";
 import formatDate from "../../Helpers/formatdate";
 import Aries from "../../Images/aries.png";
+import { motion } from "framer-motion";
 
 const MainDiv = styled.div`
   margin-bottom: 40px;
@@ -84,7 +85,7 @@ const TechStackDiv = styled.div`
   flex-wrap: wrap;
 `;
 
-const TechStack = styled.div`
+const TechStack = styled(motion.div)`
   padding: 4px 12px;
   border: 1px solid ${(props) => props.theme.Colors.TextColor};
   border-radius: 25px;
@@ -123,6 +124,22 @@ const TechImg = styled.img`
 const Experience = ({ data }) => {
   const courseworkList = data?.coursework ? data?.coursework.join(", ") : null;
 
+  const fadeInVariant = (id) => ({
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: id * 0.05,
+        duration: 0.5,
+        type: "spring",
+      },
+    },
+  });
+
   return (
     <MainDiv>
       <FlexDiv colrev="true">
@@ -155,7 +172,11 @@ const Experience = ({ data }) => {
           <TechStackDiv>
             {/* <FlexDiv style={{ marginTop: "12px", flexWrap: "wrap" }}> */}
             {data.techStack?.map((tech, i) => (
-              <TechStack key={i}>
+              <TechStack key={i}
+              variants={fadeInVariant(i)}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}>
                 <TechImg
                   src={
                     tech.icon === "aries"

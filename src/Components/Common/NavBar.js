@@ -13,7 +13,7 @@ import NavList from "../../Data/NavList.json";
 import Hidden from "./Hidden";
 import { ArrowUpRight } from "lucide-react";
 
-const MainWrapper = styled.div`
+const MainWrapper = styled(motion.div)`
   position: fixed;
   z-index: 1000;
   margin: 0 auto;
@@ -386,7 +386,11 @@ const NavBar = () => {
   }, []);
 
   return (
-    <MainWrapper>
+    <MainWrapper
+      initial={{ y: "-100%" }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: "easeInOut", type: "spring" }}
+    >
       <MobMainDiv>
         <Container>
           <LogoName onClick={() => scrollToSection("Home", false)} />

@@ -5,6 +5,7 @@ import ProjectsData from "../../Data/ProjectsData.json";
 import Microsoft from "../../Images/microsoft.png";
 import MetaMask from "../../Images/MetaMask.svg";
 import Aries from "../../Images/aries.png";
+import { motion } from "framer-motion";
 
 const ProjectDetails = styled.div`
   width: 35%;
@@ -45,7 +46,7 @@ const Point = styled.p`
   color: ${(props) => props.theme.Colors.TextColor};
 `;
 
-const TechStack = styled.div`
+const TechStack = styled(motion.div)`
   padding: 4px 12px;
   border: 1px solid ${(props) => props.theme.Colors.LightWhite};
   border-radius: 25px;
@@ -82,6 +83,21 @@ const FlexDiv = styled.div`
 
 const ProjectDescription = forwardRef((_, ref) => {
   const [projectData, setProjectData] = useState(ProjectsData[0]);
+  const fadeInVariant = (i) => ({
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.05,
+        duration: 0.3,
+        type: "spring",
+      },
+    },
+  });
 
   useImperativeHandle(ref, () => ({
     updateProject: (newProject) => {
@@ -120,7 +136,13 @@ const ProjectDescription = forwardRef((_, ref) => {
 
         <FlexDiv style={{ marginTop: "12px", flexWrap: "wrap" }}>
           {projectData.techStack?.map((tech, i) => (
-            <TechStack key={i}>
+            <TechStack
+              key={i}
+              variants={fadeInVariant(i)}
+              initial="initial"
+              animate="animate"
+              // viewport={{ once: true }}
+            >
               {tech.icon && (
                 <TechImg
                   src={
