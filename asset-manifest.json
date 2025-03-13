@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.js": "/static/js/main.8b1a1b32.js",
+    "main.js": "/static/js/main.56e01dd4.js",
     "static/media/jalsa.png": "/static/media/jalsa.0fad91399ef7c760a711.png",
     "static/media/iste.png": "/static/media/iste.c5908581b5e1dade415a.png",
     "static/media/bugsquash.png": "/static/media/bugsquash.b857d09005dac5b5c302.png",
     "static/media/portrait1.png": "/static/media/portrait1.9464b5ae6aebce1d45e4.png",
     "static/media/techxter.png": "/static/media/techxter.e9d09259f895a47cc68e.png",
+    "static/media/vdkms.png": "/static/media/vdkms.48bc3a143f6e306f61ba.png",
     "static/media/sies-home.png": "/static/media/sies-home.16a522a70eba5dd14f91.png",
     "static/media/bytecamp.png": "/static/media/bytecamp.d56007120683eecbb25f.png",
     "static/media/pushpak.png": "/static/media/pushpak.88465942d435691df0c1.png",
@@ -26,6 +27,6 @@
     "static/media/Logo.svg": "/static/media/Logo.88f4375abca88eea782e53371473401e.svg"
   },
   "entrypoints": [
-    "static/js/main.8b1a1b32.js"
+    "static/js/main.56e01dd4.js"
   ]
 }
