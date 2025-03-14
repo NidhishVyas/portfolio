@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { useTheme } from "styled-components";
 import Icon from "./Icon";
+import { motion } from "framer-motion";
 
 const MainWrapper = styled.div`
   background: ${(props) => props.theme.Colors.LightBlack};
@@ -17,7 +18,7 @@ const SocialsDiv = styled.div`
   gap: 20px;
 `;
 
-const SocialsIcon = styled.button`
+const SocialsIcon = styled(motion.a)`
   background: ${(props) => props.theme.Colors.LightBlack};
   border: 0px solid ${(props) => props.theme.Colors.White};
   padding: 10px;
@@ -25,7 +26,6 @@ const SocialsIcon = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease-in-out;
 `;
 
 const FooterText = styled.p`
@@ -42,22 +42,30 @@ const Copyright = styled.p`
 
 const Footer = () => {
   const theme = useTheme();
+const socialIcons = [
+    { name: "linkedin-in", link: "https://www.linkedin.com/in/nidhish-vyas/" },
+    { name: "github", link: "https://github.com/NidhishVyas" },
+    { name: "discord", link: "https://discord.com/users/nids1312" },
+    { name: "envelope", link: "mailto:nv373@njit.edu" },
+  ];
 
+  
   return (
     <MainWrapper>
       <SocialsDiv>
-        <SocialsIcon>
-          <Icon name="linkedin" color={theme.Colors.White} size="2xl" />
-        </SocialsIcon>
-        <SocialsIcon>
-          <Icon name="github" color={theme.Colors.White} size="2xl" />
-        </SocialsIcon>
-        <SocialsIcon>
-          <Icon name="instagram" color={theme.Colors.White} size="2xl" />
-        </SocialsIcon>
-        <SocialsIcon>
-          <Icon name="envelope" color={theme.Colors.White} size="2xl" />
-        </SocialsIcon>
+        {socialIcons.map((icon, index) => (
+          <SocialsIcon
+            key={icon}
+            index={index + 1}
+            whileHover={{ y: -5 }}
+            whileTap={{ scale: 0.8 }}
+            href={icon.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon name={icon.name} color={theme.Colors.White} size="xl" />
+          </SocialsIcon>
+        ))}
       </SocialsDiv>
       <FooterText>Designed and Developed with ❤ by Nidhish Vyas</FooterText>
       <Copyright>Copyright © {new Date().getFullYear()}</Copyright>

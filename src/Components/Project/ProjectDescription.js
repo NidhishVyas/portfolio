@@ -83,6 +83,7 @@ const FlexDiv = styled.div`
 
 const ProjectDescription = forwardRef((_, ref) => {
   const [projectData, setProjectData] = useState(ProjectsData[0]);
+
   const fadeInVariant = (i) => ({
     initial: {
       opacity: 0,
@@ -93,7 +94,7 @@ const ProjectDescription = forwardRef((_, ref) => {
       y: 0,
       transition: {
         delay: i * 0.05,
-        duration: 0.3,
+        duration: 0.2,
         type: "spring",
       },
     },

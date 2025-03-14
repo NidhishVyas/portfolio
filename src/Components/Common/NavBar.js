@@ -204,6 +204,7 @@ const Socials = styled(motion.a)`
   color: ${(props) => props.theme.Colors.White};
   position: relative;
   width: fit-content;
+  
   @media ${(props) => props.theme.MediaQueries.l.query} {
     font-size: 16px;
   }

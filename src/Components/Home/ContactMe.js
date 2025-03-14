@@ -1,8 +1,9 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import Icon from "../Common/Icon";
 import SectionHeading from "../Common/SectionHeading";
-import { MoveRight } from 'lucide-react';
+import { MoveRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const MainWrapper = styled.div`
   margin-top: 90px;
@@ -24,9 +25,10 @@ const ConnectText = styled.p`
   font-size: 18px;
   font-family: ${(props) => props.theme.Fonts.Poppins};
   margin: 10px 0px;
+  color: ${(props) => props.theme.Colors.TextColor};
 `;
 
-const ConnectMeBtn = styled.button`
+const ConnectMeBtn = styled(motion.a)`
   display: flex;
   align-items: center;
   margin: 40px auto;
@@ -35,8 +37,10 @@ const ConnectMeBtn = styled.button`
   font-family: ${(props) => props.theme.Fonts.Poppins};
   color: ${(props) => props.theme.Colors.White};
   padding: 15px 30px;
-  border: 1px solid ${(props) => props.theme.Colors.White};
+  border: 1px solid ${(props) => props.theme.Colors.LightWhite};
   border-radius: 50px;
+  cursor: pointer;
+  width: fit-content;
 `;
 
 const ContactMeText = styled.p`
@@ -44,6 +48,7 @@ const ContactMeText = styled.p`
 `;
 
 const ContactMe = () => {
+  const theme = useTheme();
   return (
     <MainWrapper>
       <SectionHeading heading="BUILD TOGETHER" subHeading="Let's connect" />
@@ -51,7 +56,18 @@ const ContactMe = () => {
       <ConnectText>
         Have a project in mind? Let's work together to bring your ideas to life!
       </ConnectText>
-      <ConnectMeBtn>
+      <ConnectMeBtn
+        whileHover={{
+          boxShadow: `0px 0px 10px ${theme.Colors.LightWhite}`,
+          scale: 1.05,
+          transition: { duration: 0.3, ease: "easeInOut" },
+        }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ duration: 0.3 }}
+        href="https://www.linkedin.com/in/nidhish-vyas/"
+        target="_blank"
+        noopener="noreferrer"
+      >
         <Icon name="linkedin" size="2xl" />
         <ContactMeText>Contact Me</ContactMeText>
         <MoveRight size={24} />

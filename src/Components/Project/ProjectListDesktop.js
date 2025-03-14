@@ -34,17 +34,19 @@ const ProjectImage = styled(motion.img)`
   border-radius: 10px 10px 0 0;
 `;
 
-const ProjectImgDiv = styled(motion.div)`
+const ProjectImgDiv = styled(motion.a)`
   backdrop-filter: blur(28px);
   background-color: ${(props) => props.theme.Colors.LightestWhite};
   border-radius: 10px;
   border: 1px solid ${(props) => props.theme.Colors.LightWhite};
+  color: ${(props) => props.theme.Colors.White};
   height: 525px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 40px;
   position: relative;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -157,12 +159,16 @@ const ProjectListDesktop = () => {
           }}
         >
           <ProjectImgDiv
-            onHoverStart={() => {
+            onMouseEnter={() => {
               targetControls.start({ rotate: -3, y: 20, scale: 1.1 });
             }}
-            onHoverEnd={() => {
+            onMouseLeave={() => {
               targetControls.start({ rotate: 0, y: 20, scale: 1 });
             }}
+
+            href={data.website}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <ProjectColor style={{ backgroundColor: data.color }}>
               <ProjectGistDiv>
