@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.4eca9004.js",
+    "main.js": "/static/js/main.02cb7aa3.js",
     "static/media/jalsa.png": "/static/media/jalsa.0fad91399ef7c760a711.png",
     "static/media/iste.png": "/static/media/iste.c5908581b5e1dade415a.png",
     "static/media/bugsquash.png": "/static/media/bugsquash.b857d09005dac5b5c302.png",
@@ -28,6 +28,6 @@
     "static/media/Logo.svg": "/static/media/Logo.88f4375abca88eea782e53371473401e.svg"
   },
   "entrypoints": [
-    "static/js/main.4eca9004.js"
+    "static/js/main.02cb7aa3.js"
   ]
 }
