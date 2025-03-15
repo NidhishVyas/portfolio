@@ -195,6 +195,7 @@ const Experience = ({ data }) => {
           <ExLogo
             src={require(`../../Images/${data.logo.img}`)}
             style={{ objectFit: data.logo.fit }}
+            alt={data.logo.img}
           />
         </ImgDiv>
         <Content>

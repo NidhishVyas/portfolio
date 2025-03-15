@@ -332,9 +332,10 @@ const Hero = () => {
         <HeroImageDiv>
           <HeroImage
             src={Portrait}
+            alt="Nidhish Vyas"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
-            transition={{ duration: 0.5  }}
+            transition={{ duration: 0.5 }}
           />
           <SemiCircle variants={circleAnimateVariants} {...animateProps} />
           <OtherSemiCircle
@@ -356,6 +357,7 @@ const Hero = () => {
                 href={icon.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={icon.name}
               >
                 <Icon name={icon.name} color={theme.Colors.White} size="lg" />
               </SocialsIcon>

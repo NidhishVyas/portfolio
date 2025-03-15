@@ -425,6 +425,7 @@ const NavBar = () => {
               e.stopPropagation();
               toggleNav();
             }}
+            aria-label="Open navigation menu"
           >
             {/* <Icon name="bars" color={theme.Colors.White} /> */}
             <motion.svg
@@ -456,7 +457,11 @@ const NavBar = () => {
             >
               <NavDiv>
                 {NavList.map((item, i) => (
-                  <NavButton key={i} onClick={() => scrollToSection(item)}>
+                  <NavButton
+                    key={i}
+                    onClick={() => scrollToSection(item)}
+                    aria-label={item.replace("-", " ")}
+                  >
                     <NavItem variants={animationVariants} {...animationProps}>
                       {item.replace("-", " ")}
                     </NavItem>
@@ -506,6 +511,7 @@ const NavBar = () => {
             e.stopPropagation();
             toggleNav();
           }}
+          aria-label="Open navigation menu"
         >
           {/* <Icon name="bars" color={theme.Colors.White} /> */}
           <motion.svg

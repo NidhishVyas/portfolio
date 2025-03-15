@@ -61,6 +61,7 @@ const TechStackItems = styled(motion.div)`
   background-color: ${(props) => props.theme.Colors.TechBg};
   border-radius: 15px;
   /* color: ${(props) => props.theme.Colors.Black}; */
+  cursor: pointer;
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     padding: 5px 25px;
@@ -153,6 +154,7 @@ const TechStack = () => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
+                whileHover={{ y: -2 }}
               >
                 <TechImage
                   src={

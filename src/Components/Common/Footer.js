@@ -4,11 +4,16 @@ import Icon from "./Icon";
 import { motion } from "framer-motion";
 
 const MainWrapper = styled.div`
-  background: ${(props) => props.theme.Colors.LightBlack};
-  margin-top: 120px;
+  background: ${(props) => props.theme.Colors.Black};
+  margin-top: 80px;
   padding: 50px 0;
   color: ${(props) => props.theme.Colors.White};
   text-align: center;
+
+  @media ${(props) => props.theme.MediaQueries.m.query} {
+    margin-top: 100px;
+    padding: 50px 0;
+  }
 `;
 
 const SocialsDiv = styled.div`
@@ -42,14 +47,13 @@ const Copyright = styled.p`
 
 const Footer = () => {
   const theme = useTheme();
-const socialIcons = [
+  const socialIcons = [
     { name: "linkedin-in", link: "https://www.linkedin.com/in/nidhish-vyas/" },
     { name: "github", link: "https://github.com/NidhishVyas" },
     { name: "discord", link: "https://discord.com/users/nids1312" },
     { name: "envelope", link: "mailto:nv373@njit.edu" },
   ];
 
-  
   return (
     <MainWrapper>
       <SocialsDiv>
@@ -62,6 +66,7 @@ const socialIcons = [
             href={icon.link}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={icon.name}
           >
             <Icon name={icon.name} color={theme.Colors.White} size="xl" />
           </SocialsIcon>
