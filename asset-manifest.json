@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.36a647e2.js",
+    "main.js": "/static/js/main.de9bfbbf.js",
     "static/media/jalsa.png": "/static/media/jalsa.0fad91399ef7c760a711.png",
     "static/media/iste.png": "/static/media/iste.c5908581b5e1dade415a.png",
     "static/media/bugsquash.png": "/static/media/bugsquash.b857d09005dac5b5c302.png",
@@ -20,14 +20,33 @@
     "static/media/mu.png": "/static/media/mu.6a4f93b2280d8892eef9.png",
     "static/media/contact.jpg": "/static/media/contact.191cb1ba4f121b8b06be.jpg",
     "static/media/Resume - Nidhish Vyas.pdf": "/static/media/Resume - Nidhish Vyas.9e44e400ee977ced31ff.pdf",
+    "static/media/jalsa.webp": "/static/media/jalsa.b120603b0162a60d57cf.webp",
+    "static/media/portrait1.webp": "/static/media/portrait1.4171069a659eeb8489f3.webp",
+    "static/media/bugsquash.webp": "/static/media/bugsquash.abb5d5007e3bf333cb70.webp",
+    "static/media/pushpak.webp": "/static/media/pushpak.50021bfbed6b90dbfaf0.webp",
+    "static/media/vdkms.webp": "/static/media/vdkms.d11bf4d2f86ca74f97ac.webp",
+    "static/media/iste.webp": "/static/media/iste.3e49d49e5ed119ba88ec.webp",
+    "static/media/bytecamp.webp": "/static/media/bytecamp.9ef9ede7efa3f29f279b.webp",
+    "static/media/sies-home.webp": "/static/media/sies-home.75ed7ebb9e7d1fd3a175.webp",
+    "static/media/techxter.webp": "/static/media/techxter.ea07e2b39a2c75f67fd8.webp",
+    "static/media/crowdfunding.webp": "/static/media/crowdfunding.15cdcfdca3a0e2cf7c3a.webp",
+    "static/media/SIESGST Portal.webp": "/static/media/SIESGST Portal.806a03be73a0119943bf.webp",
+    "static/media/tedx.webp": "/static/media/tedx.9a8f6fe22e18f9a8e88f.webp",
+    "static/media/mu.webp": "/static/media/mu.307f9e16401a58eb356f.webp",
     "static/media/java.png": "/static/media/java.509f97f4e3fe76c25e42.png",
     "static/media/microsoft.png": "/static/media/microsoft.fd981461f2dea8a588ad.png",
     "static/media/aries.png": "/static/media/aries.79331761e7c0ba051c27.png",
+    "static/media/java.webp": "/static/media/java.dabf46a5439e17231ee7.webp",
+    "static/media/microsoft.webp": "/static/media/microsoft.2b67dcf8acf2733c03aa.webp",
+    "static/media/pushpak logo.webp": "/static/media/pushpak logo.799bbf7a1622bff2c7a0.webp",
+    "static/media/tech logo.webp": "/static/media/tech logo.5acc0847b7607ab61f75.webp",
+    "static/media/tedx logo.webp": "/static/media/tedx logo.c484e471ac3f60eaf183.webp",
+    "static/media/njit logo.webp": "/static/media/njit logo.63433e9b451299aac4fa.webp",
     "static/media/MetaMask.svg": "/static/media/MetaMask.accccb27a1f9e5d3fa8fd64cecfe904f.svg",
     "index.html": "/index.html",
     "static/media/Logo.svg": "/static/media/Logo.88f4375abca88eea782e53371473401e.svg"
   },
   "entrypoints": [
-    "static/js/main.36a647e2.js"
+    "static/js/main.de9bfbbf.js"
   ]
 }
