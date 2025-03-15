@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.3aea8ecf.js",
+    "main.js": "/static/js/main.36a647e2.js",
     "static/media/jalsa.png": "/static/media/jalsa.0fad91399ef7c760a711.png",
     "static/media/iste.png": "/static/media/iste.c5908581b5e1dade415a.png",
     "static/media/bugsquash.png": "/static/media/bugsquash.b857d09005dac5b5c302.png",
@@ -17,9 +17,9 @@
     "static/media/SIESGST Portal.png": "/static/media/SIESGST Portal.cc5ed350af1c572bf412.png",
     "static/media/tedx.png": "/static/media/tedx.d8b7f2b7641fbac7dd03.png",
     "static/media/heroimg.png": "/static/media/heroimg.561707d556d52dd29b28.png",
+    "static/media/mu.png": "/static/media/mu.6a4f93b2280d8892eef9.png",
     "static/media/contact.jpg": "/static/media/contact.191cb1ba4f121b8b06be.jpg",
     "static/media/Resume - Nidhish Vyas.pdf": "/static/media/Resume - Nidhish Vyas.9e44e400ee977ced31ff.pdf",
-    "static/media/mu.png": "/static/media/mu.88f2b3c43fc0b7441a11.png",
     "static/media/java.png": "/static/media/java.509f97f4e3fe76c25e42.png",
     "static/media/microsoft.png": "/static/media/microsoft.fd981461f2dea8a588ad.png",
     "static/media/aries.png": "/static/media/aries.79331761e7c0ba051c27.png",
@@ -28,6 +28,6 @@
     "static/media/Logo.svg": "/static/media/Logo.88f4375abca88eea782e53371473401e.svg"
   },
   "entrypoints": [
-    "static/js/main.3aea8ecf.js"
+    "static/js/main.36a647e2.js"
   ]
 }
