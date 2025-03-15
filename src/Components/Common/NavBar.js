@@ -137,6 +137,7 @@ const NavButton = styled.button`
   color: ${(props) => props.theme.Colors.White};
   padding: 0;
   overflow: hidden;
+  width: fit-content;
 
   &:hover {
     overflow: visible;
@@ -147,7 +148,6 @@ const NavItem = styled(motion.p)`
   font-size: 28px;
   font-family: ${(props) => props.theme.Fonts.Inter};
   position: relative;
-  width: fit-content;
   cursor: pointer;
 
   @media ${(props) => props.theme.MediaQueries.l.query} {
@@ -204,7 +204,7 @@ const Socials = styled(motion.a)`
   color: ${(props) => props.theme.Colors.White};
   position: relative;
   width: fit-content;
-  
+
   @media ${(props) => props.theme.MediaQueries.l.query} {
     font-size: 16px;
   }
@@ -327,7 +327,9 @@ const NavBar = () => {
   const theme = useTheme();
   const [isSideNav, setIsSideNav] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const toggleNav = () => setIsSideNav(!isSideNav);
+  const toggleNav = () => {
+    setIsSideNav((prev) => !prev);
+  };
 
   const { scrollYProgress } = useScroll();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -369,7 +371,7 @@ const NavBar = () => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [windowWidth]);
+  }, []);
 
   useMotionValueEvent(scrollYProgress, "change", (value) => {
     if (isSideNav) toggleNav();
@@ -382,9 +384,32 @@ const NavBar = () => {
   useEffect(() => {
     if (widthRef.current) {
       setWidth(widthRef.current.offsetWidth);
-      console.log(widthRef.current.offsetWidth);
     }
   }, []);
+
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        navRef.current &&
+        !navRef.current.contains(event.target) &&
+        !event.target.closest("button") // Exclude the close button
+      ) {
+        setIsSideNav(false);
+      }
+    };
+
+    if (isSideNav) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isSideNav]);
 
   return (
     <MainWrapper
@@ -395,7 +420,12 @@ const NavBar = () => {
       <MobMainDiv>
         <Container>
           <LogoName onClick={() => scrollToSection("Home", false)} />
-          <MenuDiv onClick={toggleNav}>
+          <MenuDiv
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleNav();
+            }}
+          >
             {/* <Icon name="bars" color={theme.Colors.White} /> */}
             <motion.svg
               width="22"
@@ -418,6 +448,7 @@ const NavBar = () => {
         <AnimatePresence>
           {isSideNav && (
             <DropMenu
+              ref={navRef}
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "calc(100vh - 130px)", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
@@ -470,7 +501,12 @@ const NavBar = () => {
         // transition={{ duration: 0.7, ease: "easeInOut" }}
       >
         <LogoName onClick={() => scrollToSection("Home", false)} />
-        <MenuDiv onClick={toggleNav}>
+        <MenuDiv
+          onClick={(e) => {
+            e.stopPropagation();
+            toggleNav();
+          }}
+        >
           {/* <Icon name="bars" color={theme.Colors.White} /> */}
           <motion.svg
             width="22"
@@ -497,6 +533,7 @@ const NavBar = () => {
       {isSideNav && windowWidth >= 768 && (
         <AnimatePresence>
           <DropMenu
+            ref={navRef}
             isscrolled={isScrolled}
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "calc(100vh - 140px)", opacity: 1 }}

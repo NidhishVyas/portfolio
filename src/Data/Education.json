@@ -5,6 +5,7 @@
     "degree": "MS in Computer Science",
     "location": "Newark, NJ",
     "endDate": "May 2025",
+    "logo": { "img": "njit logo.png", "fit": "cover" },
     "coursework": [
       "Data Structures and Algorithms",
       "Database Management Systems Design",
@@ -24,6 +25,7 @@
     "degree": "BE in Information Technology",
     "location": "Mumbai, IN",
     "endDate": "May 2023",
+    "logo": { "img": "mu.png", "fit": "cover" },
     "coursework": [
       "OOPs",
       "Software Engineering",

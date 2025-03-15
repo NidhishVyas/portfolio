@@ -138,11 +138,14 @@ const ButtonName = styled.p`
 const ProjectListMobile = () => {
   const theme = useTheme();
   const ref = useRef(null);
+  const featureList = (data) => {
+    return data?.points ? data?.points.join(" | ") : null;
+  };
 
   return (
     <>
       {ProjectsData.map((data, i) => (
-        <AnimatePresence>
+        <AnimatePresence key={i}>
           <ProjectDiv
             ref={ref}
             initial="hidden"
@@ -167,9 +170,10 @@ const ProjectListMobile = () => {
             </ProjectImgDiv>
             <ProjectName>{data.name}</ProjectName>
             <ProjectInfo>{data.info}</ProjectInfo>
+            <ProjectInfo>{featureList(data)}</ProjectInfo>
             <TechStack data={data.techStack} color={data.color} />
             <ButtonDiv>
-              {!data.sourceCode && (
+              {data.sourceCode && (
                 <Button
                   href={data.sourceCode}
                   target="_blank"
@@ -179,7 +183,7 @@ const ProjectListMobile = () => {
                   <ButtonName>Source Code</ButtonName>
                 </Button>
               )}
-              {!data.website && (
+              {data.website && (
                 <Button
                   href={data.website}
                   target="_blank"

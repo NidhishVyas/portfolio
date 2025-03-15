@@ -46,7 +46,7 @@ const ProjectImgDiv = styled(motion.a)`
   align-items: center;
   margin: 0 40px;
   position: relative;
-  cursor: pointer;
+  /* cursor: pointer; */
 
   &::before {
     content: "";
@@ -165,10 +165,10 @@ const ProjectListDesktop = () => {
             onMouseLeave={() => {
               targetControls.start({ rotate: 0, y: 20, scale: 1 });
             }}
-
-            href={data.website}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={data.website ? data.website : undefined}
+            target={data.website ? "_blank" : undefined}
+            rel={data.website ? "noopener noreferrer" : undefined}
+            style={{ cursor: data.website ? "pointer" : "no-drop" }}
           >
             <ProjectColor style={{ backgroundColor: data.color }}>
               <ProjectGistDiv>

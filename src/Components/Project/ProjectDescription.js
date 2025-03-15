@@ -39,12 +39,12 @@ const ProjectInfo = styled.div`
   color: ${(props) => props.theme.Colors.TextColor};
 `;
 
-const Point = styled.p`
-  font-size: 14px;
-  margin-bottom: 8px;
-  font-family: ${(props) => props.theme.Fonts.Poppins};
-  color: ${(props) => props.theme.Colors.TextColor};
-`;
+// const Point = styled.p`
+//   font-size: 14px;
+//   margin-bottom: 8px;
+//   font-family: ${(props) => props.theme.Fonts.Poppins};
+//   color: ${(props) => props.theme.Colors.TextColor};
+// `;
 
 const TechStack = styled(motion.div)`
   padding: 4px 12px;
@@ -109,6 +109,11 @@ const ProjectDescription = forwardRef((_, ref) => {
   if (!projectData) {
     return <ProjectDetails>No project selected</ProjectDetails>;
   }
+
+  const featureList = projectData?.points
+    ? projectData?.points.join(" | ")
+    : null;
+
   return (
     <ProjectDetails>
       <LineDiv style={{ backgroundColor: projectData.color }} />
@@ -127,13 +132,14 @@ const ProjectDescription = forwardRef((_, ref) => {
         </FlexDiv>
 
         <ProjectInfo>{projectData.info}</ProjectInfo>
+        <ProjectInfo>{featureList}</ProjectInfo>
 
-        {projectData.points?.map((point, index) => (
+        {/* {projectData.points?.map((point, index) => (
           <FlexDiv key={index}>
             <Icon name="asterisk" size="xs" style={{ margin: "5px 0 0" }} />
             <Point>{point}</Point>
           </FlexDiv>
-        ))}
+        ))} */}
 
         <FlexDiv style={{ marginTop: "12px", flexWrap: "wrap" }}>
           {projectData.techStack?.map((tech, i) => (

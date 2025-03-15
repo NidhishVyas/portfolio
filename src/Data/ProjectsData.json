@@ -1,17 +1,27 @@
 [
   {
     "name": "College Student Portal",
-    "info": "Designed and developed a website application using MERN stack, integrating a customizable event calendar and RSVP system.",
+    "info": "",
     "gist": "A online portal for SIES GST students that keeps you connected to the college from anywhere and everywhere!",
     "image": "SIESGST Portal.png",
     "sourceCode": "",
     "website": "https://www.portal.siesgst.ac.in/",
+    "points": [
+      "Events Calendar",
+      "Manage Announcements",
+      "Blogs Management",
+      "Notes Repository",
+      "Railway Concession Requests",
+      "User Authentication",
+      "Light & Dark Mode",
+      "Responsive Design"
+    ],
     "techStack": [
       { "name": "ReactJS", "icon": "react" },
-      { "name": "Figma", "icon": "figma" },
       { "name": "NodeJS", "icon": "nodedotjs" },
       { "name": "Express", "icon": "express", "color": "dark" },
       { "name": "MongoDB", "icon": "mongodb" },
+      { "name": "Figma", "icon": "figma" },
       { "name": "Axios", "icon": "axios" },
       { "name": "Google Sign-in", "icon": "google" },
       { "name": "Microsoft Sign-in", "icon": "microsoft" },
@@ -21,12 +31,20 @@
   },
   {
     "name": "Crowdfunding using Blockchain",
-    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "info": "",
     "gist": "A smart contract-based crowdfunding system ensuring secure transactions, transparent fund management, and contributor-approved spending requests.",
     "image": "crowdfunding.png",
     "sourceCode": "",
     "website": "",
-    "points": [],
+    "points": [
+      "Decentralized & Secure",
+      "Investor Governance",
+      "Global Reach",
+      "Transparent Fund Allocation",
+      "Efficient Fund Management",
+      "Seamless Navigation",
+      "Responsive Design"
+    ],
     "techStack": [
       { "name": "NextJS", "icon": "nextdotjs", "color": "dark" },
       { "name": "Solidity", "icon": "solidity", "color": "dark" },
@@ -40,11 +58,21 @@
   },
   {
     "name": "Bugsquash",
-    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "info": "",
     "gist": "BugSquash is a project-building competition by SIES GST, where participants create innovative solutions to real-world problems.",
     "image": "bugsquash.png",
     "sourceCode": "",
     "website": "",
+    "points": [
+      "User Registration",
+      "User Sign-In",
+      "Team Management",
+      "Events Timeline",
+      "Event Overview",
+      "Partner & Sponsors",
+      "Seamless Navigation",
+      "Responsive Design"
+    ],
     "techStack": [
       { "name": "EJS", "icon": "ejs" },
       { "name": "HTML5", "icon": "html5" },
@@ -59,11 +87,18 @@
   },
   {
     "name": "Bytecamp",
-    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "info": "",
     "gist": "A 24-hour long hackathon where you can brainstorm and create your own solutions to real-world problems.",
     "image": "bytecamp.png",
     "sourceCode": "",
-    "website": "",
+    "website": "https://bytecamp.siesgst.ac.in/",
+    "points": [
+      "Event Overview",
+      "Event Timeline",
+      "Partner & Sponsors",
+      "Get in Touch",
+      "Responsive Design"
+    ],
     "techStack": [
       { "name": "HTML5", "icon": "html5" },
       { "name": "CSS3", "icon": "css3" },
@@ -75,11 +110,19 @@
   },
   {
     "name": "InternXpo",
-    "info": "Designed and developed a website application using MERN stack, integrating a customizable event calendar and RSVP system.",
+    "info": "",
     "gist": "InternXpo by ISTE connects students with internship opportunities in companies, startups, and departmental projects across all domains.",
     "image": "iste.png",
     "sourceCode": "",
-    "website": "https://www.portal.siesgst.ac.in/",
+    "website": "https://www.iste.siesgst.ac.in/",
+    "points": [
+      "Event Overview",
+      "Event Timeline",
+      "Company Profiles",
+      "Brochure Access",
+      "Seamless Navigation",
+      "Responsive Design"
+    ],
     "techStack": [
       { "name": "HTML5", "icon": "html5" },
       { "name": "CSS3", "icon": "css3" },
@@ -91,12 +134,19 @@
   },
   {
     "name": "Jalsa Villa",
-    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "info": "",
     "gist": "A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.",
     "image": "jalsa.png",
     "sourceCode": "",
-    "website": "",
-    "points": [],
+    "website": "https://www.jalsavilla.com",
+    "points": [
+      "Explore Villa",
+      "Easy Booking",
+      "Villa Services",
+      "Get in Touch",
+      "Seamless Navigation",
+      "Responsive Design"
+    ],
     "techStack": [
       { "name": "ReactJS", "icon": "react" },
       { "name": "Figma", "icon": "figma" },
@@ -111,11 +161,20 @@
   },
   {
     "name": "Pushpak Rail Construction Pvt Ltd",
-    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "info": "",
     "gist": "Pushpak Rail Construction Pvt Ltd specializes in rail construction, maintenance, and civil engineering contracts across multiple states.",
     "image": "pushpak.png",
-    "sourceCode": "",
+    "sourceCode": "https://www.pushpakrailconstruction.com/",
     "website": "",
+    "points": [
+      "Company Overview",
+      "Services Offered",
+      "Project Portfolios",
+      "Get in Touch",
+      "Brochure Download",
+      "Seamless Navigation",
+      "Responsive Design"
+    ],
     "techStack": [
       { "name": "ReactJS", "icon": "react" },
       { "name": "styled-components", "icon": "styledcomponents" },
@@ -127,11 +186,19 @@
   },
   {
     "name": "SIES Graduate School of Technology",
-    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "info": "",
     "gist": "SIES Graduate School of Technology, in Navi Mumbai, offers quality engineering education across eight disciplines.",
     "image": "sies-home.png",
     "sourceCode": "",
-    "website": "",
+    "website": "https://home.siesgst.ac.in/",
+    "points": [
+      "About Us",
+      "Departments",
+      "Admissions",
+      "Campus life",
+      "Companies Who Recruit",
+      "Responsive Design"
+    ],
     "techStack": [
       { "name": "HTML5", "icon": "html5" },
       { "name": "CSS3", "icon": "css3" },
@@ -143,11 +210,19 @@
   },
   {
     "name": "TECHXTER",
-    "info": "Designed and developed a website application using MERN stack, integrating a customizable event calendar and RSVP system.",
+    "info": "",
     "gist": "TECHXTER is a National Level Paper Presentation fostering innovation, competence, and sustainable development in emerging technologies.",
     "image": "techxter.png",
     "sourceCode": "",
-    "website": "https://www.portal.siesgst.ac.in/",
+    "website": "https://techxter.siesgst.ac.in/",
+    "points": [
+      "Event Overview",
+      "Event Timeline",
+      "Partner & Sponsors",
+      "Testimonials",
+      "Get in Touch",
+      "Responsive Design"
+    ],
     "techStack": [
       { "name": "HTML5", "icon": "html5" },
       { "name": "CSS3", "icon": "css3" },
@@ -159,12 +234,23 @@
   },
   {
     "name": "TEDxSIESGST",
-    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "info": "",
     "gist": "TEDx is a locally organized event fostering TED-like experiences through talks, discussions, and connections under TED's general guidance.",
     "image": "tedx.png",
     "sourceCode": "",
-    "website": "",
-    "points": [],
+    "website": "https://tedxsiesgst.github.io/website-2022/",
+    "points": [
+      "About TEDx",
+      "Event Speakers",
+      "Talks & Sessions",
+      "Event Schedule",
+      "Partner & Sponsors",
+      "Ticket Registration",
+      "Contact Us",
+      "Light & Dark Mode",
+      "Seamless Navigation",
+      "Responsive Design"
+    ],
     "techStack": [
       { "name": "EJS", "icon": "ejs" },
       { "name": "Figma", "icon": "figma" },
@@ -178,11 +264,23 @@
   },
   {
     "name": "VDKMS Bifold",
-    "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. elementum at lacus ac euismod. Lorem ipsum dolor sit amet, consectetur",
+    "info": "",
     "gist": "Vehicular Decentralized Key Management System for Cellular Vehicular-to-Everything Networks, A Blockchain-Based Approach.",
     "image": "vdkms.png",
-    "sourceCode": "",
+    "sourceCode": "https://vdkms.netlify.app/",
     "website": "",
+    "points": [
+      "Blockchain Ledger",
+      "Decentralized Identifiers (DIDs)",
+      "Secure Transactions",
+      "QR-Based Authentication",
+      "Proof Requests Handling",
+      "Bluetooth Connectivity",
+      "Credential Issuance & Verification",
+      "Mediated Communication",
+      "Secure Multicast Messaging",
+      "User-Friendly Infrastructure"
+    ],
     "techStack": [
       { "name": "React Native", "icon": "react" },
       { "name": "TypeScript", "icon": "typescript" },
