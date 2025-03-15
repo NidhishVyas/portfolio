@@ -27,7 +27,7 @@ const StackDiv = styled.div`
   }
 `;
 
-const StackCategory = styled.div`
+const StackCategory = styled(motion.div)`
   font-size: 22px;
   margin: 0 0 25px;
   font-family: ${(props) => props.theme.Fonts.Quicksand};
@@ -124,7 +124,27 @@ const TechStack = () => {
       <SectionHeading heading="STACK & SKILLS" subHeading="My Tech Stack" />
       {TechStackData.map((item, i) => (
         <StackDiv key={i}>
-          <StackCategory>{item.category}</StackCategory>
+          <StackCategory
+            variants={{
+              initial: {
+                opacity: 0,
+                y: 100,
+              },
+              animate: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.5,
+                  type: "spring",
+                },
+              },
+            }}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
+            {item.category}
+          </StackCategory>
           <MyTechWrap>
             {item.stack.map((tech, id) => (
               <TechStackItems
