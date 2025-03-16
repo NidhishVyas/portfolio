@@ -292,7 +292,7 @@ const Hero = () => {
     { name: "linkedin-in", link: "https://www.linkedin.com/in/nidhish-vyas/" },
     { name: "github", link: "https://github.com/NidhishVyas" },
     { name: "discord", link: "https://discord.com/users/nids1312" },
-    { name: "envelope", link: "mailto:nv373@njit.edu" },
+    { name: "envelope", link: "mailto:vyasnidhish2001@gmail.com" },
   ];
   const [isHovered, setIsHovered] = useState(false);
 
