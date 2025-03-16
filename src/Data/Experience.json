@@ -6,7 +6,7 @@
     "location": "Newark, NJ",
     "startDate": "Jan 2024",
     "endDate": "Oct 2024",
-    "logo": { "img": "njit logo.png", "fit": "cover" },
+    "logo": { "img": "njit logo.webp", "fit": "cover" },
     "description": [],
     "techStack": [
       { "name": "React Native", "icon": "react" },
@@ -26,7 +26,7 @@
     "location": "Mumbai, IN",
     "startDate": "Apr 2022",
     "endDate": "Oct 2022",
-    "logo": { "img": "pushpak logo.png", "fit": "contain" },
+    "logo": { "img": "pushpak logo.webp", "fit": "contain" },
     "description": [],
     "techStack": [
       { "name": "ReactJS", "icon": "react" },
@@ -42,7 +42,7 @@
     "location": "Mumbai, IN",
     "startDate": "Jun 2021",
     "endDate": "May 2023",
-    "logo": { "img": "tech logo.png", "fit": "cover" },
+    "logo": { "img": "tech logo.webp", "fit": "cover" },
     "description": [],
     "techStack": [
       { "name": "ReactJS", "icon": "react" },
@@ -58,7 +58,7 @@
     "location": "Mumbai, IN",
     "startDate": "Jan 2021",
     "endDate": "May 2023",
-    "logo": { "img": "tedx logo.png", "fit": "contain" },
+    "logo": { "img": "tedx logo.webp", "fit": "contain" },
     "description": [],
     "techStack": [
       { "name": "ReactJS", "icon": "react" },

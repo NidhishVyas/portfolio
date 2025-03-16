@@ -3,7 +3,7 @@
     "name": "College Student Portal",
     "info": "",
     "gist": "A online portal for SIES GST students that keeps you connected to the college from anywhere and everywhere!",
-    "image": "SIESGST Portal.png",
+    "image": "SIESGST Portal.webp",
     "sourceCode": "",
     "website": "https://www.portal.siesgst.ac.in/",
     "points": [
@@ -33,7 +33,7 @@
     "name": "Crowdfunding using Blockchain",
     "info": "",
     "gist": "A smart contract-based crowdfunding system ensuring secure transactions, transparent fund management, and contributor-approved spending requests.",
-    "image": "crowdfunding.png",
+    "image": "crowdfunding.webp",
     "sourceCode": "",
     "website": "",
     "points": [
@@ -60,7 +60,7 @@
     "name": "Bugsquash",
     "info": "",
     "gist": "BugSquash is a project-building competition by SIES GST, where participants create innovative solutions to real-world problems.",
-    "image": "bugsquash.png",
+    "image": "bugsquash.webp",
     "sourceCode": "",
     "website": "",
     "points": [
@@ -89,7 +89,7 @@
     "name": "Bytecamp",
     "info": "",
     "gist": "A 24-hour long hackathon where you can brainstorm and create your own solutions to real-world problems.",
-    "image": "bytecamp.png",
+    "image": "bytecamp.webp",
     "sourceCode": "",
     "website": "https://bytecamp.siesgst.ac.in/",
     "points": [
@@ -112,7 +112,7 @@
     "name": "InternXpo",
     "info": "",
     "gist": "InternXpo by ISTE connects students with internship opportunities in companies, startups, and departmental projects across all domains.",
-    "image": "iste.png",
+    "image": "iste.webp",
     "sourceCode": "",
     "website": "https://www.iste.siesgst.ac.in/",
     "points": [
@@ -136,7 +136,7 @@
     "name": "Jalsa Villa",
     "info": "",
     "gist": "A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.",
-    "image": "jalsa.png",
+    "image": "jalsa.webp",
     "sourceCode": "",
     "website": "https://www.jalsavilla.com",
     "points": [
@@ -163,7 +163,7 @@
     "name": "Pushpak Rail Construction Pvt Ltd",
     "info": "",
     "gist": "Pushpak Rail Construction Pvt Ltd specializes in rail construction, maintenance, and civil engineering contracts across multiple states.",
-    "image": "pushpak.png",
+    "image": "pushpak.webp",
     "sourceCode": "",
     "website": "https://www.pushpakrailconstruction.com/",
     "points": [
@@ -188,7 +188,7 @@
     "name": "SIES Graduate School of Technology",
     "info": "",
     "gist": "SIES Graduate School of Technology, in Navi Mumbai, offers quality engineering education across eight disciplines.",
-    "image": "sies-home.png",
+    "image": "sies-home.webp",
     "sourceCode": "",
     "website": "https://home.siesgst.ac.in/",
     "points": [
@@ -212,7 +212,7 @@
     "name": "TECHXTER",
     "info": "",
     "gist": "TECHXTER is a National Level Paper Presentation fostering innovation, competence, and sustainable development in emerging technologies.",
-    "image": "techxter.png",
+    "image": "techxter.webp",
     "sourceCode": "",
     "website": "https://techxter.siesgst.ac.in/",
     "points": [
@@ -236,7 +236,7 @@
     "name": "TEDxSIESGST",
     "info": "",
     "gist": "TEDx is a locally organized event fostering TED-like experiences through talks, discussions, and connections under TED's general guidance.",
-    "image": "tedx.png",
+    "image": "tedx.webp",
     "sourceCode": "",
     "website": "https://tedxsiesgst.github.io/website-2022/",
     "points": [
@@ -266,7 +266,7 @@
     "name": "VDKMS Bifold",
     "info": "",
     "gist": "Vehicular Decentralized Key Management System for Cellular Vehicular-to-Everything Networks, A Blockchain-Based Approach.",
-    "image": "vdkms.png",
+    "image": "vdkms.webp",
     "sourceCode": "",
     "website": "https://vdkms.netlify.app/",
     "points": [

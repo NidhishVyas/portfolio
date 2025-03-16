@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import TechStackData from "../../Data/TechStack.json";
-import Java from "../../Images/java.png";
+import Java from "../../Images/java.webp";
 import SectionHeading from "../Common/SectionHeading";
 import { motion } from "framer-motion";
 

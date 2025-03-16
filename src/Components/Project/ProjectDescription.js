@@ -2,7 +2,7 @@ import React, { forwardRef, useImperativeHandle, useState } from "react";
 import styled from "styled-components";
 import Icon from "../Common/Icon";
 import ProjectsData from "../../Data/ProjectsData.json";
-import Microsoft from "../../Images/microsoft.png";
+import Microsoft from "../../Images/microsoft.webp";
 import MetaMask from "../../Images/MetaMask.svg";
 import Aries from "../../Images/aries.png";
 import { motion } from "framer-motion";

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import styled, { useTheme } from "styled-components";
-import Portrait from "../../Images/portrait1.png";
+import Portrait from "../../Images/portrait1.webp";
 import Icon from "../Common/Icon";
 import Resume from "../../Data/Resume - Nidhish Vyas.pdf";
 import HeroImg from "../../Images/heroimg.png";
