@@ -30,29 +30,33 @@
     "color": "#193cb8"
   },
   {
-    "name": "Crowdfunding using Blockchain",
+    "name": "VDKMS Bifold",
     "info": "",
-    "gist": "A smart contract-based crowdfunding system ensuring secure transactions, transparent fund management, and contributor-approved spending requests.",
-    "image": "crowdfunding.webp",
+    "gist": "Vehicular Decentralized Key Management System for Cellular Vehicular-to-Everything Networks, A Blockchain-Based Approach.",
+    "image": "vdkms.webp",
     "sourceCode": "",
-    "website": "",
+    "website": "https://vdkms.netlify.app/",
     "points": [
-      "Decentralized & Secure",
-      "Investor Governance",
-      "Global Reach",
-      "Transparent Fund Allocation",
-      "Efficient Fund Management",
-      "Seamless Navigation",
-      "Responsive Design"
+      "Blockchain Ledger",
+      "Decentralized Identifiers (DIDs)",
+      "Secure Transactions",
+      "QR-Based Authentication",
+      "Proof Requests Handling",
+      "Bluetooth Connectivity",
+      "Credential Issuance & Verification",
+      "Mediated Communication",
+      "Secure Multicast Messaging",
+      "User-Friendly Infrastructure"
     ],
     "techStack": [
-      { "name": "NextJS", "icon": "nextdotjs", "color": "dark" },
-      { "name": "Solidity", "icon": "solidity", "color": "dark" },
-      { "name": "Ethereum", "icon": "ethereum", "color": "dark" },
-      { "name": "MetaMask", "icon": "metamask" },
-      { "name": "Web3", "icon": "web3dotjs" },
-      { "name": "Chakra UI", "icon": "chakraui" },
-      { "name": "Framer Motion", "icon": "framer" }
+      { "name": "React Native", "icon": "react" },
+      { "name": "TypeScript", "icon": "typescript" },
+      { "name": "Hyperledger Aries", "icon": "aries", "color": "bright" },
+      { "name": "ReactJS", "icon": "react" },
+      { "name": "Python", "icon": "python" },
+      { "name": "Jekyll", "icon": "jekyll", "color": "bright" },
+      { "name": "HTML5", "icon": "html5" },
+      { "name": "CSS3", "icon": "css3" }
     ],
     "color": "#e60076"
   },
@@ -262,34 +266,31 @@
     ],
     "color": "#e60076"
   },
+
   {
-    "name": "VDKMS Bifold",
+    "name": "Crowdfunding using Blockchain",
     "info": "",
-    "gist": "Vehicular Decentralized Key Management System for Cellular Vehicular-to-Everything Networks, A Blockchain-Based Approach.",
-    "image": "vdkms.webp",
+    "gist": "A smart contract-based crowdfunding system ensuring secure transactions, transparent fund management, and contributor-approved spending requests.",
+    "image": "crowdfunding.webp",
     "sourceCode": "",
-    "website": "https://vdkms.netlify.app/",
+    "website": "",
     "points": [
-      "Blockchain Ledger",
-      "Decentralized Identifiers (DIDs)",
-      "Secure Transactions",
-      "QR-Based Authentication",
-      "Proof Requests Handling",
-      "Bluetooth Connectivity",
-      "Credential Issuance & Verification",
-      "Mediated Communication",
-      "Secure Multicast Messaging",
-      "User-Friendly Infrastructure"
+      "Decentralized & Secure",
+      "Investor Governance",
+      "Global Reach",
+      "Transparent Fund Allocation",
+      "Efficient Fund Management",
+      "Seamless Navigation",
+      "Responsive Design"
     ],
     "techStack": [
-      { "name": "React Native", "icon": "react" },
-      { "name": "TypeScript", "icon": "typescript" },
-      { "name": "Hyperledger Aries", "icon": "aries", "color": "bright" },
-      { "name": "ReactJS", "icon": "react" },
-      { "name": "Python", "icon": "python" },
-      { "name": "Jekyll", "icon": "jekyll", "color": "bright" },
-      { "name": "HTML5", "icon": "html5" },
-      { "name": "CSS3", "icon": "css3" }
+      { "name": "NextJS", "icon": "nextdotjs", "color": "dark" },
+      { "name": "Solidity", "icon": "solidity", "color": "dark" },
+      { "name": "Ethereum", "icon": "ethereum", "color": "dark" },
+      { "name": "MetaMask", "icon": "metamask" },
+      { "name": "Web3", "icon": "web3dotjs" },
+      { "name": "Chakra UI", "icon": "chakraui" },
+      { "name": "Framer Motion", "icon": "framer" }
     ],
     "color": "#00bc7d"
   }

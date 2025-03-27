@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import styled, { useTheme } from "styled-components";
 import Portrait from "../../Images/portrait1.webp";
 import Icon from "../Common/Icon";
-import Resume from "../../Data/Resume - Nidhish Vyas.pdf";
+// import Resume from "../../Data/Resume - Nidhish Vyas.pdf";
 import HeroImg from "../../Images/heroimg.png";
 import { Download } from "lucide-react";
 import { motion } from "framer-motion";
@@ -377,8 +377,11 @@ const Hero = () => {
             insights.
           </SubTitleText>
           <ResumeDownload
-            href={Resume}
-            download="Resume - Nidhish Vyas.pdf"
+            // href={Resume}
+            // download="Resume - Nidhish Vyas.pdf"
+            href="https://drive.google.com/file/d/1St3ghB0BegmSv7pKUTDc4AACc33xCHVL/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             variants={animateVariants}
             {...animateProps}
             onMouseEnter={() => {

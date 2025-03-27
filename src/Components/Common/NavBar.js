@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 // import Icon from "./Icon";
 import { ReactComponent as Logo } from "../../Images/Logo.svg";
-import Resume from "../../Data/Resume - Nidhish Vyas.pdf";
+// import Resume from "../../Data/Resume - Nidhish Vyas.pdf";
 import NavList from "../../Data/NavList.json";
 import Hidden from "./Hidden";
 import { ArrowUpRight } from "lucide-react";
@@ -570,7 +570,12 @@ const NavBar = () => {
                 </Hidden>
               ))}
             </SocialsDiv>
-            <ResumeBtn href={Resume} download="Resume - Nidhish Vyas.pdf">
+            <ResumeBtn
+              href="https://drive.google.com/file/d/1St3ghB0BegmSv7pKUTDc4AACc33xCHVL/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              // href={Resume} download="Resume - Nidhish Vyas.pdf"
+            >
               Resume
             </ResumeBtn>
           </DropMenu>
