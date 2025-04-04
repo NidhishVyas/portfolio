@@ -379,7 +379,7 @@ const Hero = () => {
           <ResumeDownload
             // href={Resume}
             // download="Resume - Nidhish Vyas.pdf"
-            href="https://drive.google.com/file/d/1St3ghB0BegmSv7pKUTDc4AACc33xCHVL/view?usp=sharing"
+            href="https://drive.google.com/file/d/1St3ghB0BegmSv7pKUTDc4AACc33xCHVL/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             variants={animateVariants}
