@@ -292,7 +292,7 @@ const Hero = () => {
     { name: "linkedin-in", link: "https://www.linkedin.com/in/nidhish-vyas/" },
     { name: "github", link: "https://github.com/NidhishVyas" },
     { name: "discord", link: "https://discord.com/users/nids1312" },
-    { name: "envelope", link: "mailto:vyasnidhish2001@gmail.com" },
+    { name: "envelope", link: "mailto:nidhishmvyas@gmail.com" },
   ];
   const [isHovered, setIsHovered] = useState(false);
 
@@ -379,7 +379,7 @@ const Hero = () => {
           <ResumeDownload
             // href={Resume}
             // download="Resume - Nidhish Vyas.pdf"
-            href="https://drive.google.com/file/d/1St3ghB0BegmSv7pKUTDc4AACc33xCHVL/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1St3ghB0BegmSv7pKUTDc4AACc33xCHVL/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             variants={animateVariants}
