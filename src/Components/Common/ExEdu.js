@@ -66,6 +66,7 @@ const FlexDiv = styled.div`
 
   @media ${(props) => props.theme.MediaQueries.m.query} {
     flex-direction: row;
+    align-items: center;
   }
 `;
 

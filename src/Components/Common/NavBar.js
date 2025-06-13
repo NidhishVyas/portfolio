@@ -571,7 +571,7 @@ const NavBar = () => {
               ))}
             </SocialsDiv>
             <ResumeBtn
-              href="https://drive.google.com/file/d/1St3ghB0BegmSv7pKUTDc4AACc33xCHVL/view?usp=sharing"
+              href="https://drive.google.com/file/d/16j1831onx9KAEun4Msy4xqvkW4eifurA/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               // href={Resume} download="Resume - Nidhish Vyas.pdf"

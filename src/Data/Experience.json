@@ -21,11 +21,11 @@
   },
   {
     "id": 2,
-    "title": "Full Stack Developer Intern",
+    "title": "Full-Stack Developer - Procurement & Data Automation",
     "company": " Pushpak Rail Constructions Pvt. Ltd.",
     "location": "Mumbai, IN",
-    "startDate": "Apr 2022",
-    "endDate": "Oct 2022",
+    "startDate": "Dec 2022",
+    "endDate": "May 2023",
     "logo": { "img": "pushpak logo.webp", "fit": "contain" },
     "description": [],
     "techStack": [
@@ -37,6 +37,22 @@
   },
   {
     "id": 3,
+    "title": "Full Stack Developer Intern",
+    "company": " Pushpak Rail Constructions Pvt. Ltd.",
+    "location": "Mumbai, IN",
+    "startDate": "Jun 2022",
+    "endDate": "Dec 2022",
+    "logo": { "img": "pushpak logo.webp", "fit": "contain" },
+    "description": [],
+    "techStack": [
+      { "name": "ReactJS", "icon": "react" },
+      { "name": "Figma", "icon": "figma" },
+      { "name": "NodeJS", "icon": "nodedotjs" },
+      { "name": "MongoDB", "icon": "mongodb" }
+    ]
+  },
+  {
+    "id": 4,
     "title": "Web Developer",
     "company": " Technical Team SIES GST",
     "location": "Mumbai, IN",
@@ -49,23 +65,6 @@
       { "name": "Figma", "icon": "figma" },
       { "name": "NodeJS", "icon": "nodedotjs" },
       { "name": "MongoDB", "icon": "mongodb" }
-    ]
-  },
-  {
-    "id": 4,
-    "title": "Web Developer",
-    "company": " TEDxSIESGST",
-    "location": "Mumbai, IN",
-    "startDate": "Jan 2021",
-    "endDate": "May 2023",
-    "logo": { "img": "tedx logo.webp", "fit": "contain" },
-    "description": [],
-    "techStack": [
-      { "name": "ReactJS", "icon": "react" },
-      { "name": "Figma", "icon": "figma" },
-      { "name": "NodeJS", "icon": "nodedotjs" },
-      { "name": "HTML5", "icon": "html5" },
-      { "name": "CSS3", "icon": "css3" }
     ]
   }
 ]
