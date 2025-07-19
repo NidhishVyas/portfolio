@@ -7,7 +7,7 @@
       { "name": "Angular", "icon": "angular", "color": "dark" },
       { "name": "Bootstrap", "icon": "bootstrap" },
       { "name": "HTML5", "icon": "html5" },
-      { "name": "CSS3", "icon": "css3" }
+      { "name": "CSS3", "icon": "css" }
     ]
   },
   {

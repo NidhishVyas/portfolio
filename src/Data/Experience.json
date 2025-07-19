@@ -16,7 +16,7 @@
       { "name": "Python", "icon": "python" },
       { "name": "Jekyll", "icon": "jekyll", "color": "bright" },
       { "name": "HTML5", "icon": "html5" },
-      { "name": "CSS3", "icon": "css3" }
+      { "name": "CSS3", "icon": "css" }
     ]
   },
   {
