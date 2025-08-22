@@ -1,6 +1,26 @@
 [
   {
     "id": 1,
+    "title": "Software Engineer",
+    "company": " Easley-Dunn Productions, Inc.",
+    "location": "Torrance, California",
+    "startDate": "Jun 2025",
+    "endDate": "Present",
+    "logo": { "img": "easley_logo.jpeg", "fit": "cover" },
+    "description": [],
+    "techStack": [
+      { "name": "React Native", "icon": "react" },
+      { "name": "TypeScript", "icon": "typescript" },
+      { "name": "Hyperledger Aries", "icon": "aries", "color": "bright" },
+      { "name": "ReactJS", "icon": "react" },
+      { "name": "Python", "icon": "python" },
+      { "name": "Jekyll", "icon": "jekyll", "color": "bright" },
+      { "name": "HTML5", "icon": "html5" },
+      { "name": "CSS3", "icon": "css" }
+    ]
+  },
+  {
+    "id": 2,
     "title": "Software Developer",
     "company": " New Jersey Institute of Technology",
     "location": "Newark, NJ",
@@ -20,29 +40,13 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Full-Stack Developer - Procurement & Data Automation",
     "company": " Pushpak Rail Constructions Pvt. Ltd.",
     "location": "Mumbai, IN",
     "startDate": "Dec 2022",
     "endDate": "May 2023",
-    "logo": { "img": "pushpak logo.webp", "fit": "contain" },
-    "description": [],
-    "techStack": [
-      { "name": "ReactJS", "icon": "react" },
-      { "name": "Figma", "icon": "figma" },
-      { "name": "NodeJS", "icon": "nodedotjs" },
-      { "name": "MongoDB", "icon": "mongodb" }
-    ]
-  },
-  {
-    "id": 3,
-    "title": "Full Stack Developer Intern",
-    "company": " Pushpak Rail Constructions Pvt. Ltd.",
-    "location": "Mumbai, IN",
-    "startDate": "Jun 2022",
-    "endDate": "Dec 2022",
-    "logo": { "img": "pushpak logo.webp", "fit": "contain" },
+    "logo": { "img": "pushpak logo.webp", "fit": "contain", "color": "dark" },
     "description": [],
     "techStack": [
       { "name": "ReactJS", "icon": "react" },
@@ -53,6 +57,22 @@
   },
   {
     "id": 4,
+    "title": "Full Stack Developer Intern",
+    "company": " Pushpak Rail Constructions Pvt. Ltd.",
+    "location": "Mumbai, IN",
+    "startDate": "Jun 2022",
+    "endDate": "Dec 2022",
+    "logo": { "img": "pushpak logo.webp", "fit": "contain", "color": "dark" },
+    "description": [],
+    "techStack": [
+      { "name": "ReactJS", "icon": "react" },
+      { "name": "Figma", "icon": "figma" },
+      { "name": "NodeJS", "icon": "nodedotjs" },
+      { "name": "MongoDB", "icon": "mongodb" }
+    ]
+  },
+  {
+    "id": 5,
     "title": "Web Developer",
     "company": " Technical Team SIES GST",
     "location": "Mumbai, IN",

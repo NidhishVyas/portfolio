@@ -14,6 +14,7 @@ const monthMap = {
   };
   
   const formatDate = (input) => {
+    if (!input || input === "Present") return { fullDate: "Present", shortDate: "Present" };
     const [shortMonth, year] = input.split(" ");
   
     const fullMonth = monthMap[shortMonth] || shortMonth;

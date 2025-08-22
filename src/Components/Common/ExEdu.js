@@ -45,6 +45,10 @@ const ExLogo = styled.img`
   aspect-ratio: 1;
   border-radius: 15px;
   background-color: ${(props) => props.theme.Colors.White};
+
+  &.dark {
+    filter: invert(100%);
+  }
 `;
 
 const Content = styled.div`
@@ -197,6 +201,7 @@ const Experience = ({ data }) => {
             src={require(`../../Images/${data.logo.img}`)}
             style={{ objectFit: data.logo.fit }}
             alt={data.logo.img}
+            className={data.logo?.color === "dark" ? "dark" : ""}
           />
         </ImgDiv>
         <Content>
@@ -204,13 +209,13 @@ const Experience = ({ data }) => {
             <Heading>{data?.university || data?.company}</Heading>
             <DateDivMob>
               {data?.startDate
-                ? `${formatDate(data?.startDate).shortDate} -`
+                ? `${formatDate(data?.startDate).shortDate} - `
                 : ""}
               {formatDate(data?.endDate).shortDate}
             </DateDivMob>
             <DateDivTab>
               {data?.startDate
-                ? `${formatDate(data?.startDate).fullDate} -`
+                ? `${formatDate(data?.startDate).fullDate} - `
                 : ""}
               {formatDate(data?.endDate).fullDate}
             </DateDivTab>
