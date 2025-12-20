@@ -41,10 +41,10 @@
   },
   {
     "id": 3,
-    "title": "Full-Stack Developer",
+    "title": "Full-Stack Developer Intern",
     "company": " Pushpak Rail Constructions Pvt. Ltd.",
     "location": "Mumbai, IN",
-    "startDate": "Dec 2022",
+    "startDate": "Jun 2022",
     "endDate": "May 2023",
     "logo": { "img": "pushpak logo.webp", "fit": "contain", "color": "dark" },
     "description": [],
@@ -57,22 +57,6 @@
   },
   {
     "id": 4,
-    "title": "Full Stack Developer Intern",
-    "company": " Pushpak Rail Constructions Pvt. Ltd.",
-    "location": "Mumbai, IN",
-    "startDate": "Jun 2022",
-    "endDate": "Dec 2022",
-    "logo": { "img": "pushpak logo.webp", "fit": "contain", "color": "dark" },
-    "description": [],
-    "techStack": [
-      { "name": "ReactJS", "icon": "react" },
-      { "name": "Figma", "icon": "figma" },
-      { "name": "NodeJS", "icon": "nodedotjs" },
-      { "name": "MongoDB", "icon": "mongodb" }
-    ]
-  },
-  {
-    "id": 5,
     "title": "Web Developer",
     "company": " Technical Team SIES GST",
     "location": "Mumbai, IN",
