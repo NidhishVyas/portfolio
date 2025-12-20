@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.51d04794.js",
+    "main.js": "/static/js/main.8c03f284.js",
     "static/media/jalsa.png": "/static/media/jalsa.0fad91399ef7c760a711.png",
     "static/media/iste.png": "/static/media/iste.c5908581b5e1dade415a.png",
     "static/media/bugsquash.png": "/static/media/bugsquash.b857d09005dac5b5c302.png",
@@ -43,9 +43,10 @@
     "static/media/njit logo.webp": "/static/media/njit logo.63433e9b451299aac4fa.webp",
     "static/media/MetaMask.svg": "/static/media/MetaMask.accccb27a1f9e5d3fa8fd64cecfe904f.svg",
     "index.html": "/index.html",
-    "static/media/Logo.svg": "/static/media/Logo.88f4375abca88eea782e53371473401e.svg"
+    "static/media/Logo.svg": "/static/media/Logo.88f4375abca88eea782e53371473401e.svg",
+    "main.8c03f284.js.map": "/static/js/main.8c03f284.js.map"
   },
   "entrypoints": [
-    "static/js/main.51d04794.js"
+    "static/js/main.8c03f284.js"
   ]
 }
